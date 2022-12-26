@@ -6,6 +6,7 @@ Packet = {}
 
 function Packet:GetOpcode() end
 
+---@returns number
 function Packet:GetRawOpcode() end
 
 function Packet:GetSize() end

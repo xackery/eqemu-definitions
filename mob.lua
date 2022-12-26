@@ -52,7 +52,7 @@ function Mob:ApplySpellBuff(spell_id, duration) end
 ---@param from_riposte number # TODO: definition of parameter (and type this)
 ---@param is_strikethrough number # TODO: definition of parameter (and type this)
 ---@param is_from_spell number # TODO: definition of parameter (and type this)
----@param opts object # TODO: definition of parameter
+---@param opts Object # TODO: definition of parameter
 function Mob:Attack(other, hand, from_riposte, is_strikethrough, is_from_spell, opts) end
 
 ---@param other Mob # TODO: definition of parameter
@@ -1102,7 +1102,7 @@ function Mob:QuestSay(client, message) end
 
 ---@param client Client # TODO: definition of parameter
 ---@param message string # TODO: definition of parameter
----@param opts object # TODO: definition of parameter
+---@param opts Object # TODO: definition of parameter
 function Mob:QuestSay(client, message, opts) end
 
 ---@param send_illusion number # TODO: definition of parameter (and type this)
@@ -1170,7 +1170,7 @@ function Mob:SendAppearanceEffect(parm1, parm2, parm3, parm4, parm5, specific_ta
 ---@param cast_time number # TODO: definition of parameter
 function Mob:SendBeginCast(spell_id, cast_time) end
 
----@param illusion object # TODO: definition of parameter
+---@param illusion Object # TODO: definition of parameter
 function Mob:SendIllusionPacket(illusion) end
 
 ---@param effect_id number # TODO: definition of parameter

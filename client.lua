@@ -122,11 +122,7 @@ function Client:CharacterID() end
 
 ---@param skill_id number # TODO: definition of parameter
 ---@param target Mob # TODO: definition of parameter
-function Client:CheckIncreaseSkill(skill_id, target) end
-
----@param skill_id number # TODO: definition of parameter
----@param target Mob # TODO: definition of parameter
----@param chance_mod number # TODO: definition of parameter
+---@param chance_mod? number # TODO: definition of parameter
 function Client:CheckIncreaseSkill(skill_id, target, chance_mod) end
 
 ---@param spell_id number # TODO: definition of parameter
@@ -157,16 +153,8 @@ function Client:CountItemEquippedByID(item_id) end
 ---@param expedition_name string # TODO: definition of parameter
 ---@param min_players number # TODO: definition of parameter
 ---@param max_players number # TODO: definition of parameter
----@param disable_messages boolean # TODO: definition of parameter
+---@param disable_messages? boolean # TODO: definition of parameter
 function Client:CreateExpedition(zone_name, version, duration, expedition_name, min_players, max_players, disable_messages) end
-
----@param zone_name string # TODO: definition of parameter
----@param version number # TODO: definition of parameter
----@param duration number # TODO: definition of parameter
----@param expedition_name string # TODO: definition of parameter
----@param min_players number # TODO: definition of parameter
----@param max_players number # TODO: definition of parameter
-function Client:CreateExpedition(zone_name, version, duration, expedition_name, min_players, max_players) end
 
 ---@param dz_template_id number # TODO: definition of parameter
 function Client:CreateExpeditionFromTemplate(dz_template_id) end
@@ -177,12 +165,8 @@ function Client:DecreaseByID(type, amt) end
 
 ---@param slot_id number # TODO: definition of parameter
 ---@param quantity number # TODO: definition of parameter
----@param update_client boolean # TODO: definition of parameter
+---@param update_client? boolean # TODO: definition of parameter
 function Client:DeleteItemInInventory(slot_id, quantity, update_client) end
-
----@param slot_id number # TODO: definition of parameter
----@param quantity number # TODO: definition of parameter
-function Client:DeleteItemInInventory(slot_id, quantity) end
 
 ---@param markdown string # TODO: definition of parameter
 function Client:DialogueWindow(markdown) end
@@ -206,14 +190,8 @@ function Client:Duck() end
 ---@param red number # TODO: definition of parameter
 ---@param green number # TODO: definition of parameter
 ---@param blue number # TODO: definition of parameter
----@param use_tint number # TODO: definition of parameter
+---@param use_tint? number # TODO: definition of parameter
 function Client:DyeArmorBySlot(slot, red, green, blue, use_tint) end
-
----@param slot number # TODO: definition of parameter
----@param red number # TODO: definition of parameter
----@param green number # TODO: definition of parameter
----@param blue number # TODO: definition of parameter
-function Client:DyeArmorBySlot(slot, red, green, blue) end
 
 ---@param value number # TODO: definition of parameter
 function Client:EnableAreaEndRegen(value) end
@@ -227,9 +205,7 @@ function Client:EnableAreaManaRegen(value) end
 ---@param value number # TODO: definition of parameter
 function Client:EnableAreaRegens(value) end
 
-function Client:EndSharedTask() end
-
----@param send_fail boolean # TODO: definition of parameter
+---@param send_fail? boolean # TODO: definition of parameter
 function Client:EndSharedTask(send_fail) end
 
 function Client:Escape() end
@@ -946,7 +922,7 @@ function Client:QuestReward(target, copper, silver, gold, platinum, itemid, exp)
 function Client:QuestReward(target, copper, silver, gold, platinum, itemid, exp, faction) end
 
 ---@param target Mob # TODO: definition of parameter
----@param reward object # TODO: definition of parameter
+---@param reward Object # TODO: definition of parameter
 function Client:QuestReward(target, reward) end
 
 ---@param target Mob # TODO: definition of parameter
@@ -1423,7 +1399,7 @@ function Client:Sit() end
 function Client:Stand() end
 
 ---@param bag_item_id number # TODO: definition of parameter
----@param bag_items_table object # TODO: definition of parameter
+---@param bag_items_table Object # TODO: definition of parameter
 function Client:SummonBaggedItems(bag_item_id, bag_items_table) end
 
 ---@param item_id number # TODO: definition of parameter
@@ -1505,10 +1481,10 @@ function Client:TakePlatinum(platinum, update_client) end
 ---@param platinum number # TODO: definition of parameter
 function Client:TakePlatinum(platinum) end
 
----@param table object # TODO: definition of parameter
+---@param table Object # TODO: definition of parameter
 function Client:TaskSelector(table) end
 
----@param table object # TODO: definition of parameter
+---@param table Object # TODO: definition of parameter
 ---@param ignore_cooldown boolean # TODO: definition of parameter
 function Client:TaskSelector(table, ignore_cooldown) end
 
