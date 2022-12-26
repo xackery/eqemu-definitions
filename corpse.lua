@@ -111,8 +111,8 @@ function Corpse:SetCash(copper, silver, gold, platinum) end
 function Corpse:SetDecayTimer(decaytime) end
 
 ---@param client Client # TODO: definition of parameter
----@param spell # TODO: definition of parameter (and type this)
----@param checkdistance # TODO: definition of parameter (and type this)
+---@param spell number # TODO: definition of parameter (and type this)
+---@param checkdistance number # TODO: definition of parameter (and type this)
 function Corpse:Summon(client, spell, checkdistance) end
 
 function Corpse:UnLock() end

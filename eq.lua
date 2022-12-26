@@ -45,7 +45,7 @@ function eq.add_ldon_points(theme_id, points) end
 ---@param theme_id number # TODO: definition of parameter
 function eq.add_ldon_win(theme_id) end
 
----@param table object # TODO: definition of parameter
+---@param table Object # TODO: definition of parameter
 function eq.add_spawn_point(table) end
 
 ---@param instance_id number # TODO: definition of parameter
@@ -113,7 +113,7 @@ function eq.completed_tasks_in_set(task_set) end
 ---@param item_id number # TODO: definition of parameter
 function eq.count_item(item_id) end
 
----@param table object # TODO: definition of parameter
+---@param table Object # TODO: definition of parameter
 function eq.count_spawned_npcs(table) end
 
 ---@param model string # TODO: definition of parameter
@@ -173,7 +173,7 @@ function eq.create_guild(name, leader) end
 ---@param duration number # TODO: definition of parameter (and type this)
 function eq.create_instance(zone, version, duration) end
 
----@param table object # TODO: definition of parameter
+---@param table Object # TODO: definition of parameter
 ---@param x number # TODO: definition of parameter
 ---@param y number # TODO: definition of parameter
 ---@param z number # TODO: definition of parameter
@@ -856,7 +856,7 @@ function eq.disable_recipe(recipe_id) end
 ---@param spawn2_id number # TODO: definition of parameter
 function eq.disable_spawn2(spawn2_id) end
 
----@param table object # TODO: definition of parameter
+---@param table Object # TODO: definition of parameter
 function eq.disable_task(table) end
 
 ---@param webhook_name string # TODO: definition of parameter
@@ -871,7 +871,7 @@ function eq.enable_recipe(recipe_id) end
 ---@param spawn2_id number # TODO: definition of parameter
 function eq.enable_spawn2(spawn2_id) end
 
----@param table object # TODO: definition of parameter
+---@param table Object # TODO: definition of parameter
 function eq.enable_task(table) end
 
 ---@param title_set number # TODO: definition of parameter
@@ -1241,7 +1241,7 @@ function eq.is_house_of_thule_enabled() end
 
 function eq.is_lost_dungeons_of_norrath_enabled() end
 
----@param table object # TODO: definition of parameter
+---@param table Object # TODO: definition of parameter
 function eq.is_npc_spawned(table) end
 
 function eq.is_omens_of_war_enabled() end
@@ -1744,11 +1744,11 @@ function eq.summon_buried_player_corpse(char_id, x, y, z, h) end
 ---@param zone_id number # TODO: definition of parameter
 function eq.target_global(name, value, duration, npc_id, char_id, zone_id) end
 
----@param table object # TODO: definition of parameter
+---@param table Object # TODO: definition of parameter
 ---@param ignore_cooldown boolean # TODO: definition of parameter
 function eq.task_selector(table, ignore_cooldown) end
 
----@param table object # TODO: definition of parameter
+---@param table Object # TODO: definition of parameter
 function eq.task_selector(table) end
 
 ---@param task_set number # TODO: definition of parameter
