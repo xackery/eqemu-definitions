@@ -118,6 +118,7 @@ function Client:CashReward(copper, silver, gold, platinum) end
 ---@param last_name string # TODO: definition of parameter
 function Client:ChangeLastName(last_name) end
 
+---@returns number
 function Client:CharacterID() end
 
 ---@param skill_id number # TODO: definition of parameter
