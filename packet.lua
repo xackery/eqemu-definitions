@@ -4,6 +4,12 @@
 ---@class Packet
 Packet = {}
 
+---@returns Packet
+---@param opcode number # initial opcode to construct packet with
+---@param size number # size of packet, this MUST entail total size
+---@param raw? boolean # is packet raw?
+function Packet(opcode, size, raw) end
+
 ---@returns number
 function Packet:GetOpcode() end
 
