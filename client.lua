@@ -881,78 +881,20 @@ function Client:PutItemInInventory(slot_id, inst) end
 function Client:QuestReadBook(text, type) end
 
 ---@param target Mob # TODO: definition of parameter
----@param copper number # TODO: definition of parameter
----@param silver number # TODO: definition of parameter
----@param gold number # TODO: definition of parameter
----@param platinum number # TODO: definition of parameter
----@param itemid number # TODO: definition of parameter
-function Client:QuestReward(target, copper, silver, gold, platinum, itemid) end
-
----@param target Mob # TODO: definition of parameter
-function Client:QuestReward(target) end
-
----@param target Mob # TODO: definition of parameter
----@param copper number # TODO: definition of parameter
----@param silver number # TODO: definition of parameter
----@param gold number # TODO: definition of parameter
----@param platinum number # TODO: definition of parameter
-function Client:QuestReward(target, copper, silver, gold, platinum) end
-
----@param target Mob # TODO: definition of parameter
----@param copper number # TODO: definition of parameter
----@param silver number # TODO: definition of parameter
-function Client:QuestReward(target, copper, silver) end
-
----@param target Mob # TODO: definition of parameter
----@param copper number # TODO: definition of parameter
----@param silver number # TODO: definition of parameter
----@param gold number # TODO: definition of parameter
----@param platinum number # TODO: definition of parameter
----@param itemid number # TODO: definition of parameter
----@param exp number # TODO: definition of parameter
-function Client:QuestReward(target, copper, silver, gold, platinum, itemid, exp) end
-
----@param target Mob # TODO: definition of parameter
----@param copper number # TODO: definition of parameter
----@param silver number # TODO: definition of parameter
----@param gold number # TODO: definition of parameter
----@param platinum number # TODO: definition of parameter
----@param itemid number # TODO: definition of parameter
----@param exp number # TODO: definition of parameter
----@param faction boolean # TODO: definition of parameter
+---@param copper? number # TODO: definition of parameter
+---@param silver? number # TODO: definition of parameter
+---@param gold? number # TODO: definition of parameter
+---@param platinum? number # TODO: definition of parameter
+---@param itemid? number # TODO: definition of parameter
+---@param exp? number # TODO: definition of parameter
+---@param faction? boolean # TODO: definition of parameter
 function Client:QuestReward(target, copper, silver, gold, platinum, itemid, exp, faction) end
 
----@param target Mob # TODO: definition of parameter
----@param reward Object # TODO: definition of parameter
-function Client:QuestReward(target, reward) end
-
----@param target Mob # TODO: definition of parameter
----@param copper number # TODO: definition of parameter
----@param silver number # TODO: definition of parameter
----@param gold number # TODO: definition of parameter
-function Client:QuestReward(target, copper, silver, gold) end
-
----@param target Mob # TODO: definition of parameter
----@param copper number # TODO: definition of parameter
-function Client:QuestReward(target, copper) end
-
----@param app Packet # TODO: definition of parameter
-function Client:QueuePacket(app) end
-
----@param app Packet # TODO: definition of parameter
----@param ack_req boolean # TODO: definition of parameter
-function Client:QueuePacket(app, ack_req) end
-
----@param app Packet # TODO: definition of parameter
----@param ack_req boolean # TODO: definition of parameter
----@param client_connection_status number # TODO: definition of parameter
----@param filter number # TODO: definition of parameter
+---@param app PacketType # TODO: definition of parameter
+---@param ack_req? boolean # TODO: definition of parameter
+---@param client_connection_status? number # TODO: definition of parameter
+---@param filter? number # TODO: definition of parameter
 function Client:QueuePacket(app, ack_req, client_connection_status, filter) end
-
----@param app Packet # TODO: definition of parameter
----@param ack_req boolean # TODO: definition of parameter
----@param client_connection_status number # TODO: definition of parameter
-function Client:QueuePacket(app, ack_req, client_connection_status) end
 
 ---@param book_name string # TODO: definition of parameter
 ---@param book_type number # TODO: definition of parameter

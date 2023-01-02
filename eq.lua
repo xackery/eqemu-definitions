@@ -1642,31 +1642,13 @@ function eq.set_time(hour, min) end
 
 ---@param timer string # TODO: definition of parameter
 ---@param time_ms number # TODO: definition of parameter
----@param enc Encounter # TODO: definition of parameter
-function eq.set_timer(timer, time_ms, enc) end
-
----@param timer string # TODO: definition of parameter
----@param time_ms number # TODO: definition of parameter
----@param mob Mob # TODO: definition of parameter
-function eq.set_timer(timer, time_ms, mob) end
-
----@param timer string # TODO: definition of parameter
----@param time_ms number # TODO: definition of parameter
----@param inst ItemInst # TODO: definition of parameter
+---@param inst? ItemInst|Mob|Encounter # Set a timer for provided instance
 function eq.set_timer(timer, time_ms, inst) end
 
----@param timer string # TODO: definition of parameter
----@param time_ms number # TODO: definition of parameter
-function eq.set_timer(timer, time_ms) end
-
 ---@param npc_id number # TODO: definition of parameter
 ---@param signal_id number # TODO: definition of parameter
----@param wait number # TODO: definition of parameter
+---@param wait? number # TODO: definition of parameter
 function eq.signal(npc_id, signal_id, wait) end
-
----@param npc_id number # TODO: definition of parameter
----@param signal_id number # TODO: definition of parameter
-function eq.signal(npc_id, signal_id) end
 
 ---@param weather number # TODO: definition of parameter
 function eq.snow(weather) end

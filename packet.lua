@@ -1,98 +1,98 @@
 ---@meta
 
 ---TODO: definition for Packet
----@class Packet
-Packet = {}
+---@class PacketType
+PacketType = {}
 
----@returns Packet
 ---@param opcode number # initial opcode to construct packet with
 ---@param size number # size of packet, this MUST entail total size
 ---@param raw? boolean # is packet raw?
+---@return PacketType
 function Packet(opcode, size, raw) end
 
 ---@returns number
-function Packet:GetOpcode() end
+function PacketType:GetOpcode() end
 
 ---@returns number
-function Packet:GetRawOpcode() end
+function PacketType:GetRawOpcode() end
 
 ---@returns number
-function Packet:GetSize() end
+function PacketType:GetSize() end
 
 ---@returns number
-function Packet:GetWritePosition() end
+function PacketType:GetWritePosition() end
 
 ---@param offset number # TODO: definition of parameter
 ---@returns number
-function Packet:ReadDouble(offset) end
+function PacketType:ReadDouble(offset) end
 
 ---@param offset number # TODO: definition of parameter
 ---@param string_length number # TODO: definition of parameter
 ---@returns string
-function Packet:ReadFixedLengthString(offset, string_length) end
+function PacketType:ReadFixedLengthString(offset, string_length) end
 
 ---@param offset number # TODO: definition of parameter
 ---@returns number
-function Packet:ReadFloat(offset) end
+function PacketType:ReadFloat(offset) end
 
 ---@param offset number # TODO: definition of parameter (and type this)
 ---@returns number
-function Packet:ReadInt16(offset) end
+function PacketType:ReadInt16(offset) end
 
 ---@param offset number # TODO: definition of parameter (and type this)
 ---@returns number
-function Packet:ReadInt32(offset) end
+function PacketType:ReadInt32(offset) end
 
 ---@param offset number # TODO: definition of parameter
 ---@returns number
-function Packet:ReadInt64(offset) end
+function PacketType:ReadInt64(offset) end
 
 ---@param offset number # TODO: definition of parameter (and type this)
 ---@returns number
-function Packet:ReadInt8(offset) end
+function PacketType:ReadInt8(offset) end
 
 ---@param offset number # TODO: definition of parameter
----@returns number
-function Packet:ReadString(offset) end
+---@returns string
+function PacketType:ReadString(offset) end
 
 ---@param op number # TODO: definition of parameter
-function Packet:SetOpcode(op) end
+function PacketType:SetOpcode(op) end
 
 ---@param op number # TODO: definition of parameter
-function Packet:SetRawOpcode(op) end
+function PacketType:SetRawOpcode(op) end
 
 ---@param offset number # TODO: definition of parameter
-function Packet:SetWritePosition(offset) end
+function PacketType:SetWritePosition(offset) end
 
 ---@param offset? number # TODO: definition of parameter
 ---@param value number # TODO: definition of parameter
-function Packet:WriteDouble(offset, value) end
+function PacketType:WriteDouble(offset, value) end
 
 ---@param offset? number # TODO: definition of parameter
 ---@param value string # TODO: definition of parameter
 ---@param string_length? number # TODO: definition of parameter
-function Packet:WriteFixedLengthString(offset, value, string_length) end
+function PacketType:WriteFixedLengthString(offset, value, string_length) end
 
 ---@param offset? number # TODO: definition of parameter
 ---@param value number # TODO: definition of parameter
-function Packet:WriteFloat(offset, value) end
+function PacketType:WriteFloat(offset, value) end
 
 ---@param offset? number # TODO: definition of parameter
 ---@param value number # TODO: definition of parameter
-function Packet:WriteInt16(offset, value) end
+function PacketType:WriteInt16(offset, value) end
 
 ---@param offset? number # TODO: definition of parameter
 ---@param value number # TODO: definition of parameter
-function Packet:WriteInt32(offset, value) end
+function PacketType:WriteInt32(offset, value) end
 
 ---@param offset? number # TODO: definition of parameter
 ---@param value number # TODO: definition of parameter
-function Packet:WriteInt64(offset, value) end
+function PacketType:WriteInt64(offset, value) end
 
 ---@param offset? number # TODO: definition of parameter
 ---@param value number # TODO: definition of parameter
-function Packet:WriteInt8(offset, value) end
+function PacketType:WriteInt8(offset, value) end
 
 ---@param offset? number # TODO: definition of parameter
 ---@param value string # TODO: definition of parameter
-function Packet:WriteString(offset, value) end
+function PacketType:WriteString(offset, value) end

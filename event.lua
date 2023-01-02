@@ -12,35 +12,37 @@
 function event_aa_buy(e) end
 
 
----@class NPCEventtrade
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field platinum string # TODO: definition of field (and proper typing)
----@field gold string # TODO: definition of field (and proper typing)
----@field silver string # TODO: definition of field (and proper typing)
----@field copper string # TODO: definition of field (and proper typing)
----@field trade string # TODO: definition of field (and proper typing)
+---event_trade is when a client begins a trade with an NPC [doc](https://docs.eqemu.io/quest-api/events/#event_trade)
+---@class NPCEventTrade 
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
+---@field platinum number # Amount of platinum being traded
+---@field gold number # Amount of gold being traded
+---@field silver number # Amount of silver being traded
+---@field copper number # Amount of copper being traded
+---@field trade string # Seems broken or unused, can be ignored
 
---- event_trade is a NPC event when trade occurs.
----@param e NPCEventtrade
+---@param e NPCEventTrade # event_trade is when a client begins a trade with an NPC [doc](https://docs.eqemu.io/quest-api/events/#event_trade)
 function event_trade(e) end
 
----@class NPCEventwaypointarrive
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field wp string # TODO: definition of field (and proper typing)
+--- event_waypoint_arrive triggers when a mob arrives at a waypoint [doc](https://docs.eqemu.io/quest-api/events/#event_waypoint_arrive)
+---@class NPCEventWaypointArrive
+---@field self NPC # NPC who is handling the event
+---@field other Mob # Mob triggered event
+---@field wp number # Waypoint Index
 
---- event_waypoint_arrive is a NPC event when waypointarrive occurs.
----@param e NPCEventwaypointarrive
+--- event_waypoint_arrive triggers when a mob arrives at a waypoint [doc](https://docs.eqemu.io/quest-api/events/#event_waypoint_arrive)
+---@param e NPCEventWaypointArrive
 function event_waypoint_arrive(e) end
 
----@class NPCEventwaypointdepart
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field wp string # TODO: definition of field (and proper typing)
+--- event_waypoint_depart triggers when a mob leaves a waypoint [doc](https://docs.eqemu.io/quest-api/events/#event_waypoint_depart)
+---@class NPCEventWaypointDepart
+---@field self NPC # NPC who is handling the event
+---@field other Mob # Mob triggered event
+---@field wp number # Waypoint Index
 
---- event_waypoint_depart is a NPC event when waypointdepart occurs.
----@param e NPCEventwaypointdepart
+--- event_waypoint_depart triggers when a mob leaves a waypoint [doc](https://docs.eqemu.io/quest-api/events/#event_waypoint_depart)
+---@param e NPCEventWaypointDepart
 function event_waypoint_depart(e) end
 
 ---@class PlayerEvententerzone
@@ -60,7 +62,7 @@ function event_aggro_say(e) end
 
 ---@class BotEventcast
 ---@field self Bot # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field spell Spell|nil # Spell instance that was used
 ---@field caster_id number # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 
@@ -70,7 +72,7 @@ function event_cast(e) end
 
 ---@class BotEventcastbegin
 ---@field self Bot # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field spell Spell|nil # Spell instance that was used
 ---@field caster_id number # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 
@@ -80,7 +82,7 @@ function event_cast_begin(e) end
 
 ---@class BotEventcaston
 ---@field self Bot # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field spell Spell|nil # Spell instance that was used
 ---@field caster_id number # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 
@@ -88,20 +90,20 @@ function event_cast_begin(e) end
 ---@param e BotEventcaston
 function event_cast_on(e) end
 
----@class BotEventcombat
+---@class BotEventCombat
 ---@field self Bot # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field joined string # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
+---@field joined boolean # Is this a joining or leaving hate list event?
 
 --- event_combat is a Bot event when combat occurs.
----@param e BotEventcombat
+---@param e BotEventCombat
 function event_combat(e) end
 
 ---@class BotEventdeath
 ---@field self Bot # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field damage string # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
+---@field damage number # Final damage amount that was killing blow
+---@field spell Spell|nil # Spell instance that was used
 ---@field skill string # TODO: definition of field (and proper typing)
 
 --- event_death is a Bot event when death occurs.
@@ -110,9 +112,9 @@ function event_death(e) end
 
 ---@class BotEventdeathcomplete
 ---@field self Bot # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field damage string # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
+---@field damage number # Final damage amount that was killing blow
+---@field spell Spell|nil # Spell instance that was used
 ---@field skill string # TODO: definition of field (and proper typing)
 
 --- event_death_complete is a Bot event when deathcomplete occurs.
@@ -121,7 +123,7 @@ function event_death_complete(e) end
 
 ---@class BotEventpopupresponse
 ---@field self Bot # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
 ---@field popup_id number # TODO: definition of field (and proper typing)
 
 --- event_popup_response is a Bot event when popupresponse occurs.
@@ -130,9 +132,9 @@ function event_popup_response(e) end
 
 ---@class BotEventsay
 ---@field self Bot # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field message string # TODO: definition of field (and proper typing)
----@field language string # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
+---@field message string # Message client said to npc
+---@field language Languages # Language client said message in
 
 --- event_say is a Bot event when say occurs.
 ---@param e BotEventsay
@@ -148,7 +150,7 @@ function event_signal(e) end
 
 ---@class BotEventslay
 ---@field self Bot # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
 
 --- event_slay is a Bot event when slay occurs.
 ---@param e BotEventslay
@@ -163,18 +165,18 @@ function event_spawn(e) end
 
 ---@class BotEventtargetchange
 ---@field self Bot # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
 
 --- event_target_change is a Bot event when targetchange occurs.
 ---@param e BotEventtargetchange
 function event_target_change(e) end
 
----@class BotEventtimer
+---@class BotEventTimer
 ---@field self Bot # TODO: definition of field (and proper typing)
 ---@field timer string # TODO: definition of field (and proper typing)
 
 --- event_timer is a Bot event when timer occurs.
----@param e BotEventtimer
+---@param e BotEventTimer
 function event_timer(e) end
 
 ---@class BotEventuseskill
@@ -291,7 +293,7 @@ function event_item_tick(e) end
 
 ---@class ItemEventloot
 ---@field self Item # TODO: definition of field (and proper typing)
----@field corpse string # TODO: definition of field (and proper typing)
+---@field corpse Corpse|nil # Corpse of dying NPC
 
 --- event_loot is a Item event when loot occurs.
 ---@param e ItemEventloot
@@ -332,107 +334,110 @@ function event_unequip_item(e) end
 ---@class ItemEventweaponproc
 ---@field self Item # TODO: definition of field (and proper typing)
 ---@field target string # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field spell Spell|nil # Spell instance that was used
 
 --- event_weapon_proc is a Item event when weaponproc occurs.
 ---@param e ItemEventweaponproc
 function event_weapon_proc(e) end
 
 ---@class NPCEventaggrosay
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field message string # TODO: definition of field (and proper typing)
----@field language string # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
+---@field message string # Message client said to npc
+---@field language Languages # Language client said message in
 
 --- event_aggro_say is a NPC event when aggrosay occurs.
 ---@param e NPCEventaggrosay
 function event_aggro_say(e) end
 
 ---@class NPCEventcast
----@field self NPC # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
+---@field spell Spell|nil # Spell instance that was used
 
 --- event_cast is a NPC event when cast occurs.
 ---@param e NPCEventcast
 function event_cast(e) end
 
 ---@class NPCEventcastbegin
----@field self NPC # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
+---@field spell Spell|nil # Spell instance that was used
 
 --- event_cast_begin is a NPC event when castbegin occurs.
 ---@param e NPCEventcastbegin
 function event_cast_begin(e) end
 
 ---@class NPCEventcaston
----@field self NPC # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
+---@field spell Spell|nil # Spell instance that was used
 
 --- event_cast_on is a NPC event when caston occurs.
 ---@param e NPCEventcaston
 function event_cast_on(e) end
 
----@class NPCEventcombat
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field joined string # TODO: definition of field (and proper typing)
+--- event_combat triggers when a mob enters or leaves combat [docs](https://docs.eqemu.io/quest-api/events/#event_combat)
+---@class NPCEventCombat
+---@field self NPC # NPC who is handling the event
+---@field other Mob # Mob that triggered the event
+---@field joined boolean # Is this a joining or leaving hate list event?
 
---- event_combat is a NPC event when combat occurs.
----@param e NPCEventcombat
+--- event_combat triggers when a mob enters or leaves combat [docs](https://docs.eqemu.io/quest-api/events/#event_combat)
+---@param e NPCEventCombat
 function event_combat(e) end
 
----@class NPCEventdeath
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field killer_id number # TODO: definition of field (and proper typing)
----@field damage string # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
----@field skill_id number # TODO: definition of field (and proper typing)
----@field corpse string # TODO: definition of field (and proper typing)
----@field killed string # TODO: definition of field (and proper typing)
+--- event_death triggers when an NPC dies [docs](https://docs.eqemu.io/quest-api/events/#event_death)
+---@class NPCEventDeath
+---@field self NPC # NPC who is handling the event
+---@field other Mob # Mob that triggered the event, but may not be reliable vs killerID
+---@field killer_id number # Entity ID of mob that killed NPC
+---@field damage number # Final damage amount that was killing blow
+---@field spell Spell|nil # Spell instance that was used
+---@field skill_id number # Skill ID that was used for killing blow
+---@field corpse Corpse|nil # Corpse of dying NPC
+---@field killed Mob|nil # Killer mob, if any
 
---- event_death is a NPC event when death occurs.
----@param e NPCEventdeath
+--- event_death triggers when an NPC dies [docs](https://docs.eqemu.io/quest-api/events/#event_death)
+---@param e NPCEventDeath
 function event_death(e) end
 
 ---@class NPCEventdeathcomplete
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field killer_id number # TODO: definition of field (and proper typing)
----@field damage string # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
+---@field killer_id number # Entity ID of mob that killed NPC
+---@field damage number # Final damage amount that was killing blow
+---@field spell Spell|nil # Spell instance that was used
 ---@field skill_id number # TODO: definition of field (and proper typing)
----@field corpse string # TODO: definition of field (and proper typing)
----@field killed string # TODO: definition of field (and proper typing)
+---@field corpse Corpse|nil # Corpse of dying NPC
+---@field killed Mob|nil # Killer mob, if any
 
 --- event_death_complete is a NPC event when deathcomplete occurs.
 ---@param e NPCEventdeathcomplete
 function event_death_complete(e) end
 
 ---@class NPCEventdeathzone
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field killer_id number # TODO: definition of field (and proper typing)
----@field damage string # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
+---@field killer_id number # Entity ID of mob that killed NPC
+---@field damage number # Final damage amount that was killing blow
+---@field spell Spell|nil # Spell instance that was used
 ---@field skill_id number # TODO: definition of field (and proper typing)
----@field corpse string # TODO: definition of field (and proper typing)
----@field killed string # TODO: definition of field (and proper typing)
+---@field corpse Corpse|nil # Corpse of dying NPC
+---@field killed Mob|nil # Killer mob, if any
 
 --- event_death_zone is a NPC event when deathzone occurs.
 ---@param e NPCEventdeathzone
 function event_death_zone(e) end
 
----@class NPCEvententer
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+--- event_enter triggers when a client enters an NPC proximity based on eq.set_proximity() [docs](https://docs.eqemu.io/quest-api/events/#event_enter)
+---@class NPCEventEnter
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
 
---- event_enter is a NPC event when enter occurs.
----@param e NPCEvententer
+--- event_enter triggers when a client enters an NPC proximity based on eq.set_proximity() [docs](https://docs.eqemu.io/quest-api/events/#event_enter)
+---@param e NPCEventEnter
 function event_enter(e) end
 
 ---@class NPCEvententerarea
----@field self NPC # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
 ---@field area_id number # TODO: definition of field (and proper typing)
 ---@field area_type string # TODO: definition of field (and proper typing)
 
@@ -440,50 +445,53 @@ function event_enter(e) end
 ---@param e NPCEvententerarea
 function event_enter_area(e) end
 
----@class NPCEventexit
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+--- event_exit triggers when a client exit an NPC proximity based on eq.set_proximity() [docs](https://docs.eqemu.io/quest-api/events/#event_exit)
+---@class NPCEventExit
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
 
---- event_exit is a NPC event when exit occurs.
----@param e NPCEventexit
+--- event_exit triggers when a client exit an NPC proximity based on eq.set_proximity() [docs](https://docs.eqemu.io/quest-api/events/#event_exit)
+---@param e NPCEventExit
 function event_exit(e) end
 
+--- event_feign_death triggers when a client feign deaths while aggro'd to an NPC [docs](https://docs.eqemu.io/quest-api/events/#event_feign_death)
 ---@class NPCEventfeigndeath
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
 
---- event_feign_death is a NPC event when feigndeath occurs.
+--- event_feign_death triggers when a client feign deaths while aggro'd to an NPC [docs](https://docs.eqemu.io/quest-api/events/#event_feign_death)
 ---@param e NPCEventfeigndeath
 function event_feign_death(e) end
 
----@class NPCEventhatelist
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field joined string # TODO: definition of field (and proper typing)
+--- event_hate_list triggers when a mob's hate list has changed [docs](https://docs.eqemu.io/quest-api/events/#event_hate_list)
+---@class NPCEventHateList
+---@field self NPC # NPC who is handling the event
+---@field other Mob # Mob that triggered the event
+---@field joined boolean Is this a joining or leaving hate list event?
 
---- event_hate_list is a NPC event when hatelist occurs.
----@param e NPCEventhatelist
+--- event_hate_list triggers when a mob enters or leaves an NPC hate list [docs](https://docs.eqemu.io/quest-api/events/#event_hate_list)
+---@param e NPCEventHateList
 function event_hate_list(e) end
 
----@class NPCEventhp
----@field self NPC # TODO: definition of field (and proper typing)
----@field hp_event string # TODO: definition of field (and proper typing)
----@field inc_hp_event string # TODO: definition of field (and proper typing)
+--- event_hp triggers when an NPC HP hits a threshold set via eq.set_next_hp_event() [docs](https://docs.eqemu.io/quest-api/events/#event_hp)
+---@class NPCEventHP
+---@field self NPC # NPC who is handling the event
+---@field hp_pct number # percent of HP that event triggered on
+---@field inc_hp_pct number # percent of HP the mob currently has
 
---- event_hp is a NPC event when hp occurs.
----@param e NPCEventhp
+---@param e NPCEventHP # event_hp triggers when an NPC HP hits a threshold set via eq.set_next_hp_event() [docs](https://docs.eqemu.io/quest-api/events/#event_hp)
 function event_hp(e) end
 
----@class NPCEventkilledmerit
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+---@class NPCEventKilledMerit
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
 
---- event_killed_merit is a NPC event when killedmerit occurs.
----@param e NPCEventkilledmerit
+--- event_killed_merit triggers when a client kills an NPC [docs](https://docs.eqemu.io/quest-api/events/#event_killed_merit)
+---@param e NPCEventKilledMerit
 function event_killed_merit(e) end
 
 ---@class NPCEventleavearea
----@field self NPC # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
 ---@field area_id number # TODO: definition of field (and proper typing)
 ---@field area_type string # TODO: definition of field (and proper typing)
 
@@ -492,105 +500,115 @@ function event_killed_merit(e) end
 function event_leave_area(e) end
 
 ---@class NPCEventlootzone
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
 ---@field item string # TODO: definition of field (and proper typing)
----@field corpse string # TODO: definition of field (and proper typing)
+---@field corpse Corpse|nil # Corpse of dying NPC
 
 --- event_loot_zone is a NPC event when lootzone occurs.
 ---@param e NPCEventlootzone
 function event_loot_zone(e) end
 
----@class NPCEventpopupresponse
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field popup_id number # TODO: definition of field (and proper typing)
+--- event_popup_response triggers when a Mob responds to an NPC Popup [docs](https://docs.eqemu.io/quest-api/events/#event_popupresponse)
+---@class NPCEventPopupResponse
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
+---@field popup_id number # Popup index, set by the initial popup
 
---- event_popup_response is a NPC event when popupresponse occurs.
----@param e NPCEventpopupresponse
+--- event_popup_response triggers when a Mob responds to an NPC Popup [docs](https://docs.eqemu.io/quest-api/events/#event_popupresponse)
+---@param e NPCEventPopupResponse
 function event_popup_response(e) end
 
 ---@class NPCEventproximitysay
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field message string # TODO: definition of field (and proper typing)
----@field language string # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
+---@field message string # Message client said to npc
+---@field language Languages # Language client said message in
 
 --- event_proximity_say is a NPC event when proximitysay occurs.
 ---@param e NPCEventproximitysay
 function event_proximity_say(e) end
 
----@class NPCEventsay
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field message string # TODO: definition of field (and proper typing)
----@field language string # TODO: definition of field (and proper typing)
+--- event_say arguments when a player says something to an NPC [docs](https://docs.eqemu.io/quest-api/events/#event_say)
+---@class NPCEventSay
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
+---@field message string # Message client said to npc
+---@field language Languages # Language client said message in
+---@field item1 ItemInst # Item in slot 1, if applicable
+---@field item2 ItemInst # Item in slot 2, if applicable
+---@field item3 ItemInst # Item in slot 2, if applicable
+---@field item4 ItemInst # Item in slot 2, if applicable
 
---- event_say is a NPC event when say occurs.
----@param e NPCEventsay
+--- event_say triggers when a player says something to an NPC. [docs](https://docs.eqemu.io/quest-api/events/#event_say)
+---@param e NPCEventSay
 function event_say(e) end
 
----@class NPCEventsignal
----@field self NPC # TODO: definition of field (and proper typing)
----@field signal string # TODO: definition of field (and proper typing)
+---@class NPCEventSignal
+---@field self NPC # NPC who is handling the event
+---@field signal number # number to uniquely identify signal
 
---- event_signal is a NPC event when signal occurs.
----@param e NPCEventsignal
+--- event_signal triggers when an NPC receives a signal via eq.signal() [docs](https://docs.eqemu.io/quest-api/events/#event_slay)
+---@param e NPCEventSignal
 function event_signal(e) end
 
----@class NPCEventslay
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+--- event_slay triggers when an NPC dies [docs](https://docs.eqemu.io/quest-api/events/#event_slay)
+---@class NPCEventSlay
+---@field self NPC # NPC who is handling the event
+---@field other Mob # Mob that triggered the event
 
---- event_slay is a NPC event when slay occurs.
----@param e NPCEventslay
+--- event_slay triggers when an NPC dies [docs](https://docs.eqemu.io/quest-api/events/#event_slay)
+---@param e NPCEventSlay
 function event_slay(e) end
 
 ---@class NPCEventspawn
----@field self NPC # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
 
 --- event_spawn is a NPC event when spawn occurs.
 ---@param e NPCEventspawn
 function event_spawn(e) end
 
 ---@class NPCEventspawnzone
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
 
 --- event_spawn_zone is a NPC event when spawnzone occurs.
 ---@param e NPCEventspawnzone
 function event_spawn_zone(e) end
 
----@class NPCEventtargetchange
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+--- event_target_change triggers when a NPC changes their target [docs](https://docs.eqemu.io/quest-api/events/#event_target_change)
+---@class NPCEventTargetChange
+---@field self NPC # NPC who is handling the event
+---@field other Mob # Mob that triggered the event
 
---- event_target_change is a NPC event when targetchange occurs.
----@param e NPCEventtargetchange
+--- event_target_change triggers when a NPC changes their target [docs](https://docs.eqemu.io/quest-api/events/#event_target_change)
+---@param e NPCEventTargetChange
 function event_target_change(e) end
 
----@class NPCEventtaskaccepted
----@field self NPC # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field task_id number # TODO: definition of field (and proper typing)
+--- event_task_accepted triggers when a client accepts an NPC task [docs](https://docs.eqemu.io/quest-api/events/#event_task_accepted)
+---@class NPCEventTaskAccepted
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
+---@field task_id number # Task ID client accepted
 
---- event_task_accepted is a NPC event when taskaccepted occurs.
----@param e NPCEventtaskaccepted
+--- event_task_accepted triggers when a client accepts an NPC task [docs](https://docs.eqemu.io/quest-api/events/#event_task_accepted)
+---@param e NPCEventTaskAccepted
 function event_task_accepted(e) end
 
 ---@class NPCEventtick
----@field self NPC # TODO: definition of field (and proper typing)
+---@field self NPC # NPC who is handling the event
 
 --- event_tick is a NPC event when tick occurs.
 ---@param e NPCEventtick
 function event_tick(e) end
 
----@class NPCEventtimer
----@field self NPC # TODO: definition of field (and proper typing)
----@field timer string # TODO: definition of field (and proper typing)
+--- event_timer triggers when a timer is set via eq.set_timer(). Using eq.stop_timer(name) or eq.stop_all_timers() should be called to stop a timer [docs](https://docs.eqemu.io/quest-api/events/#event_timer)
+---@class NPCEventTimer
+---@field self NPC # NPC who is handling the event
+---@field timer string # name of timer that triggered
 
---- event_timer is a NPC event when timer occurs.
----@param e NPCEventtimer
+--- event_timer triggers when a timer is set via eq.set_timer(). Using eq.stop_timer(name) or eq.stop_all_timers() should be called to stop a timer [docs](https://docs.eqemu.io/quest-api/events/#event_timer)
+---@param e NPCEventTimer
 function event_timer(e) end
 
 ---@class PlayerEventaagain
@@ -636,7 +654,7 @@ function event_(e) end
 
 ---@class PlayerEventcast
 ---@field self Client # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field spell Spell|nil # Spell instance that was used
 ---@field caster_id number # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 
@@ -646,7 +664,7 @@ function event_cast(e) end
 
 ---@class PlayerEventcastbegin
 ---@field self Client # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field spell Spell|nil # Spell instance that was used
 ---@field caster_id number # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 
@@ -656,7 +674,7 @@ function event_cast_begin(e) end
 
 ---@class PlayerEventcaston
 ---@field self Client # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field spell Spell|nil # Spell instance that was used
 ---@field caster_id number # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 
@@ -751,10 +769,10 @@ function event_consider_corpse(e) end
 
 ---@class PlayerEventdeath
 ---@field self Client # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field killer_id number # TODO: definition of field (and proper typing)
----@field damage string # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
+---@field killer_id number # Entity ID of mob that killed NPC
+---@field damage number # Final damage amount that was killing blow
+---@field spell Spell|nil # Spell instance that was used
 ---@field skill string # TODO: definition of field (and proper typing)
 
 --- event_death is a Player event when death occurs.
@@ -763,10 +781,10 @@ function event_death(e) end
 
 ---@class PlayerEventdeathcomplete
 ---@field self Client # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
----@field killer_id number # TODO: definition of field (and proper typing)
----@field damage string # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
+---@field killer_id number # Entity ID of mob that killed NPC
+---@field damage number # Final damage amount that was killing blow
+---@field spell Spell|nil # Spell instance that was used
 ---@field skill string # TODO: definition of field (and proper typing)
 
 --- event_death_complete is a Player event when deathcomplete occurs.
@@ -790,7 +808,7 @@ function event_discover_item(e) end
 
 ---@class PlayerEventduellose
 ---@field self Client # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
 
 --- event_duel_lose is a Player event when duellose occurs.
 ---@param e PlayerEventduellose
@@ -798,7 +816,7 @@ function event_duel_lose(e) end
 
 ---@class PlayerEventduelwin
 ---@field self Client # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
 
 --- event_duel_win is a Player event when duelwin occurs.
 ---@param e PlayerEventduelwin
@@ -836,7 +854,7 @@ function event_equip_item_client(e) end
 
 ---@class PlayerEventfeigndeath
 ---@field self Client # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
 
 --- event_feign_death is a Player event when feigndeath occurs.
 ---@param e PlayerEventfeigndeath
@@ -888,7 +906,7 @@ function event_group_change(e) end
 
 ---@class PlayerEventinspect
 ---@field self Client # TODO: definition of field (and proper typing)
----@field other Client # TODO: definition of field (and proper typing)
+---@field other Client # Client that triggered the event
 
 --- event_inspect is a Player event when inspect occurs.
 ---@param e PlayerEventinspect
@@ -896,7 +914,7 @@ function event_inspect(e) end
 
 ---@class PlayerEventlanguageskillup
 ---@field self Client # TODO: definition of field (and proper typing)
----@field skill_id number # TODO: definition of field (and proper typing)
+---@field skillID Languages # Language that skilled up
 ---@field skill_value string # TODO: definition of field (and proper typing)
 ---@field skill_max string # TODO: definition of field (and proper typing)
 ---@field is_tradeskill string # TODO: definition of field (and proper typing)
@@ -924,7 +942,7 @@ function event_level_up(e) end
 ---@class PlayerEventloot
 ---@field self Client # TODO: definition of field (and proper typing)
 ---@field item string # TODO: definition of field (and proper typing)
----@field corpse string # TODO: definition of field (and proper typing)
+---@field corpse Corpse|nil # Corpse of dying NPC
 
 --- event_loot is a Player event when loot occurs.
 ---@param e PlayerEventloot
@@ -962,12 +980,12 @@ function event_merchant_sell(e) end
 ---@param e PlayerEventplayerpickup
 function event_player_pickup(e) end
 
----@class PlayerEventpopupresponse
+---@class PlayerEventPopupResponse
 ---@field self Client # TODO: definition of field (and proper typing)
 ---@field popup_id number # TODO: definition of field (and proper typing)
 
 --- event_popup_response is a Player event when popupresponse occurs.
----@param e PlayerEventpopupresponse
+---@param e PlayerEventPopupResponse
 function event_popup_response(e) end
 
 ---@class PlayerEvent
@@ -981,8 +999,8 @@ function event_(e) end
 
 ---@class PlayerEventsay
 ---@field self Client # TODO: definition of field (and proper typing)
----@field message string # TODO: definition of field (and proper typing)
----@field language string # TODO: definition of field (and proper typing)
+---@field message string # Message client said to npc
+---@field language Languages # Language player said message in
 
 --- event_say is a Player event when say occurs.
 ---@param e PlayerEventsay
@@ -1089,7 +1107,7 @@ function event_unequip_item_client(e) end
 
 ---@class PlayerEventunhandledopcode
 ---@field self Client # TODO: definition of field (and proper typing)
----@field packet string # TODO: definition of field (and proper typing)
+---@field packet PacketType # TODO: definition of field (and proper typing)
 ---@field connecting string # TODO: definition of field (and proper typing)
 
 --- event_unhandled_opcode is a Player event when unhandledopcode occurs.
@@ -1136,7 +1154,7 @@ function event_zone(e) end
 ---@field tics_remaining string # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 ---@field buff_slot string # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field spell Spell|nil # Spell instance that was used
 
 --- event_spell_buff_tic is a Spell event when spellbufftic occurs.
 ---@param e SpellEventspellbufftic
@@ -1150,7 +1168,7 @@ function event_spell_buff_tic(e) end
 ---@field tics_remaining string # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 ---@field buff_slot string # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field spell Spell|nil # Spell instance that was used
 
 --- event_spell_effect is a Spell event when spelleffect occurs.
 ---@param e SpellEventspelleffect
@@ -1172,7 +1190,7 @@ function event_spell_effect_translocate_complete(e) end
 ---@field tics_remaining string # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 ---@field buff_slot string # TODO: definition of field (and proper typing)
----@field spell string # TODO: definition of field (and proper typing)
+---@field spell Spell|nil # Spell instance that was used
 
 --- event_spell_fade is a Spell event when spellfade occurs.
 ---@param e SpellEventspellfade
@@ -1187,3 +1205,12 @@ function event_spell_fade(e) end
 --- Occurs when a player receives a packet
 ---@param e PlayerEventplayerpacket
 function event_player_packet(e) end
+
+---@class NpcEventPayload
+---@field self NPC # NPC who is handling the event
+---@field payload_id number # unique identifier of the payload
+---@field payload_value string # raw payload, can be json, csv or other formats
+
+--- event_payload triggers when a mob SendPayload() is called, allowing for large data payloads compared to signal [docs](https://docs.eqemu.io/quest-api/events/#event_payload)
+---@param e NpcEventPayload
+function event_payload(e) end
