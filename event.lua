@@ -684,7 +684,7 @@ function event_cast_on(e) end
 
 ---@class PlayerEventclickdoor
 ---@field self Client # TODO: definition of field (and proper typing)
----@field door string # TODO: definition of field (and proper typing)
+---@field door Door # TODO: definition of field (and proper typing)
 
 --- event_click_door is a Player event when clickdoor occurs.
 ---@param e PlayerEventclickdoor
@@ -692,7 +692,7 @@ function event_click_door(e) end
 
 ---@class PlayerEventclickobject
 ---@field self Client # TODO: definition of field (and proper typing)
----@field object string # TODO: definition of field (and proper typing)
+---@field object Object # TODO: definition of field (and proper typing)
 
 --- event_click_object is a Player event when clickobject occurs.
 ---@param e PlayerEventclickobject

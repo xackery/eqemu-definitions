@@ -882,6 +882,7 @@ function Mob:GetSpellBonuses() end
 
 function Mob:GetSpellHPBonuses() end
 
+---@return Mob Mob
 function Mob:GetTarget() end
 
 function Mob:GetTexture() end
