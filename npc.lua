@@ -272,8 +272,8 @@ function NPC:ModifyNPCStat(stat, value) end
 ---@param x number # TODO: definition of parameter
 ---@param y number # TODO: definition of parameter
 ---@param z number # TODO: definition of parameter
----@param h number # TODO: definition of parameter
----@param save boolean # TODO: definition of parameter
+---@param h? number # TODO: definition of parameter
+---@param save? boolean # TODO: definition of parameter
 function NPC:MoveTo(x, y, z, h, save) end
 
 function NPC:NextGuardPosition() end

@@ -643,15 +643,6 @@ function event_alt_currency_merchant_buy(e) end
 ---@param e PlayerEventaltcurrencymerchantsell
 function event_alt_currency_merchant_sell(e) end
 
----@class PlayerEvent
----@field self Client # TODO: definition of field (and proper typing)
----@field bot_command string # TODO: definition of field (and proper typing)
----@field args string # TODO: definition of field (and proper typing)
-
---- event_ is a Player event when  occurs.
----@param e PlayerEvent
-function event_(e) end
-
 ---@class PlayerEventcast
 ---@field self Client # TODO: definition of field (and proper typing)
 ---@field spell Spell|nil # Spell instance that was used
@@ -697,43 +688,6 @@ function event_click_door(e) end
 --- event_click_object is a Player event when clickobject occurs.
 ---@param e PlayerEventclickobject
 function event_click_object(e) end
-
----@class PlayerEvent
----@field self Client # TODO: definition of field (and proper typing)
----@field container_slot string # TODO: definition of field (and proper typing)
-
---- event_ is a Player event when  occurs.
----@param e PlayerEvent
-function event_(e) end
-
----@class PlayerEvent
----@field self Client # TODO: definition of field (and proper typing)
----@field recipe_id number # TODO: definition of field (and proper typing)
----@field recipe_name string # TODO: definition of field (and proper typing)
-
---- event_ is a Player event when  occurs.
----@param e PlayerEvent
-function event_(e) end
-
----@class PlayerEvent
----@field self Client # TODO: definition of field (and proper typing)
----@field recipe_id number # TODO: definition of field (and proper typing)
----@field recipe_name string # TODO: definition of field (and proper typing)
-
---- event_ is a Player event when  occurs.
----@param e PlayerEvent
-function event_(e) end
-
----@class PlayerEvent
----@field self Client # TODO: definition of field (and proper typing)
----@field recipe_id number # TODO: definition of field (and proper typing)
----@field validate_type string # TODO: definition of field (and proper typing)
----@field zone_id number # TODO: definition of field (and proper typing)
----@field tradeskill_id number # TODO: definition of field (and proper typing)
-
---- event_ is a Player event when  occurs.
----@param e PlayerEvent
-function event_(e) end
 
 ---@class PlayerEventcommand
 ---@field self Client # TODO: definition of field (and proper typing)
@@ -1200,7 +1154,7 @@ function event_spell_fade(e) end
 ---@class PlayerEventplayerpacket
 ---@field self Client # TODO: definition of field (and proper typing)
 ---@field isConnecting boolean # returns true if the packet is in a connecting state
----@field packet Packet # Packet information
+---@field packet PacketType # Packet information
 
 --- Occurs when a player receives a packet
 ---@param e PlayerEventplayerpacket

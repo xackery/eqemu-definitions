@@ -662,7 +662,8 @@ function Mob:GetDrakkinHeritage() end
 
 function Mob:GetDrakkinTattoo() end
 
----@param name number # TODO: definition of parameter (and type this)
+---@param name string # TODO: definition of parameter (and type this)
+---@return string
 function Mob:GetEntityVariable(name) end
 
 function Mob:GetEyeColor1() end
