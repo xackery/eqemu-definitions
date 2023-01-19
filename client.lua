@@ -1,12 +1,14 @@
 ---@meta
 
----TODO: definition for Client
+---A Client represents a connected player
 ---@class Client : Mob
 Client = {}
 
-function Client:AccountID() end
+---@return number
+function Client:AccountID() end --- AccountID is a unique identifier for the account the client connects with, and contains multiple characters
 
-function Client:AccountName() end
+---@return string
+function Client:AccountName() end --- AccountName is the login name used in the loginserver
 
 ---@param points number # TODO: definition of parameter
 function Client:AddAAPoints(points) end

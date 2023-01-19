@@ -1,6 +1,6 @@
 ---@meta
 
----TODO: definition for Bot
+---A Bot is a server driven client that can be grouped, similar to a mercenary
 ---@class Bot
 Bot = {}
 
