@@ -954,14 +954,17 @@ function eq.get_currency_id(item_id) end
 ---@param currency_id number # TODO: definition of parameter (and type this)
 function eq.get_currency_item_id(currency_id) end
 
----@param bucket_key number # TODO: definition of parameter (and type this)
+---@param bucket_key string # TODO: definition of parameter (and type this)
+---@returns string
 function eq.get_data(bucket_key) end
 
----@param bucket_key number # TODO: definition of parameter (and type this)
+---@param bucket_key string # TODO: definition of parameter (and type this)
+---@returns string
 function eq.get_data_expires(bucket_key) end
 
----@param bucket_name number # TODO: definition of parameter (and type this)
-function eq.get_data_remaining(bucket_name) end
+---@param bucket_key string # TODO: definition of parameter (and type this)
+---@returns string
+function eq.get_data_remaining(bucket_key) end
 
 ---@param deity_id number # TODO: definition of parameter
 function eq.get_deity_name(deity_id) end
@@ -1660,6 +1663,7 @@ function eq.snow(weather) end
 ---@param y number # TODO: definition of parameter
 ---@param z number # TODO: definition of parameter
 ---@param heading number # TODO: definition of parameter
+---@return Mob # Newly spawned mob
 function eq.spawn2(npc_type, grid, unused, x, y, z, heading) end
 
 ---@param zone string # TODO: definition of parameter

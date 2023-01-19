@@ -22,14 +22,19 @@ function Door:ForceOpen(sender) end
 
 function Door:GetDisableTimer() end
 
+---@return number
 function Door:GetDoorDBID() end
 
+---@return number
 function Door:GetDoorID() end
 
+---@return string
 function Door:GetDoorName() end
 
+---@return number
 function Door:GetHeading() end
 
+---@return number
 function Door:GetIncline() end
 
 function Door:GetKeyItem() end
@@ -40,12 +45,16 @@ function Door:GetNoKeyring() end
 
 function Door:GetOpenType() end
 
+---@return number
 function Door:GetSize() end
 
+---@return number
 function Door:GetX() end
 
+---@return number
 function Door:GetY() end
 
+---@return number
 function Door:GetZ() end
 
 ---@param flag boolean # TODO: definition of parameter
