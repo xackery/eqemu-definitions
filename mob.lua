@@ -9,111 +9,43 @@ function Mob:AddNimbusEffect(effect_id) end
 
 ---@param other Mob # TODO: definition of parameter
 ---@param hate number # TODO: definition of parameter
----@param damage number # TODO: definition of parameter
----@param yell_for_help boolean # TODO: definition of parameter
----@param frenzy boolean # TODO: definition of parameter
----@param buff_tic boolean # TODO: definition of parameter
+---@param damage? number # TODO: definition of parameter
+---@param yell_for_help? boolean # TODO: definition of parameter
+---@param frenzy? boolean # TODO: definition of parameter
+---@param buff_tic? boolean # TODO: definition of parameter
 function Mob:AddToHateList(other, hate, damage, yell_for_help, frenzy, buff_tic) end
 
----@param other Mob # TODO: definition of parameter
----@param hate number # TODO: definition of parameter
-function Mob:AddToHateList(other, hate) end
-
----@param other Mob # TODO: definition of parameter
----@param hate number # TODO: definition of parameter
----@param damage number # TODO: definition of parameter
-function Mob:AddToHateList(other, hate, damage) end
-
----@param other Mob # TODO: definition of parameter
-function Mob:AddToHateList(other) end
-
----@param other Mob # TODO: definition of parameter
----@param hate number # TODO: definition of parameter
----@param damage number # TODO: definition of parameter
----@param yell_for_help boolean # TODO: definition of parameter
-function Mob:AddToHateList(other, hate, damage, yell_for_help) end
-
----@param other Mob # TODO: definition of parameter
----@param hate number # TODO: definition of parameter
----@param damage number # TODO: definition of parameter
----@param yell_for_help boolean # TODO: definition of parameter
----@param frenzy boolean # TODO: definition of parameter
-function Mob:AddToHateList(other, hate, damage, yell_for_help, frenzy) end
-
 ---@param spell_id number # TODO: definition of parameter
-function Mob:ApplySpellBuff(spell_id) end
-
----@param spell_id number # TODO: definition of parameter
----@param duration number # TODO: definition of parameter
+---@param duration? number # TODO: definition of parameter
 function Mob:ApplySpellBuff(spell_id, duration) end
 
 ---@param other Mob # TODO: definition of parameter
----@param hand number # TODO: definition of parameter
----@param from_riposte number # TODO: definition of parameter (and type this)
----@param is_strikethrough number # TODO: definition of parameter (and type this)
----@param is_from_spell number # TODO: definition of parameter (and type this)
----@param opts Object # TODO: definition of parameter
+---@param hand? number # TODO: definition of parameter
+---@param from_riposte? number # TODO: definition of parameter (and type this)
+---@param is_strikethrough? number # TODO: definition of parameter (and type this)
+---@param is_from_spell? number # TODO: definition of parameter (and type this)
+---@param opts? Object # TODO: definition of parameter
 function Mob:Attack(other, hand, from_riposte, is_strikethrough, is_from_spell, opts) end
-
----@param other Mob # TODO: definition of parameter
----@param hand number # TODO: definition of parameter
----@param from_riposte number # TODO: definition of parameter (and type this)
----@param is_strikethrough number # TODO: definition of parameter (and type this)
-function Mob:Attack(other, hand, from_riposte, is_strikethrough) end
-
----@param other Mob # TODO: definition of parameter
----@param hand number # TODO: definition of parameter
----@param from_riposte number # TODO: definition of parameter (and type this)
----@param is_strikethrough number # TODO: definition of parameter (and type this)
----@param is_from_spell number # TODO: definition of parameter (and type this)
-function Mob:Attack(other, hand, from_riposte, is_strikethrough, is_from_spell) end
-
----@param other Mob # TODO: definition of parameter
----@param hand number # TODO: definition of parameter
----@param from_riposte number # TODO: definition of parameter (and type this)
-function Mob:Attack(other, hand, from_riposte) end
-
----@param other Mob # TODO: definition of parameter
-function Mob:Attack(other) end
-
----@param other Mob # TODO: definition of parameter
----@param hand number # TODO: definition of parameter
-function Mob:Attack(other, hand) end
 
 ---@param Hand number # TODO: definition of parameter (and type this)
 ---@param weapon ItemInst # TODO: definition of parameter
 function Mob:AttackAnimation(Hand, weapon) end
 
----@param other Mob # TODO: definition of parameter
----@param x number # TODO: definition of parameter
-function Mob:BehindMob(other, x) end
-
----@param other Mob # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
+---@param other? Mob # TODO: definition of parameter
+---@param x? number # TODO: definition of parameter
+---@param y? number # TODO: definition of parameter
 function Mob:BehindMob(other, x, y) end
-
----@param other Mob # TODO: definition of parameter
-function Mob:BehindMob(other) end
-
-function Mob:BehindMob() end
 
 function Mob:BuffCount() end
 
 function Mob:BuffFadeAll() end
 
 ---@param effect_id number # TODO: definition of parameter
-function Mob:BuffFadeByEffect(effect_id) end
-
----@param effect_id number # TODO: definition of parameter
----@param skipslot number # TODO: definition of parameter
+---@param skipslot? number # TODO: definition of parameter
 function Mob:BuffFadeByEffect(effect_id, skipslot) end
 
 ---@param slot number # TODO: definition of parameter
-function Mob:BuffFadeBySlot(slot) end
-
----@param slot number # TODO: definition of parameter
----@param recalc_bonuses boolean # TODO: definition of parameter
+---@param recalc_bonuses? boolean # TODO: definition of parameter
 function Mob:BuffFadeBySlot(slot, recalc_bonuses) end
 
 ---@param spell_id number # TODO: definition of parameter
@@ -942,17 +874,12 @@ function Mob:HasTwoHanderEquipped() end
 
 function Mob:Heal() end
 
----@param amount uint64 # TODO: definition of parameter
----@param other Mob # TODO: definition of parameter
+---@param amount number # TODO: definition of parameter
+---@param other? Mob # TODO: definition of parameter
 function Mob:HealDamage(amount, other) end
 
----@param amount uint64 # TODO: definition of parameter
-function Mob:HealDamage(amount) end
-
----@param spell_id number # TODO: definition of parameter
+---@param spell_id? number # TODO: definition of parameter
 function Mob:InterruptSpell(spell_id) end
-
-function Mob:InterruptSpell() end
 
 function Mob:IsAIControlled() end
 

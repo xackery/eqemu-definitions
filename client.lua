@@ -1297,11 +1297,11 @@ function Client:SummonItem(item_id, charges, aug1, aug2, aug3, aug4, aug5) end
 
 function Client:TGB() end
 
----@param copper uint64 # TODO: definition of parameter
+---@param copper number # TODO: definition of parameter
 ---@param update_client number # TODO: definition of parameter (and type this)
 function Client:TakeMoneyFromPP(copper, update_client) end
 
----@param copper uint64 # TODO: definition of parameter
+---@param copper number # TODO: definition of parameter
 function Client:TakeMoneyFromPP(copper) end
 
 ---@param platinum number # TODO: definition of parameter
