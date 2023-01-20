@@ -22,7 +22,7 @@ function Object:EntityVariableExists(name) end
 
 function Object:GetDBID() end
 
----@param name # TODO: definition of parameter (and type this)
+---@param name string # TODO: definition of parameter (and type this)
 function Object:GetEntityVariable(name) end
 
 function Object:GetHeading() end

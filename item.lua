@@ -32,13 +32,13 @@ function Item:AugDistiller() end
 
 function Item:AugRestrict() end
 
----@param i # TODO: definition of parameter (and type this)
+---@param i number # TODO: definition of parameter (and type this)
 function Item:AugSlotType(i) end
 
----@param i # TODO: definition of parameter (and type this)
+---@param i number # TODO: definition of parameter (and type this)
 function Item:AugSlotUnk2(i) end
 
----@param i # TODO: definition of parameter (and type this)
+---@param i number # TODO: definition of parameter (and type this)
 function Item:AugSlotVisible(i) end
 
 function Item:AugType() end
@@ -235,6 +235,7 @@ function Item:Lore() end
 
 function Item:LoreFlag() end
 
+---@return LoreGroup # Lore group
 function Item:LoreGroup() end
 
 function Item:MR() end

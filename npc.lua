@@ -122,7 +122,7 @@ function NPC:CalculateNewWaypoint() end
 ---@param last_name string # TODO: definition of parameter
 function NPC:ChangeLastName(last_name) end
 
----@param faction # TODO: definition of parameter (and type this)
+---@param faction number # TODO: definition of parameter (and type this)
 function NPC:CheckNPCFactionAlly(faction) end
 
 function NPC:ClearItemList() end

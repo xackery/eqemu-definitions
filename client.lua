@@ -237,35 +237,17 @@ function Client:FindSpellBookSlotBySpellID(spell_id) end
 ---@param target_x number # TODO: definition of parameter
 ---@param target_y number # TODO: definition of parameter
 ---@param target_z number # TODO: definition of parameter
----@param ignore_los boolean # TODO: definition of parameter
----@param clipping boolean # TODO: definition of parameter
+---@param ignore_los? boolean # TODO: definition of parameter
+---@param clipping? boolean # TODO: definition of parameter
 function Client:Fling(value, target_x, target_y, target_z, ignore_los, clipping) end
 
----@param value number # TODO: definition of parameter
----@param target_x number # TODO: definition of parameter
----@param target_y number # TODO: definition of parameter
----@param target_z number # TODO: definition of parameter
-function Client:Fling(value, target_x, target_y, target_z) end
-
----@param value number # TODO: definition of parameter
----@param target_x number # TODO: definition of parameter
----@param target_y number # TODO: definition of parameter
----@param target_z number # TODO: definition of parameter
----@param ignore_los boolean # TODO: definition of parameter
-function Client:Fling(value, target_x, target_y, target_z, ignore_los) end
-
-function Client:ForageItem() end
-
----@param guarantee boolean # TODO: definition of parameter
+---@param guarantee? boolean # TODO: definition of parameter
 function Client:ForageItem(guarantee) end
 
 function Client:Freeze() end
 
 ---@param zone_id number # TODO: definition of parameter
-function Client:GetAAEXPModifier(zone_id) end
-
----@param zone_id number # TODO: definition of parameter
----@param instance_version number # TODO: definition of parameter
+---@param instance_version? number # TODO: definition of parameter
 function Client:GetAAEXPModifier(zone_id, instance_version) end
 
 function Client:GetAAExp() end
@@ -310,44 +292,28 @@ function Client:GetBaseSTR() end
 
 function Client:GetBaseWIS() end
 
-function Client:GetBindHeading() end
-
----@param index number # TODO: definition of parameter
+---@param index? number # TODO: definition of parameter
 function Client:GetBindHeading(index) end
 
-function Client:GetBindX() end
-
----@param index number # TODO: definition of parameter
+---@param index? number # TODO: definition of parameter
 function Client:GetBindX(index) end
 
-function Client:GetBindY() end
-
----@param index number # TODO: definition of parameter
+---@param index? number # TODO: definition of parameter
 function Client:GetBindY(index) end
 
-function Client:GetBindZ() end
-
----@param index number # TODO: definition of parameter
+---@param index? number # TODO: definition of parameter
 function Client:GetBindZ(index) end
 
----@param index number # TODO: definition of parameter
+---@param index? number # TODO: definition of parameter
 function Client:GetBindZoneID(index) end
 
-function Client:GetBindZoneID() end
-
----@param class_id number # TODO: definition of parameter
+---@param class_id? number # TODO: definition of parameter
 function Client:GetBotCreationLimit(class_id) end
 
-function Client:GetBotCreationLimit() end
-
----@param class_id number # TODO: definition of parameter
+---@param class_id? number # TODO: definition of parameter
 function Client:GetBotRequiredLevel(class_id) end
 
-function Client:GetBotRequiredLevel() end
-
-function Client:GetBotSpawnLimit() end
-
----@param class_id number # TODO: definition of parameter
+---@param class_id? number # TODO: definition of parameter
 function Client:GetBotSpawnLimit(class_id) end
 
 function Client:GetCarriedMoney() end
@@ -385,11 +351,8 @@ function Client:GetDuelTarget() end
 function Client:GetEXP() end
 
 ---@param zone_id number # TODO: definition of parameter
----@param instance_version number # TODO: definition of parameter
+---@param instance_version? number # TODO: definition of parameter
 function Client:GetEXPModifier(zone_id, instance_version) end
-
----@param zone_id number # TODO: definition of parameter
-function Client:GetEXPModifier(zone_id) end
 
 function Client:GetEbonCrystals() end
 
@@ -473,14 +436,10 @@ function Client:GetModCharacterFactionLevel(faction) end
 ---@param subtype number # TODO: definition of parameter
 function Client:GetMoney(type, subtype) end
 
-function Client:GetNextAvailableDisciplineSlot() end
-
----@param starting_slot number # TODO: definition of parameter (and type this)
+---@param starting_slot? number # TODO: definition of parameter (and type this)
 function Client:GetNextAvailableDisciplineSlot(starting_slot) end
 
-function Client:GetNextAvailableSpellBookSlot() end
-
----@param start number # TODO: definition of parameter (and type this)
+---@param start? number # TODO: definition of parameter (and type this)
 function Client:GetNextAvailableSpellBookSlot(start) end
 
 function Client:GetPVP() end
@@ -530,12 +489,8 @@ function Client:GoFish() end
 
 ---@param aa_id number # TODO: definition of parameter
 ---@param points number # TODO: definition of parameter
----@param ignore_cost number # TODO: definition of parameter (and type this)
+---@param ignore_cost? number # TODO: definition of parameter (and type this)
 function Client:GrantAlternateAdvancementAbility(aa_id, points, ignore_cost) end
-
----@param aa_id number # TODO: definition of parameter
----@param points number # TODO: definition of parameter
-function Client:GrantAlternateAdvancementAbility(aa_id, points) end
 
 function Client:GuildID() end
 
@@ -578,17 +533,11 @@ function Client:InZone() end
 function Client:IncStats(type, value) end
 
 ---@param skill_id number # TODO: definition of parameter
-function Client:IncreaseLanguageSkill(skill_id) end
-
----@param skill_id number # TODO: definition of parameter
----@param value number # TODO: definition of parameter
+---@param value? number # TODO: definition of parameter
 function Client:IncreaseLanguageSkill(skill_id, value) end
 
 ---@param skill_id number # TODO: definition of parameter
-function Client:IncreaseSkill(skill_id) end
-
----@param skill_id number # TODO: definition of parameter
----@param value number # TODO: definition of parameter
+---@param value? number # TODO: definition of parameter
 function Client:IncreaseSkill(skill_id, value) end
 
 ---@param aa number # TODO: definition of parameter
@@ -649,25 +598,16 @@ function Client:LockSharedTask(lock) end
 ---@param in_x number # TODO: definition of parameter
 ---@param in_y number # TODO: definition of parameter
 ---@param in_z number # TODO: definition of parameter
----@param count number # TODO: definition of parameter
+---@param count? number # TODO: definition of parameter
 function Client:MarkSingleCompassLoc(in_x, in_y, in_z, count) end
-
----@param in_x number # TODO: definition of parameter
----@param in_y number # TODO: definition of parameter
----@param in_z number # TODO: definition of parameter
-function Client:MarkSingleCompassLoc(in_x, in_y, in_z) end
 
 ---@param skill_id number # TODO: definition of parameter (and type this)
 function Client:MaxSkill(skill_id) end
 
 ---@param spell_id number # TODO: definition of parameter
 ---@param slot number # TODO: definition of parameter
----@param update_client boolean # TODO: definition of parameter
+---@param update_client? boolean # TODO: definition of parameter
 function Client:MemSpell(spell_id, slot, update_client) end
-
----@param spell_id number # TODO: definition of parameter
----@param slot number # TODO: definition of parameter
-function Client:MemSpell(spell_id, slot) end
 
 function Client:MemmedCount() end
 
@@ -678,29 +618,10 @@ function Client:MemmedCount() end
 ---@param heading number # TODO: definition of parameter
 function Client:MovePC(zone, x, y, z, heading) end
 
----@param zone_name string # TODO: definition of parameter
----@param zone_version number # TODO: definition of parameter
-function Client:MovePCDynamicZone(zone_name, zone_version) end
-
----@param zone_id number # TODO: definition of parameter
----@param zone_version number # TODO: definition of parameter
-function Client:MovePCDynamicZone(zone_id, zone_version) end
-
----@param zone_id number # TODO: definition of parameter
-function Client:MovePCDynamicZone(zone_id) end
-
----@param zone_name string # TODO: definition of parameter
----@param zone_version number # TODO: definition of parameter
----@param msg_if_invalid boolean # TODO: definition of parameter
-function Client:MovePCDynamicZone(zone_name, zone_version, msg_if_invalid) end
-
----@param zone_id number # TODO: definition of parameter
----@param zone_version number # TODO: definition of parameter
----@param msg_if_invalid boolean # TODO: definition of parameter
-function Client:MovePCDynamicZone(zone_id, zone_version, msg_if_invalid) end
-
----@param zone_name string # TODO: definition of parameter
-function Client:MovePCDynamicZone(zone_name) end
+---@param zone_name_or_number string|number # TODO: definition of parameter
+---@param zone_version? number # TODO: definition of parameter
+---@param msg_if_invalid? boolean # TODO: definition of parameter
+function Client:MovePCDynamicZone(zone_name_or_number, zone_version, msg_if_invalid) end
 
 ---@param zone number # TODO: definition of parameter
 ---@param instance number # TODO: definition of parameter
@@ -711,68 +632,32 @@ function Client:MovePCDynamicZone(zone_name) end
 function Client:MovePCInstance(zone, instance, x, y, z, heading) end
 
 ---@param zone_short_name string # TODO: definition of parameter
-function Client:MoveZone(zone_short_name) end
-
----@param zone_short_name string # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
-function Client:MoveZone(zone_short_name, x, y, z) end
-
----@param zone_short_name string # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param heading number # TODO: definition of parameter
+---@param x? number # TODO: definition of parameter
+---@param y? number # TODO: definition of parameter
+---@param z? number # TODO: definition of parameter
+---@param heading? number # TODO: definition of parameter
 function Client:MoveZone(zone_short_name, x, y, z, heading) end
 
 ---@param zone_short_name string # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
-function Client:MoveZoneGroup(zone_short_name, x, y, z) end
-
----@param zone_short_name string # TODO: definition of parameter
-function Client:MoveZoneGroup(zone_short_name) end
-
----@param zone_short_name string # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param heading number # TODO: definition of parameter
+---@param x? number # TODO: definition of parameter
+---@param y? number # TODO: definition of parameter
+---@param z? number # TODO: definition of parameter
+---@param heading? number # TODO: definition of parameter
 function Client:MoveZoneGroup(zone_short_name, x, y, z, heading) end
 
 ---@param instance_id number # TODO: definition of parameter
-function Client:MoveZoneInstance(instance_id) end
-
----@param instance_id number # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param heading number # TODO: definition of parameter
+---@param x? number # TODO: definition of parameter
+---@param y? number # TODO: definition of parameter
+---@param z? number # TODO: definition of parameter
+---@param heading? number # TODO: definition of parameter
 function Client:MoveZoneInstance(instance_id, x, y, z, heading) end
 
 ---@param instance_id number # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
-function Client:MoveZoneInstance(instance_id, x, y, z) end
-
----@param instance_id number # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param heading number # TODO: definition of parameter
+---@param x? number # TODO: definition of parameter
+---@param y? number # TODO: definition of parameter
+---@param z? number # TODO: definition of parameter
+---@param heading? number # TODO: definition of parameter
 function Client:MoveZoneInstanceGroup(instance_id, x, y, z, heading) end
-
----@param instance_id number # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
-function Client:MoveZoneInstanceGroup(instance_id, x, y, z) end
-
----@param instance_id number # TODO: definition of parameter
-function Client:MoveZoneInstanceGroup(instance_id) end
 
 ---@param instance_id number # TODO: definition of parameter
 ---@param x number # TODO: definition of parameter

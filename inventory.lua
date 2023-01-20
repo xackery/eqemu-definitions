@@ -13,11 +13,8 @@ function Inventory:CalcMaterialFromSlot(equipslot) end
 function Inventory:CalcSlotFromMaterial(material) end
 
 ---@param slot_id number # TODO: definition of parameter (and type this)
----@param bag_slot number # TODO: definition of parameter (and type this)
+---@param bag_slot? number # TODO: definition of parameter (and type this)
 function Inventory:CalcSlotId(slot_id, bag_slot) end
-
----@param slot_id number # TODO: definition of parameter (and type this)
-function Inventory:CalcSlotId(slot_id) end
 
 ---@param item Item # TODO: definition of parameter
 ---@param container Item # TODO: definition of parameter
@@ -53,28 +50,18 @@ function Inventory:GetSlotByItemInst(inst) end
 function Inventory:HasAugmentEquippedByID(item_id) end
 
 ---@param item_id number # TODO: definition of parameter (and type this)
----@param quantity? # TODO: definition of parameter (and type this)
----@param where? # TODO: definition of parameter (and type this)
+---@param quantity? number # TODO: definition of parameter (and type this)
+---@param where? number # TODO: definition of parameter (and type this)
 function Inventory:HasItem(item_id, quantity, where) end
 
----@param loregroup number # TODO: definition of parameter
-function Inventory:HasItemByLoreGroup(loregroup) end
-
----@param loregroup number # TODO: definition of parameter
----@param where # TODO: definition of parameter (and type this)
+---@param loregroup LoreGroup # TODO: definition of parameter
+---@param where? number # TODO: definition of parameter (and type this)
 function Inventory:HasItemByLoreGroup(loregroup, where) end
 
----@param use # TODO: definition of parameter (and type this)
----@param quantity number # TODO: definition of parameter
----@param where number # TODO: definition of parameter
+---@param use number # TODO: definition of parameter (and type this)
+---@param quantity? number # TODO: definition of parameter
+---@param where? number # TODO: definition of parameter
 function Inventory:HasItemByUse(use, quantity, where) end
-
----@param use # TODO: definition of parameter (and type this)
----@param quantity number # TODO: definition of parameter
-function Inventory:HasItemByUse(use, quantity) end
-
----@param use # TODO: definition of parameter (and type this)
-function Inventory:HasItemByUse(use) end
 
 ---@param item_id number # TODO: definition of parameter
 function Inventory:HasItemEquippedByID(item_id) end

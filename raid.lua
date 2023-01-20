@@ -30,7 +30,7 @@ function Raid:GetGroup(c) end
 ---@param c Client # TODO: definition of parameter
 function Raid:GetGroup(c) end
 
----@param member_index # TODO: definition of parameter (and type this)
+---@param member_index number # TODO: definition of parameter (and type this)
 function Raid:GetGroupNumber(member_index) end
 
 function Raid:GetHighestLevel() end
