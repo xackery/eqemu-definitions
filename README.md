@@ -27,7 +27,7 @@ Inside it, add these settings, changing the c:\lua-definitions\eqemu-definitions
 {
     "Lua.runtime.version": "Lua 5.1",
     "Lua.workspace.library": [
-        "c:\lua-definitions\eqemu-definitions"
+        "c:\\lua-definitions\\eqemu-definitions"
     ],
     "Lua.diagnostics.disable": [
         "lowercase-global"
