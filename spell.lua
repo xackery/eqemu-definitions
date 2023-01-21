@@ -1,6 +1,8 @@
 
 ---TODO: definition for Spell
 ---@class Spell
+---@field null boolean # returns true when a spell does not exist
+---@field valid boolean # returns false when a spell is invalid
 Spell = {}
 
 function Spell:AEDuration() end

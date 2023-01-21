@@ -2,6 +2,8 @@
 
 ---TODO: definition for ItemInst
 ---@class ItemInst
+---@field null boolean # returns true when an item instance does not exist
+---@field valid boolean # returns false when an item instance is invalid
 ItemInst = {}
 
 ---@param exp number # TODO: definition of parameter

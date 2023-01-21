@@ -2,6 +2,8 @@
 
 ---TODO: definition for Item
 ---@class Item
+---@field null boolean # returns true when an item does not exist
+---@field valid boolean # returns false when an item is invalid
 Item = {}
 
 function Item:AAgi() end

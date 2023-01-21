@@ -2,6 +2,8 @@
 
 ---TODO: definition for Packet
 ---@class PacketType
+---@field null boolean # returns true when an object does not exist
+---@field valid boolean # returns false when an object is invalid
 PacketType = {}
 
 ---@param opcode number # initial opcode to construct packet with

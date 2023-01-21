@@ -1,44 +1,10 @@
 
----TODO: definition for HateEntry
+---Hate Entry represents a hate list's entry, tracking a mob's hate
 ---@class HateEntry
+---@field null boolean # returns true when a corpse does not exist
+---@field valid boolean # returns false when a corpse is invalid
+---@field damage number # returns total damage a hate entry has done
+---@field ent Mob # returns a mob within a hate entry
+---@field frenzy number # returns the total frenzy amount of a hate entry entity
+---@field hate number # returns total hate of an entity in entry
 HateEntry = {}
-
-function HateEntry:GetDamage() end
-
-function HateEntry:GetDamage() end
-
-function HateEntry:GetEnt() end
-
-function HateEntry:GetEnt() end
-
-function HateEntry:GetFrenzy() end
-
-function HateEntry:GetFrenzy() end
-
-function HateEntry:GetHate() end
-
-function HateEntry:GetHate() end
-
----@param value number # TODO: definition of parameter
-function HateEntry:SetDamage(value) end
-
----@param value number # TODO: definition of parameter
-function HateEntry:SetDamage(value) end
-
----@param e Mob # TODO: definition of parameter
-function HateEntry:SetEnt(e) end
-
----@param e Mob # TODO: definition of parameter
-function HateEntry:SetEnt(e) end
-
----@param value boolean # TODO: definition of parameter
-function HateEntry:SetFrenzy(value) end
-
----@param value boolean # TODO: definition of parameter
-function HateEntry:SetFrenzy(value) end
-
----@param value number # TODO: definition of parameter
-function HateEntry:SetHate(value) end
-
----@param value number # TODO: definition of parameter
-function HateEntry:SetHate(value) end

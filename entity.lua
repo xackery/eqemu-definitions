@@ -2,6 +2,8 @@
 
 ---An Entity is a base type that mob, npc, and client inherit
 ---@class Entity
+---@field null boolean # returns true when a entity does not exist
+---@field valid boolean # returns false when a entity is invalid
 Entity = {}
 
 ---@return Bot

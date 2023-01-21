@@ -1,7 +1,9 @@
 ---@meta
 
----TODO: definition for Group
+---Groups contain a list of members with clients or bots
 ---@class Group
+---@field null boolean # returns true when a group does not exist
+---@field valid boolean # returns false when a group is invalid
 Group = {}
 
 ---@param caster Mob # TODO: definition of parameter

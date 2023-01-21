@@ -1,6 +1,8 @@
 
 ---TODO: definition for Expedition
 ---@class Expedition
+---@field null boolean # returns true when an expedition does not exist
+---@field valid boolean # returns false when an expedition is invalid
 Expedition = {}
 
 ---@param event_name string # TODO: definition of parameter

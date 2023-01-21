@@ -2,6 +2,8 @@
 
 ---A Bot is a server driven client that can be grouped, similar to a mercenary
 ---@class Bot
+---@field null boolean # returns true when a bot does not exist
+---@field valid boolean # returns false when a bot is invalid
 Bot = {}
 
 ---@param slot_id number # TODO: definition of parameter

@@ -1,6 +1,8 @@
 
 ---TODO: definition for Object
 ---@class Object
+---@field null boolean # returns true when an object does not exist
+---@field valid boolean # returns false when an object is invalid
 Object = {}
 
 function Object:ClearUser() end

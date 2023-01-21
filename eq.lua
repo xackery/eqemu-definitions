@@ -1017,6 +1017,7 @@ function eq.get_guild_name_by_id(guild_id) end
 ---@param color_name number # TODO: definition of parameter (and type this)
 function eq.get_hex_color_code(color_name) end
 
+---@return Client
 function eq.get_initiator() end
 
 ---@param zone string # TODO: definition of parameter

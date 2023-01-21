@@ -2,6 +2,8 @@
 
 ---TODO: definition for Door
 ---@class Door
+---@field null boolean # returns true when a door does not exist
+---@field valid boolean # returns false when a door is invalid
 Door = {}
 
 function Door:CreateDatabaseEntry() end

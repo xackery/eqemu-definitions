@@ -1,6 +1,8 @@
 
 ---TODO: definition for Raid
 ---@class Raid
+---@field null boolean # returns true when a raid does not exist
+---@field valid boolean # returns false when a raid is invalid
 Raid = {}
 
 ---@param penalty number # TODO: definition of parameter
