@@ -1,5 +1,6 @@
 ---@meta
 
+---Note 0x0193 and 0x0347 are missing
 ---@class OpCode
 ---@field ExploreUnknown number
 ---@field Heartbeat number
@@ -304,8 +305,6 @@
 ---@field ShopEndConfirm number
 ---@field AdventureMerchantRequest number
 ---@field Sound number
----@field 0x0193 number
----@field 0x0347 number
 ---@field WorldComplete number
 ---@field MobRename number
 ---@field TaskDescription number

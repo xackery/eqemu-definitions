@@ -2,26 +2,19 @@
 
 ---TODO: definition for Corpse
 ---@class Corpse
+---@field null boolean # returns true when a corpse does not exist
+---@field valid boolean # returns false when a corpse is invalid
 Corpse = {}
 
 ---@param itemnum number # TODO: definition of parameter
 ---@param charges number # TODO: definition of parameter
----@param slot number # TODO: definition of parameter
----@param aug1 number # TODO: definition of parameter
----@param aug2 number # TODO: definition of parameter
----@param aug3 number # TODO: definition of parameter
----@param aug4 number # TODO: definition of parameter
----@param aug5 number # TODO: definition of parameter
+---@param slot? number # TODO: definition of parameter
+---@param aug1? number # TODO: definition of parameter
+---@param aug2? number # TODO: definition of parameter
+---@param aug3? number # TODO: definition of parameter
+---@param aug4? number # TODO: definition of parameter
+---@param aug5? number # TODO: definition of parameter
 function Corpse:AddItem(itemnum, charges, slot, aug1, aug2, aug3, aug4, aug5) end
-
----@param itemnum number # TODO: definition of parameter
----@param charges number # TODO: definition of parameter
----@param slot number # TODO: definition of parameter
-function Corpse:AddItem(itemnum, charges, slot) end
-
----@param itemnum number # TODO: definition of parameter
----@param charges number # TODO: definition of parameter
-function Corpse:AddItem(itemnum, charges) end
 
 ---@param who Mob # TODO: definition of parameter
 function Corpse:AddLooter(who) end
@@ -60,7 +53,7 @@ function Corpse:GetGold() end
 ---@param loot_slot number # TODO: definition of parameter
 function Corpse:GetItemIDBySlot(loot_slot) end
 
----@param L State* # TODO: definition of parameter
+---@param L State # TODO: definition of parameter
 function Corpse:GetLootList(L) end
 
 function Corpse:GetOwnerName() end
@@ -89,10 +82,7 @@ function Corpse:RemoveCash() end
 function Corpse:RemoveItem(lootslot) end
 
 ---@param item_id number # TODO: definition of parameter
-function Corpse:RemoveItemByID(item_id) end
-
----@param item_id number # TODO: definition of parameter
----@param quantity number # TODO: definition of parameter
+---@param quantity? number # TODO: definition of parameter
 function Corpse:RemoveItemByID(item_id, quantity) end
 
 function Corpse:ResetDecayTimer() end

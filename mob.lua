@@ -64,26 +64,13 @@ function Mob:CalculateHeadingToTarget(in_x, in_y) end
 
 ---@param duration number # TODO: definition of parameter
 ---@param intensity number # TODO: definition of parameter
----@param c Client # TODO: definition of parameter
----@param global boolean # TODO: definition of parameter
+---@param c? Client # TODO: definition of parameter
+---@param global? boolean # TODO: definition of parameter
 function Mob:CameraEffect(duration, intensity, c, global) end
 
----@param duration number # TODO: definition of parameter
----@param intensity number # TODO: definition of parameter
-function Mob:CameraEffect(duration, intensity) end
-
----@param duration number # TODO: definition of parameter
----@param intensity number # TODO: definition of parameter
----@param c Client # TODO: definition of parameter
-function Mob:CameraEffect(duration, intensity, c) end
-
 ---@param spell_id number # TODO: definition of parameter (and type this)
 ---@param caster_level number # TODO: definition of parameter (and type this)
-function Mob:CanBuffStack(spell_id, caster_level) end
-
----@param spell_id number # TODO: definition of parameter (and type this)
----@param caster_level number # TODO: definition of parameter (and type this)
----@param fail_if_overwrite boolean # TODO: definition of parameter
+---@param fail_if_overwrite? boolean # TODO: definition of parameter
 function Mob:CanBuffStack(spell_id, caster_level, fail_if_overwrite) end
 
 ---@param item_id number # TODO: definition of parameter
@@ -153,11 +140,8 @@ function Mob:ChangeLuclinFace(value) end
 function Mob:ChangeRace(value) end
 
 ---@param in_size number # TODO: definition of parameter
----@param no_restriction boolean # TODO: definition of parameter
+---@param no_restriction? boolean # TODO: definition of parameter
 function Mob:ChangeSize(in_size, no_restriction) end
-
----@param in_size number # TODO: definition of parameter
-function Mob:ChangeSize(in_size) end
 
 ---@param value number # TODO: definition of parameter
 function Mob:ChangeTexture(value) end
@@ -168,18 +152,12 @@ function Mob:Charmed() end
 function Mob:CheckAggro(other) end
 
 ---@param spell_id number # TODO: definition of parameter (and type this)
-function Mob:CheckAggroAmount(spell_id) end
-
----@param spell_id number # TODO: definition of parameter (and type this)
----@param is_proc boolean # TODO: definition of parameter
+---@param is_proc? boolean # TODO: definition of parameter
 function Mob:CheckAggroAmount(spell_id, is_proc) end
 
 ---@param spell_id number # TODO: definition of parameter (and type this)
----@param heal_possible number # TODO: definition of parameter
+---@param heal_possible? number # TODO: definition of parameter
 function Mob:CheckHealAggroAmount(spell_id, heal_possible) end
-
----@param spell_id number # TODO: definition of parameter (and type this)
-function Mob:CheckHealAggroAmount(spell_id) end
 
 ---@param other Mob # TODO: definition of parameter
 function Mob:CheckLoS(other) end
@@ -187,12 +165,7 @@ function Mob:CheckLoS(other) end
 ---@param x number # TODO: definition of parameter
 ---@param y number # TODO: definition of parameter
 ---@param z number # TODO: definition of parameter
-function Mob:CheckLoSToLoc(x, y, z) end
-
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param mob_size number # TODO: definition of parameter
+---@param mob_size? number # TODO: definition of parameter
 function Mob:CheckLoSToLoc(x, y, z, mob_size) end
 
 ---@param type number # TODO: definition of parameter
@@ -1030,11 +1003,7 @@ function Mob:ProjectileAnimation(to, item_id, is_arrow, speed, angle, tilt) end
 
 ---@param client Client # TODO: definition of parameter
 ---@param message string # TODO: definition of parameter
-function Mob:QuestSay(client, message) end
-
----@param client Client # TODO: definition of parameter
----@param message string # TODO: definition of parameter
----@param opts Object # TODO: definition of parameter
+---@param opts? Object # TODO: definition of parameter
 function Mob:QuestSay(client, message, opts) end
 
 ---@param send_illusion number # TODO: definition of parameter (and type this)
@@ -1240,7 +1209,7 @@ function Mob:SetPet(new_pet) end
 ---@param order number # TODO: definition of parameter
 function Mob:SetPetOrder(order) end
 
----@param in boolean # TODO: definition of parameter
+---@param value boolean # TODO: definition of parameter
 function Mob:SetPseudoRoot(value) end
 
 ---@param value number # TODO: definition of parameter
@@ -1348,9 +1317,7 @@ function Mob:Stun(duration) end
 ---@param zone_id number # TODO: definition of parameter
 function Mob:TarGlobal(name, value, duration, npc_id, char_id, zone_id) end
 
-function Mob:TempName() end
-
----@param newname string # TODO: definition of parameter
+---@param newname? string # TODO: definition of parameter
 function Mob:TempName(newname) end
 
 ---@param other Mob # TODO: definition of parameter

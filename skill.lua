@@ -1,13 +1,14 @@
 ---@meta
 
+---Note: 1HBlunt, 1HSlashing, 2HBlunt, 1HPiercing, 2HPiercing, and 2HSlashing aren't properly listed
 ---@class Skill
----@field 1HBlunt number
+--- 1HBlunt number
 ---@field Blunt1H number
----@field 1HSlashing number
+--- 1HSlashing number
 ---@field Slashing1H number
----@field 2HBlunt number
+--- 2HBlunt number
 ---@field Blunt2H number
----@field 2HSlashing number
+--- 2HSlashing number
 ---@field Slashing2H number
 ---@field Abjuration number
 ---@field Alteration number
@@ -42,7 +43,7 @@
 ---@field Offense number
 ---@field Parry number
 ---@field PickLock number
----@field 1HPiercing number
+---1HPiercing number
 ---@field Piercing1H number
 ---@field Riposte number
 ---@field RoundKick number
@@ -84,7 +85,7 @@
 ---@field Frenzy number
 ---@field RemoveTraps number
 ---@field TripleAttack number
----@field 2HPiercing number
+---2HPiercing number
 ---@field Piercing2H number
 ---@field HIGHEST_SKILL number
 Skill = {}
