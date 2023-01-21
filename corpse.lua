@@ -26,52 +26,69 @@ function Corpse:AllowMobLoot(them, slot) end
 function Corpse:Bury() end
 
 ---@param charid number # TODO: definition of parameter
+---@return boolean
 function Corpse:CanMobLoot(charid) end
 
 ---@param item_id number # TODO: definition of parameter
+---@return number
 function Corpse:CountItem(item_id) end
 
+---@return number
 function Corpse:CountItems() end
 
 function Corpse:Delete() end
 
 function Corpse:Depop() end
 
+---@return number
 function Corpse:GetCharID() end
 
+---@return number
 function Corpse:GetCopper() end
 
+---@return number
 function Corpse:GetDBID() end
 
+---@return number
 function Corpse:GetDecayTime() end
 
 ---@param item_id number # TODO: definition of parameter
+---@return number
 function Corpse:GetFirstSlotByItemID(item_id) end
 
+---@return number
 function Corpse:GetGold() end
 
 ---@param loot_slot number # TODO: definition of parameter
 function Corpse:GetItemIDBySlot(loot_slot) end
 
----@param L State # TODO: definition of parameter
-function Corpse:GetLootList(L) end
+---@return CorpseLootList
+function Corpse:GetLootList() end
 
+---@return string
 function Corpse:GetOwnerName() end
 
+---@return number
 function Corpse:GetPlatinum() end
 
+---@return number
 function Corpse:GetSilver() end
 
 ---@param equipSlot number # TODO: definition of parameter
+---@return number
 function Corpse:GetWornItem(equipSlot) end
 
 ---@param item_id number # TODO: definition of parameter
+---@return boolean
 function Corpse:HasItem(item_id) end
 
+---@return boolean
 function Corpse:IsEmpty() end
 
+---@return boolean
 function Corpse:IsLocked() end
 
+---@return boolean
 function Corpse:IsRezzed() end
 
 function Corpse:Lock() end
@@ -89,6 +106,7 @@ function Corpse:ResetDecayTimer() end
 
 function Corpse:ResetLooter() end
 
+---@return boolean
 function Corpse:Save() end
 
 ---@param copper number # TODO: definition of parameter
@@ -103,6 +121,7 @@ function Corpse:SetDecayTimer(decaytime) end
 ---@param client Client # TODO: definition of parameter
 ---@param spell number # TODO: definition of parameter (and type this)
 ---@param checkdistance number # TODO: definition of parameter (and type this)
+---@return boolean
 function Corpse:Summon(client, spell, checkdistance) end
 
 function Corpse:UnLock() end
