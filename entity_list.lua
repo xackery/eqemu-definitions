@@ -1,7 +1,9 @@
 ---@meta
 
----TODO: definition for EntityList
+---EntityList contains a list of every entity of a zone. This includes NPCs, Clients, Bots
 ---@class EntityList
+---@field null boolean # returns true when a corpse does not exist
+---@field valid boolean # returns false when a corpse is invalid
 EntityList = {}
 
 ---@param p Mob # TODO: definition of parameter
