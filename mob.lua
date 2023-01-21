@@ -595,49 +595,51 @@ function Mob:GetHP() end
 ---@return number
 function Mob:GetHPRatio() end
 
+---@return number
 function Mob:GetHairColor() end
 
+---@return number
 function Mob:GetHairStyle() end
 
+---@return number
 function Mob:GetHandToHandDamage() end
 
+---@return number
 function Mob:GetHandToHandDelay() end
 
+---@return number
 function Mob:GetHaste() end
 
 ---@param target Mob # TODO: definition of parameter
-function Mob:GetHateAmount(target) end
-
----@param target Mob # TODO: definition of parameter
----@param is_damage boolean # TODO: definition of parameter
+---@param is_damage? boolean # TODO: definition of parameter
+---@return number
 function Mob:GetHateAmount(target, is_damage) end
 
+---@return Mob
 function Mob:GetHateClosest() end
 
 ---@param other number # TODO: definition of parameter (and type this)
+---@return Mob
 function Mob:GetHateDamageTop(other) end
 
+---@return HateList
 function Mob:GetHateList() end
 
-function Mob:GetHateListBots() end
-
----@param distance number # TODO: definition of parameter
+---@param distance? number # TODO: definition of parameter
+---@return HateList
 function Mob:GetHateListBots(distance) end
 
-function Mob:GetHateListByDistance() end
-
----@param distance number # TODO: definition of parameter
+---@param distance? number # TODO: definition of parameter
+---@return HateList
 function Mob:GetHateListByDistance(distance) end
 
----@param distance number # TODO: definition of parameter
+---@param distance? number # TODO: definition of parameter
+---@return HateList
 function Mob:GetHateListClients(distance) end
 
-function Mob:GetHateListClients() end
-
----@param distance number # TODO: definition of parameter
+---@param distance? number # TODO: definition of parameter
+---@return HateList
 function Mob:GetHateListNPCs(distance) end
-
-function Mob:GetHateListNPCs() end
 
 function Mob:GetHateRandom() end
 
