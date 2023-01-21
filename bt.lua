@@ -1,0 +1,39 @@
+---@meta
+
+---BT is short for BodyType
+---@class BT
+---@field Humanoid number
+---@field Lycanthrope number
+---@field Undead number
+---@field Giant number
+---@field Construct number
+---@field Extraplanar number
+---@field Magical number
+---@field SummonedUndead number
+---@field RaidGiant number
+---@field NoTarget number
+---@field Vampire number
+---@field Atenha_Ra number
+---@field Greater_Akheva number
+---@field Khati_Sha number
+---@field Seru number
+---@field Draz_Nurakk number
+---@field Zek number
+---@field Luggald number
+---@field Animal number
+---@field Insect number
+---@field Monster number
+---@field Summoned number
+---@field Plant number
+---@field Dragon number
+---@field Summoned2 number
+---@field Summoned3 number
+---@field VeliousDragon number
+---@field Dragon3 number
+---@field Boxes number
+---@field Muramite number
+---@field NoTarget2 number
+---@field SwarmPet number
+---@field InvisMan number
+---@field Special number
+BT = {}            
