@@ -278,20 +278,28 @@ function Client:GetAnon() end
 ---@param aug_slot number # TODO: definition of parameter (and type this)
 function Client:GetAugmentIDAt(slot_id, aug_slot) end
 
+---@return number
 function Client:GetBaseAGI() end
 
+---@return number
 function Client:GetBaseCHA() end
 
+---@return number
 function Client:GetBaseDEX() end
 
+---@return number
 function Client:GetBaseFace() end
 
+---@return number
 function Client:GetBaseINT() end
 
+---@return number
 function Client:GetBaseSTA() end
 
+---@return number
 function Client:GetBaseSTR() end
 
+---@return number
 function Client:GetBaseWIS() end
 
 ---@param index? number # TODO: definition of parameter
