@@ -973,6 +973,7 @@ function eq.get_dz_task_id() end
 
 function eq.get_encounter() end
 
+---@return EntityList
 function eq.get_entity_list() end
 
 ---@param damage_type number # TODO: definition of parameter
@@ -987,6 +988,7 @@ function eq.get_exp_modifier_by_char_id(character_id, zone_id) end
 ---@param instance_version number # TODO: definition of parameter
 function eq.get_exp_modifier_by_char_id(character_id, zone_id, instance_version) end
 
+---@return Expedition
 function eq.get_expedition() end
 
 ---@param char_id number # TODO: definition of parameter
@@ -1455,11 +1457,56 @@ function eq.process_mobs_while_zone_empty(on) end
 ---@param weather number # TODO: definition of parameter
 function eq.rain(weather) end
 
+---@param name string # name of spell event
+---@param event_type number # type of event, use Event.<event_name> to set
+---@param spell_id number # id of spell
+---@param callback function # function to call on event trigger
+---@overload fun(event_type:number, spell_id:number, callback:function)
+function eq.register_spell_event(name, event_type, spell_id, callback) end
+
+---@param name string # name of spell event
+---@param event_type number # type of event, use Event.<event_name> to set
+---@param spell_id number # id of spell
+---@overload fun(event_type:number, spell_id:number)
+function eq.unregister_spell_event(name, event_type, spell_id) end
+
+---@param name string # name of item event
+---@param event_type number # type of event, use Event.<event_name> to set
+---@param item_id number # id of item
+---@param callback function # function to call on event trigger
+---@overload fun(event_type:number, item_id:number, callback:function)
+function eq.register_item_event(name, event_type, item_id, callback) end
+
+---@param name string # name of item event
+---@param event_type number # type of event, use Event.<event_name> to set
+---@param item_id number # id of item
+---@overload fun(event_type:number, item_id:number)
+function eq.unregister_item_event(name, event_type, item_id) end
+
+
 ---@param name string # name of npc event
 ---@param event_type number # type of event, use Event.<event_name> to set
 ---@param npc_id number # id of NPC
 ---@param callback function # function to call on event trigger
+---@overload fun(event_type:number, npc_id:number, callback:function)
 function eq.register_npc_event(name, event_type, npc_id, callback) end
+
+---@param name string # name of npc event
+---@param event_type number # type of event, use Event.<event_name> to set
+---@param npc_id number # id of NPC
+---@overload fun(event_type:number, npc_id:number)
+function eq.unregister_npc_event(name, event_type, npc_id) end
+
+---@param name string # name of npc event
+---@param event_type number # type of event, use Event.<event_name> to set
+---@param callback function # function to call on event trigger
+---@overload fun(event_type:number, callback:function)
+function eq.register_player_event(name, event_type, callback) end
+
+---@param name string # name of npc event
+---@param event_type number # type of event, use Event.<event_name> to set
+---@overload fun(event_type:number, npc_id:number)
+function eq.unregister_player_event(name, event_type) end
 
 function eq.reloadzonestaticdata() end
 

@@ -2,8 +2,6 @@
 
 ---TODO: definition for Mob
 ---@class Mob : Entity
----@field null boolean # returns true when a mob does not exist
----@field valid boolean # returns false when a mob is invalid
 Mob = {}
 
 ---@param effect_id number # TODO: definition of parameter

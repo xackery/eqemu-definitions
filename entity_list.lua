@@ -128,6 +128,7 @@ function EntityList:GetMobList() end
 function EntityList:GetNPCByID(id) end
 
 ---@param npc_type number # TODO: definition of parameter
+---@return NPC
 function EntityList:GetNPCByNPCTypeID(npc_type) end
 
 ---@param spawn_id number # TODO: definition of parameter
