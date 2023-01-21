@@ -11,21 +11,14 @@ function Expedition:AddLockout(event_name, seconds) end
 
 ---@param event_name string # TODO: definition of parameter
 ---@param seconds number # TODO: definition of parameter
-function Expedition:AddLockoutDuration(event_name, seconds) end
-
----@param event_name string # TODO: definition of parameter
----@param seconds number # TODO: definition of parameter
----@param members_only boolean # TODO: definition of parameter
+---@param members_only? boolean # TODO: definition of parameter
 function Expedition:AddLockoutDuration(event_name, seconds, members_only) end
 
 ---@param seconds number # TODO: definition of parameter
 function Expedition:AddReplayLockout(seconds) end
 
 ---@param seconds number # TODO: definition of parameter
-function Expedition:AddReplayLockoutDuration(seconds) end
-
----@param seconds number # TODO: definition of parameter
----@param members_only boolean # TODO: definition of parameter
+---@param members_only? boolean # TODO: definition of parameter
 function Expedition:AddReplayLockoutDuration(seconds, members_only) end
 
 function Expedition:GetDynamicZoneID() end
@@ -35,6 +28,9 @@ function Expedition:GetID() end
 function Expedition:GetInstanceID() end
 
 function Expedition:GetLeaderName() end
+
+---@return { [number]:number }
+function Expedition:GetLockouts() return {} end
 
 ---@param npc_type_id number # TODO: definition of parameter
 function Expedition:GetLootEventByNPCTypeID(npc_type_id) end

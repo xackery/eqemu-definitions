@@ -1070,17 +1070,11 @@ function eq.get_player_corpse_count(char_id) end
 ---@param zone_id number # TODO: definition of parameter
 function eq.get_player_corpse_count_by_zone_id(char_id, zone_id) end
 
----@param npc NPC # TODO: definition of parameter
----@param client Client # TODO: definition of parameter
+---@param npc? NPC
+---@param client? Client 
+---@return string[]
+---@overload fun(client: Client): string[]
 function eq.get_qglobals(npc, client) end
-
----@param client Client # TODO: definition of parameter
-function eq.get_qglobals(client) end
-
----@param npc NPC # TODO: definition of parameter
-function eq.get_qglobals(npc) end
-
-function eq.get_qglobals() end
 
 function eq.get_quest_item() end
 
@@ -1142,10 +1136,13 @@ function eq.get_zone_id() end
 ---@param zone_name string # TODO: definition of parameter
 function eq.get_zone_id_by_name(zone_name) end
 
+---@return number
 function eq.get_zone_instance_id() end
 
+---@return number
 function eq.get_zone_instance_version() end
 
+---@return string
 function eq.get_zone_long_name() end
 
 ---@param zone_id number # TODO: definition of parameter
@@ -1823,7 +1820,7 @@ function eq.train_discs(max) end
 ---@param x number # TODO: definition of parameter
 ---@param y number # TODO: definition of parameter
 ---@param z number # TODO: definition of parameter
----@param heading number # TODO: definition of parameter
+---@param heading? number # TODO: definition of parameter
 function eq.unique_spawn(npc_type, grid, unused, x, y, z, heading) end
 
 ---@param instance_id number # TODO: definition of parameter

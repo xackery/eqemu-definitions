@@ -7,10 +7,9 @@ bit = {}
 ---@return number result # result of shift
 function bit.tobit(value, shift) return 0 end
 
----@param value number # value base
----@param shift number # value to shift
----@return number result # result of shift
-function bit.bnot(value, shift) return 0 end
+---@param value number # value
+---@return number result # result of NOT operation
+function bit.bnot(value) return 0 end
 
 ---@param value number # value base
 ---@param shift number # value to shift

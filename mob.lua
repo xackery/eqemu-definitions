@@ -589,8 +589,10 @@ function Mob:GetGender() end
 ---@return string
 function Mob:GetGlobal(name) end
 
+---@return number
 function Mob:GetHP() end
 
+---@return number
 function Mob:GetHPRatio() end
 
 function Mob:GetHairColor() end
@@ -647,6 +649,7 @@ function Mob:GetHateRandomNPC() end
 
 function Mob:GetHateTop() end
 
+---@return number
 function Mob:GetHeading() end
 
 function Mob:GetHelmTexture() end
@@ -820,10 +823,13 @@ function Mob:GetWeaponDamage(against, weapon) end
 ---@param offhand boolean # TODO: definition of parameter
 function Mob:GetWeaponDamageBonus(weapon, offhand) end
 
+---@return number
 function Mob:GetX() end
 
+---@return number
 function Mob:GetY() end
 
+---@return number
 function Mob:GetZ() end
 
 function Mob:GotoBind() end

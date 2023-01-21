@@ -117,6 +117,7 @@ function EntityList:GetMob(name) end
 function EntityList:GetMob(id) end
 
 ---@param npc_type number # TODO: definition of parameter
+---@return Mob
 function EntityList:GetMobByNpcTypeID(npc_type) end
 
 ---@param id number # TODO: definition of parameter
