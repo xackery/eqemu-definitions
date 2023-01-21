@@ -1,6 +1,6 @@
 ---@meta
 
----TODO: definition for eq
+---EQ contains global methods
 ---@class eq
 eq = {}
 
@@ -1454,6 +1454,12 @@ function eq.process_mobs_while_zone_empty(on) end
 ---@param weather number # TODO: definition of parameter
 function eq.rain(weather) end
 
+---@param name string # name of npc event
+---@param event_type number # type of event, use Event.<event_name> to set
+---@param npc_id number # id of NPC
+---@param callback function # function to call on event trigger
+function eq.register_npc_event(name, event_type, npc_id, callback) end
+
 function eq.reloadzonestaticdata() end
 
 ---@param char_id number # TODO: definition of parameter
@@ -1649,7 +1655,7 @@ function eq.set_time(hour, min) end
 function eq.set_timer(timer, time_ms, inst) end
 
 ---@param npc_id number # TODO: definition of parameter
----@param signal_id number # TODO: definition of parameter
+---@param signal_id? number # TODO: definition of parameter
 ---@param wait? number # TODO: definition of parameter
 function eq.signal(npc_id, signal_id, wait) end
 

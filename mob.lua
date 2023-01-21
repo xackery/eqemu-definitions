@@ -352,8 +352,8 @@ function Mob:DamageHateListPercentage(damage, distance) end
 ---@param damage number # TODO: definition of parameter
 function Mob:DamageHateListPercentage(damage) end
 
----@param varname string # TODO: definition of parameter
-function Mob:DelGlobal(varname) end
+---@param name string # name of global variable
+function Mob:DelGlobal(name) end
 
 ---@param bucket_name string # TODO: definition of parameter
 function Mob:DeleteBucket(bucket_name) end
@@ -612,8 +612,9 @@ function Mob:GetFlurryChance() end
 
 function Mob:GetGender() end
 
----@param varname string # TODO: definition of parameter
-function Mob:GetGlobal(varname) end
+---@param name string # name of global variable
+---@return string
+function Mob:GetGlobal(name) end
 
 function Mob:GetHP() end
 
@@ -1187,18 +1188,12 @@ function Mob:SetFlyMode(value) end
 ---@param value number # TODO: definition of parameter
 function Mob:SetGender(value) end
 
----@param varname string # TODO: definition of parameter
+---@param name string # name of global variable
 ---@param newvalue string # TODO: definition of parameter
 ---@param options number # TODO: definition of parameter
 ---@param duration string # TODO: definition of parameter
-function Mob:SetGlobal(varname, newvalue, options, duration) end
-
----@param varname string # TODO: definition of parameter
----@param newvalue string # TODO: definition of parameter
----@param options number # TODO: definition of parameter
----@param duration string # TODO: definition of parameter
----@param other Mob # TODO: definition of parameter
-function Mob:SetGlobal(varname, newvalue, options, duration, other) end
+---@param other? Mob # TODO: definition of parameter
+function Mob:SetGlobal(name, newvalue, options, duration, other) end
 
 ---@param hp number # TODO: definition of parameter
 function Mob:SetHP(hp) end
@@ -1343,13 +1338,13 @@ function Mob:StopNavigation() end
 ---@param duration number # TODO: definition of parameter
 function Mob:Stun(duration) end
 
----@param varname string # TODO: definition of parameter
+---@param name string # name of global variable
 ---@param value string # TODO: definition of parameter
 ---@param duration string # TODO: definition of parameter
 ---@param npc_id number # TODO: definition of parameter
 ---@param char_id number # TODO: definition of parameter
 ---@param zone_id number # TODO: definition of parameter
-function Mob:TarGlobal(varname, value, duration, npc_id, char_id, zone_id) end
+function Mob:TarGlobal(name, value, duration, npc_id, char_id, zone_id) end
 
 function Mob:TempName() end
 
