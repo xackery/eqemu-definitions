@@ -1,9 +1,10 @@
 ---@meta
 
----@class Appearance
----@field Standing number
----@field Sitting number
----@field Crouching number
----@field Dead number
----@field Looting number
-Appearance = {}
+--- visual appearance (animation) an entity is currently doing
+Appearance = {
+    ['Standing'] = 0,
+    ['Sitting'] = 1,
+    ['Crouching'] = 2,
+    ['Dead'] = 3,
+    ['Looting'] = 4,
+}

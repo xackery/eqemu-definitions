@@ -1,39 +1,39 @@
 ---@meta
 
 ---BT is short for BodyType
----@class BT
----@field Humanoid number
----@field Lycanthrope number
----@field Undead number
----@field Giant number
----@field Construct number
----@field Extraplanar number
----@field Magical number
----@field SummonedUndead number
----@field RaidGiant number
----@field NoTarget number
----@field Vampire number
----@field Atenha_Ra number
----@field Greater_Akheva number
----@field Khati_Sha number
----@field Seru number
----@field Draz_Nurakk number
----@field Zek number
----@field Luggald number
----@field Animal number
----@field Insect number
----@field Monster number
----@field Summoned number
----@field Plant number
----@field Dragon number
----@field Summoned2 number
----@field Summoned3 number
----@field VeliousDragon number
----@field Dragon3 number
----@field Boxes number
----@field Muramite number
----@field NoTarget2 number
----@field SwarmPet number
----@field InvisMan number
----@field Special number
-BT = {}            
+BT = {
+    ['Humanoid'] = 0,
+    ['Lycanthrope'] = 1,
+    ['Undead'] = 2,
+    ['Giant'] = 3,
+    ['Construct'] = 4,
+    ['Extraplanar'] = 5,
+    ['Magical'] = 6,
+    ['SummonedUndead'] = 7,
+    ['RaidGiant'] = 8,
+    ['NoTarget'] = 9,
+    ['Vampire'] = 10,
+    ['Atenha_Ra'] = 11,
+    ['Greater_Akheva'] = 12,
+    ['Khati_Sha'] = 13,
+    ['Seru'] = 14,
+    ['Draz_Nurakk'] = 15,
+    ['Zek'] = 16,
+    ['Luggald'] = 17,
+    ['Animal'] = 18,
+    ['Insect'] = 19,
+    ['Monster'] = 20,
+    ['Summoned'] = 21,
+    ['Plant'] = 22,
+    ['Dragon'] = 23,
+    ['Summoned2'] = 24,
+    ['Summoned3'] = 25,
+    ['VeliousDragon'] = 26,
+    ['Dragon3'] = 27,
+    ['Boxes'] = 28,
+    ['Muramite'] = 29,
+    ['NoTarget2'] = 30,
+    ['SwarmPet'] = 31,
+    ['InvisMan'] = 32,
+    ['Special'] = 33,
+}
