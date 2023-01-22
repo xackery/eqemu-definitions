@@ -40,6 +40,9 @@ function Client:AddExpeditionLockout(expedition_name, event_name, seconds, uuid)
 ---@param uuid? string # TODO: definition of parameter
 function Client:AddExpeditionLockoutDuration(expedition_name, event_name, seconds, uuid) end
 
+---@param item_table table # TODO: definition of parameter
+function Client:AddItem(item_table) end
+
 ---@param theme_id number # TODO: definition of parameter
 function Client:AddLDoNLoss(theme_id) end
 
@@ -58,17 +61,18 @@ function Client:AddLevelBasedExp(exp_pct, max_level, ignore_mods) end
 ---@param update_client? boolean # TODO: definition of parameter
 function Client:AddMoneyToPP(copper, silver, gold, platinum, update_client) end
 
----@param points number # TODO: definition of parameter
-function Client:AddPVPPoints(points) end
-
 ---@param platinum number # TODO: definition of parameter
 ---@param update_client? boolean # TODO: definition of parameter
 function Client:AddPlatinum(platinum, update_client) end
+
+---@param points number # TODO: definition of parameter
+function Client:AddPVPPoints(points) end
 
 ---@param skill_id number # TODO: definition of parameter
 ---@param value number # TODO: definition of parameter
 function Client:AddSkill(skill_id, value) end
 
+---@return number
 function Client:Admin() end
 
 ---@param spell_id number # TODO: definition of parameter
