@@ -23,16 +23,10 @@ function Bot:AddBotItem(slot_id, item_id, charges, attuned, augment_one, augment
 ---@param allow_pets? boolean # TODO: definition of parameter
 function Bot:ApplySpell(spell_id, duration, allow_pets) end
 
-
 ---@param spell_id number # TODO: definition of parameter
 ---@param duration? number # TODO: definition of parameter
 ---@param allow_pets? boolean # TODO: definition of parameter
 function Bot:ApplySpellGroup(spell_id, duration, allow_pets) end
-
----@param spell_id number # TODO: definition of parameter
----@param duration number # TODO: definition of parameter
----@param allow_pets? boolean # TODO: definition of parameter
-function Bot:ApplySpellRaid(spell_id, duration, allow_pets) end
 
 ---@param is_instant? boolean # TODO: definition of parameter
 function Bot:Camp(is_instant) end
@@ -64,13 +58,6 @@ function Bot:GetAugmentAt(slot_id) end
 ---@return number
 function Bot:GetAugmentIDAt(slot_id) end
 
----@param slot_id number # TODO: definition of parameter
----@return ItemInst
-function Bot:GetBotItem(slot_id) end
-
----@param slot_id number # TODO: definition of parameter
-function Bot:GetBotItemIDBySlot(slot_id) end
-
 ---@return number
 function Bot:GetBaseAGI() end
 
@@ -95,29 +82,92 @@ function Bot:GetBaseWIS() end
 ---@return number
 function Bot:GetBotID() end
 
+---@param slot_id number # TODO: definition of parameter
+---@return ItemInst
+function Bot:GetBotItem(slot_id) end
+
+---@param slot_id number # TODO: definition of parameter
+function Bot:GetBotItemIDBySlot(slot_id) end
+
 ---@return number
 function Bot:GetExpansionBitmask() end
 
 ---@return Group
 function Bot:GetGroup() end
 
+---@return Mob
 function Bot:GetOwner() end
+
+---@return number
+function Bot:GetRawItemAC() end
+
+---@return number
+function Bot:GetSpellDamage() end
+
+---@param item_id number
+---@return boolean
+function Bot:HasAugmentEquippedByID(item_id) end
 
 ---@param item_id number # TODO: definition of parameter
 function Bot:HasBotItem(item_id) end
 
----@param spellid number # TODO: definition of parameter
-function Bot:HasBotSpellEntry(spellid) end
+---@param spell_id number # TODO: definition of parameter
+function Bot:HasBotSpellEntry(spell_id) end
+
+---@param item_id number # TODO: definition of parameter
+function Bot:HasItemEquippedByID(item_id) end
+
+---@return boolean # TODO: definition of parameter
+function Bot:IsGrouped() end
+
+---@return boolean # TODO: definition of parameter
+function Bot:Sitting() end
 
 ---@param message string # TODO: definition of parameter
 function Bot:OwnerMessage(message) end
 
+---@return boolean
+function Bot:ReloadBotDataBuckets() end
+
+---@return boolean
+function Bot:ReloadBotOwnerDataBuckets(message) end
+
+---@return boolean
+function Bot:ReloadBotSpells(message) end
+
+---@return boolean
+function Bot:ReloadBotSpellSettings(message) end
+
 ---@param item_id number # TODO: definition of parameter
 function Bot:RemoveBotItem(item_id) end
+
+---@param target_id number # TODO: definition of parameter
+---@param spell_id number # TODO: definition of parameter
+function Bot:SendSpellAnim(target_id, spell_id) end
 
 ---@param expansion_bitmask number # TODO: definition of parameter
 ---@param save? boolean # TODO: definition of parameter
 function Bot:SetExpansionBitmask(expansion_bitmask, save) end
 
+---@param spell_id number # TODO: definition of parameter
+---@param duration? number # TODO: definition of parameter
+---@param allow_pets? boolean # TODO: definition of parameter
+---@param allow_bots? boolean # TODO: definition of parameter
+function Bot:SetSpellDuration(spell_id, duration, allow_pets, allow_bots) end
+
+---@param spell_id number # TODO: definition of parameter
+---@param duration? number # TODO: definition of parameter
+---@param allow_pets? boolean # TODO: definition of parameter
+---@param allow_bots? boolean # TODO: definition of parameter
+function Bot:SetSpellDurationGroup(spell_id, duration, allow_pets, allow_bots) end
+
+---@param payload_id number # TODO: definition of parameter
+---@param payload_value? string # TODO: definition of parameter
+function Bot:SendPayload(payload_id, payload_value) end
+
 ---@param signal_id number # TODO: definition of parameter
-function Bot:SignalBot(signal_id) end
+function Bot:Signal(signal_id) end
+
+function Bot:Sit() end
+
+function Bot:Stand() end

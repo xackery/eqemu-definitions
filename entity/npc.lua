@@ -11,33 +11,18 @@ NPC = {}
 ---@param max_y number # TODO: definition of parameter
 ---@param min_y number # TODO: definition of parameter
 ---@param delay number # TODO: definition of parameter
----@param mindelay number # TODO: definition of parameter
+---@param mindelay? number # TODO: definition of parameter
 function NPC:AI_SetRoambox(dist, max_x, min_x, max_y, min_y, delay, mindelay) end
 
----@param dist number # TODO: definition of parameter
----@param max_x number # TODO: definition of parameter
----@param min_x number # TODO: definition of parameter
----@param max_y number # TODO: definition of parameter
----@param min_y number # TODO: definition of parameter
-function NPC:AI_SetRoambox(dist, max_x, min_x, max_y, min_y) end
-
 ---@param priority number # TODO: definition of parameter
 ---@param spell_id number # TODO: definition of parameter
 ---@param type number # TODO: definition of parameter
 ---@param mana_cost number # TODO: definition of parameter
 ---@param recast_delay number # TODO: definition of parameter
 ---@param resist_adjust number # TODO: definition of parameter
----@param min_hp number # TODO: definition of parameter
----@param max_hp number # TODO: definition of parameter
+---@param min_hp? number # TODO: definition of parameter
+---@param max_hp? number # TODO: definition of parameter
 function NPC:AddAISpell(priority, spell_id, type, mana_cost, recast_delay, resist_adjust, min_hp, max_hp) end
-
----@param priority number # TODO: definition of parameter
----@param spell_id number # TODO: definition of parameter
----@param type number # TODO: definition of parameter
----@param mana_cost number # TODO: definition of parameter
----@param recast_delay number # TODO: definition of parameter
----@param resist_adjust number # TODO: definition of parameter
-function NPC:AddAISpell(priority, spell_id, type, mana_cost, recast_delay, resist_adjust) end
 
 ---@param spell_effect_id number # TODO: definition of parameter
 ---@param base_value number # TODO: definition of parameter
@@ -53,67 +38,16 @@ function NPC:AddCash(copper, silver, gold, platinum) end
 
 ---@param item_id number # TODO: definition of parameter
 ---@param charges number # TODO: definition of parameter
----@param equip boolean # TODO: definition of parameter
----@param aug1 number # TODO: definition of parameter
----@param aug2 number # TODO: definition of parameter
----@param aug3 number # TODO: definition of parameter
-function NPC:AddItem(item_id, charges, equip, aug1, aug2, aug3) end
-
----@param item_id number # TODO: definition of parameter
----@param charges number # TODO: definition of parameter
----@param equip boolean # TODO: definition of parameter
----@param aug1 number # TODO: definition of parameter
----@param aug2 number # TODO: definition of parameter
----@param aug3 number # TODO: definition of parameter
----@param aug4 number # TODO: definition of parameter
----@param aug5 number # TODO: definition of parameter
-function NPC:AddItem(item_id, charges, equip, aug1, aug2, aug3, aug4, aug5) end
-
----@param item_id number # TODO: definition of parameter
----@param charges number # TODO: definition of parameter
----@param equip boolean # TODO: definition of parameter
----@param aug1 number # TODO: definition of parameter
----@param aug2 number # TODO: definition of parameter
----@param aug3 number # TODO: definition of parameter
----@param aug4 number # TODO: definition of parameter
----@param aug5 number # TODO: definition of parameter
----@param aug6 number # TODO: definition of parameter
+---@param equip? boolean # TODO: definition of parameter
+---@param aug1? number # TODO: definition of parameter
+---@param aug2? number # TODO: definition of parameter
+---@param aug3? number # TODO: definition of parameter
+---@param aug4? number # TODO: definition of parameter
+---@param aug5? number # TODO: definition of parameter
+---@param aug6? number # TODO: definition of parameter
 function NPC:AddItem(item_id, charges, equip, aug1, aug2, aug3, aug4, aug5, aug6) end
 
----@param item_id number # TODO: definition of parameter
----@param charges number # TODO: definition of parameter
-function NPC:AddItem(item_id, charges) end
-
----@param item_id number # TODO: definition of parameter
----@param charges number # TODO: definition of parameter
----@param equip boolean # TODO: definition of parameter
----@param aug1 number # TODO: definition of parameter
----@param aug2 number # TODO: definition of parameter
-function NPC:AddItem(item_id, charges, equip, aug1, aug2) end
-
----@param item_id number # TODO: definition of parameter
----@param charges number # TODO: definition of parameter
----@param equip boolean # TODO: definition of parameter
----@param aug1 number # TODO: definition of parameter
-function NPC:AddItem(item_id, charges, equip, aug1) end
-
----@param item_id number # TODO: definition of parameter
----@param charges number # TODO: definition of parameter
----@param equip boolean # TODO: definition of parameter
----@param aug1 number # TODO: definition of parameter
----@param aug2 number # TODO: definition of parameter
----@param aug3 number # TODO: definition of parameter
----@param aug4 number # TODO: definition of parameter
-function NPC:AddItem(item_id, charges, equip, aug1, aug2, aug3, aug4) end
-
----@param item_id number # TODO: definition of parameter
----@param charges number # TODO: definition of parameter
----@param equip boolean # TODO: definition of parameter
-function NPC:AddItem(item_id, charges, equip) end
-
-function NPC:AddLootTable() end
-
----@param id number # TODO: definition of parameter
+---@param id? number # TODO: definition of parameter
 function NPC:AddLootTable(id) end
 
 ---@param grid number # TODO: definition of parameter
@@ -176,8 +110,7 @@ function NPC:GetHealScale() end
 ---@param loot_slot number # TODO: definition of parameter
 function NPC:GetItemIDBySlot(loot_slot) end
 
----@param L State* # TODO: definition of parameter
-function NPC:GetLootList(L) end
+function NPC:GetLootList() end
 
 function NPC:GetLoottableID() end
 
@@ -299,28 +232,17 @@ function NPC:RemoveAISpellEffect(spell_effect_id) end
 function NPC:RemoveCash() end
 
 ---@param item_id number # TODO: definition of parameter
----@param quantity number # TODO: definition of parameter
-function NPC:RemoveItem(item_id, quantity) end
-
----@param item_id number # TODO: definition of parameter
----@param quantity number # TODO: definition of parameter
----@param slot number # TODO: definition of parameter
+---@param quantity? number # TODO: definition of parameter
+---@param slot? number # TODO: definition of parameter
 function NPC:RemoveItem(item_id, quantity, slot) end
-
----@param item_id number # TODO: definition of parameter
-function NPC:RemoveItem(item_id) end
 
 function NPC:ResumeWandering() end
 
----@param clear boolean # TODO: definition of parameter
-function NPC:SaveGuardSpot(clear) end
-
-function NPC:SaveGuardSpot() end
-
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param heading number # TODO: definition of parameter
+---@param x? number # TODO: definition of parameter
+---@param y? number # TODO: definition of parameter
+---@param z? number # TODO: definition of parameter
+---@param heading? number # TODO: definition of parameter
+---@overload fun(clear:boolean)
 function NPC:SaveGuardSpot(x, y, z, heading) end
 
 ---@param npc_level number # TODO: definition of parameter
@@ -366,15 +288,8 @@ function NPC:SetSecSkill(skill_id) end
 function NPC:SetSilver(amt) end
 
 ---@param box_size number # TODO: definition of parameter
----@param move_distance number # TODO: definition of parameter
-function NPC:SetSimpleRoamBox(box_size, move_distance) end
-
----@param box_size number # TODO: definition of parameter
-function NPC:SetSimpleRoamBox(box_size) end
-
----@param box_size number # TODO: definition of parameter
----@param move_distance number # TODO: definition of parameter
----@param move_delay number # TODO: definition of parameter
+---@param move_distance? number # TODO: definition of parameter
+---@param move_delay? number # TODO: definition of parameter
 function NPC:SetSimpleRoamBox(box_size, move_distance, move_delay) end
 
 ---@param sg2 number # TODO: definition of parameter

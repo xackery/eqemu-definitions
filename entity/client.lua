@@ -1136,21 +1136,9 @@ function Client:SetSkill(skill_id, value) end
 function Client:SetSkillPoints(skill) end
 
 ---@param spell_id number # TODO: definition of parameter
----@param duration number # TODO: definition of parameter
-function Client:SetSpellDuration(spell_id, duration) end
-
----@param spell_id number # TODO: definition of parameter
-function Client:SetSpellDuration(spell_id) end
-
----@param spell_id number # TODO: definition of parameter
----@param duration number # TODO: definition of parameter
----@param allow_pets boolean # TODO: definition of parameter
-function Client:SetSpellDuration(spell_id, duration, allow_pets) end
-
----@param spell_id number # TODO: definition of parameter
----@param duration number # TODO: definition of parameter
----@param allow_pets boolean # TODO: definition of parameter
----@param allow_bots boolean # TODO: definition of parameter
+---@param duration? number # TODO: definition of parameter
+---@param allow_pets? boolean # TODO: definition of parameter
+---@param allow_bots? boolean # TODO: definition of parameter
 function Client:SetSpellDuration(spell_id, duration, allow_pets, allow_bots) end
 
 ---@param spell_id number # TODO: definition of parameter

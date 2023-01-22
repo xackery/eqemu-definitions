@@ -16,20 +16,13 @@ function Raid:CastGroupSpell(caster, spell_id, group_id) end
 
 ---@param expedition_name string # TODO: definition of parameter
 ---@param event_name string # TODO: definition of parameter
----@param max_check_count number # TODO: definition of parameter
+---@param max_check_count? number # TODO: definition of parameter
 function Raid:DoesAnyMemberHaveExpeditionLockout(expedition_name, event_name, max_check_count) end
-
----@param expedition_name string # TODO: definition of parameter
----@param event_name string # TODO: definition of parameter
-function Raid:DoesAnyMemberHaveExpeditionLockout(expedition_name, event_name) end
 
 ---@param member_index number # TODO: definition of parameter
 function Raid:GetClientByIndex(member_index) end
 
----@param c string # TODO: definition of parameter
-function Raid:GetGroup(c) end
-
----@param c Client # TODO: definition of parameter
+---@param c string|Client # TODO: definition of parameter
 function Raid:GetGroup(c) end
 
 ---@param member_index number # TODO: definition of parameter (and type this)
@@ -53,10 +46,7 @@ function Raid:GroupCount(group_id) end
 ---@param name string # TODO: definition of parameter
 function Raid:IsGroupLeader(name) end
 
----@param c string # TODO: definition of parameter
-function Raid:IsLeader(c) end
-
----@param c Client # TODO: definition of parameter
+---@param c Client|string # TODO: definition of parameter
 function Raid:IsLeader(c) end
 
 ---@param name string # TODO: definition of parameter
@@ -73,15 +63,8 @@ function Raid:SplitExp(exp, other) end
 ---@param silver number # TODO: definition of parameter
 ---@param gold number # TODO: definition of parameter
 ---@param platinum number # TODO: definition of parameter
----@param splitter Client # TODO: definition of parameter
+---@param splitter? Client # TODO: definition of parameter
 function Raid:SplitMoney(gid, copper, silver, gold, platinum, splitter) end
-
----@param gid number # TODO: definition of parameter
----@param copper number # TODO: definition of parameter
----@param silver number # TODO: definition of parameter
----@param gold number # TODO: definition of parameter
----@param platinum number # TODO: definition of parameter
-function Raid:SplitMoney(gid, copper, silver, gold, platinum) end
 
 ---@param sender Mob # TODO: definition of parameter
 ---@param zone_id number # TODO: definition of parameter
