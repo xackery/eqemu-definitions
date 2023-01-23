@@ -1,5 +1,5 @@
 ---@meta
 
 ---@class ObjectList
----@field Entries number
+---@field entries Object[]
 ObjectList = {}

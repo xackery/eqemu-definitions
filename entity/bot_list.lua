@@ -1,5 +1,5 @@
 ---@meta
 
 ---@class BotList
----@field Entries number
+---@field entries Bot[]
 BotList = {}

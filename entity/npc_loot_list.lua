@@ -1,5 +1,5 @@
 ---@meta
 
 ---@class NPCLootList
----@field Entries number
+---@field entries number[] # npc id
 NPCLootList = {}

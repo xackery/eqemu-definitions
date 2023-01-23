@@ -130,38 +130,16 @@ function eq.create_door(model, x, y, z, h, open_type, size) end
 ---@param y number # TODO: definition of parameter
 ---@param z number # TODO: definition of parameter
 ---@param h number # TODO: definition of parameter
----@param decay_time number # TODO: definition of parameter
+---@param decay_time? number # TODO: definition of parameter
 function eq.create_ground_object(item_id, x, y, z, h, decay_time) end
 
----@param item_id number # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param h number # TODO: definition of parameter
-function eq.create_ground_object(item_id, x, y, z, h) end
-
 ---@param model string # TODO: definition of parameter
 ---@param x number # TODO: definition of parameter
 ---@param y number # TODO: definition of parameter
 ---@param z number # TODO: definition of parameter
 ---@param h number # TODO: definition of parameter
-function eq.create_ground_object_from_model(model, x, y, z, h) end
-
----@param model string # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param h number # TODO: definition of parameter
----@param type number # TODO: definition of parameter
-function eq.create_ground_object_from_model(model, x, y, z, h, type) end
-
----@param model string # TODO: definition of parameter
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param h number # TODO: definition of parameter
----@param type number # TODO: definition of parameter
----@param decay_time number # TODO: definition of parameter
+---@param type? number # TODO: definition of parameter
+---@param decay_time? number # TODO: definition of parameter
 function eq.create_ground_object_from_model(model, x, y, z, h, type, decay_time) end
 
 ---@param name string # TODO: definition of parameter
@@ -260,57 +238,33 @@ function eq.cross_zone_add_ldon_win_by_raid_id(raid_id, theme_id) end
 
 ---@param character_id number # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
-function eq.cross_zone_assign_task_by_char_id(character_id, task_id) end
-
----@param character_id number # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
----@param enforce_level_requirement boolean # TODO: definition of parameter
+---@param enforce_level_requirement? boolean # TODO: definition of parameter
 function eq.cross_zone_assign_task_by_char_id(character_id, task_id, enforce_level_requirement) end
 
 ---@param client_name string # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
-function eq.cross_zone_assign_task_by_client_name(client_name, task_id) end
-
----@param client_name string # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
----@param enforce_level_requirement boolean # TODO: definition of parameter
+---@param enforce_level_requirement? boolean # TODO: definition of parameter
 function eq.cross_zone_assign_task_by_client_name(client_name, task_id, enforce_level_requirement) end
 
 ---@param expedition_id number # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
-function eq.cross_zone_assign_task_by_expedition_id(expedition_id, task_id) end
-
----@param expedition_id number # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
----@param enforce_level_requirement boolean # TODO: definition of parameter
+---@param enforce_level_requirement? boolean # TODO: definition of parameter
 function eq.cross_zone_assign_task_by_expedition_id(expedition_id, task_id, enforce_level_requirement) end
 
 ---@param group_id number # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
-function eq.cross_zone_assign_task_by_group_id(group_id, task_id) end
-
----@param group_id number # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
----@param enforce_level_requirement boolean # TODO: definition of parameter
+---@param enforce_level_requirement? boolean # TODO: definition of parameter
 function eq.cross_zone_assign_task_by_group_id(group_id, task_id, enforce_level_requirement) end
 
 ---@param guild_id number # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
----@param enforce_level_requirement boolean # TODO: definition of parameter
+---@param enforce_level_requirement? boolean # TODO: definition of parameter
 function eq.cross_zone_assign_task_by_guild_id(guild_id, task_id, enforce_level_requirement) end
 
----@param guild_id number # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
-function eq.cross_zone_assign_task_by_guild_id(guild_id, task_id) end
-
 ---@param raid_id number # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
----@param enforce_level_requirement boolean # TODO: definition of parameter
+---@param enforce_level_requirement? boolean # TODO: definition of parameter
 function eq.cross_zone_assign_task_by_raid_id(raid_id, task_id, enforce_level_requirement) end
-
----@param raid_id number # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
-function eq.cross_zone_assign_task_by_raid_id(raid_id, task_id) end
 
 ---@param character_id number # TODO: definition of parameter
 ---@param spell_id number # TODO: definition of parameter
@@ -933,6 +887,7 @@ function eq.get_char_id_by_name(name) end
 function eq.get_char_name_by_id(char_id) end
 
 ---@param instance_id number # TODO: definition of parameter
+---@return number[] # returns an array of character_id.
 function eq.get_characters_in_instance(instance_id) end
 
 ---@param class_id number # TODO: definition of parameter
@@ -2171,19 +2126,8 @@ function eq.zone_group(zone_name) end
 
 ---@param type number # TODO: definition of parameter
 ---@param message string # TODO: definition of parameter
-function eq.zone_marquee(type, message) end
-
----@param type number # TODO: definition of parameter
----@param priority number # TODO: definition of parameter
----@param fade_in number # TODO: definition of parameter
----@param fade_out number # TODO: definition of parameter
----@param duration number # TODO: definition of parameter
----@param message string # TODO: definition of parameter
-function eq.zone_marquee(type, priority, fade_in, fade_out, duration, message) end
-
----@param type number # TODO: definition of parameter
----@param message string # TODO: definition of parameter
----@param duration number # TODO: definition of parameter
+---@param duration? number # TODO: definition of parameter
+---@overload fun(type: number, priority: number, fade_in: number, fade_out: number, duration: number, message: string)
 function eq.zone_marquee(type, message, duration) end
 
 ---@param zone_name string # TODO: definition of parameter

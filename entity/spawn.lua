@@ -1,7 +1,7 @@
 ---@meta
 
 ---TODO: definition for Spawn
----@class Spawn
+---@class Spawn : Entity
 ---@field null boolean # returns true when a spawn does not exist
 ---@field valid boolean # returns false when a spawn is invalid
 Spawn = {}

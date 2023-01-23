@@ -1,5 +1,5 @@
 ---@meta
 
 ---@class MobList
----@field Entries number
+---@field entries Mob[]
 MobList = {}

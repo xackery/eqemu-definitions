@@ -1,5 +1,5 @@
 ---@meta
 
 ---@class DoorList
----@field Entries number
+---@field entries Door[]
 DoorList = {}

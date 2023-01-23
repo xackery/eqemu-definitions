@@ -9,10 +9,8 @@ function Object:ClearUser() end
 
 function Object:Close() end
 
----@param reset_state boolean # TODO: definition of parameter
+---@param reset_state? boolean # TODO: definition of parameter
 function Object:Delete(reset_state) end
-
-function Object:Delete() end
 
 ---@param index number # TODO: definition of parameter
 function Object:DeleteItem(index) end

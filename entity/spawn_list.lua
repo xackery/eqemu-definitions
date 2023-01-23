@@ -1,5 +1,5 @@
 ---@meta
 
 ---@class SpawnList
----@field Entries number
+---@field entries Spawn[]
 SpawnList = {}

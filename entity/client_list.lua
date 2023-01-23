@@ -1,5 +1,5 @@
 ---@meta
 
 ---@class ClientList
----@field Entries number
+---@field entries Client[]
 ClientList = {}

@@ -47,22 +47,23 @@ function EntityList:GetBotByID(bot_id) end
 ---@param bot_name string # TODO: definition of parameter
 function EntityList:GetBotByName(bot_name) end
 
+---@return BotList
 function EntityList:GetBotList() end
 
 ---@param character_id number # TODO: definition of parameter
----@param class_id number # TODO: definition of parameter
+---@param class_id? number # TODO: definition of parameter
+---@return BotList
 function EntityList:GetBotListByCharacterID(character_id, class_id) end
 
----@param character_id number # TODO: definition of parameter
-function EntityList:GetBotListByCharacterID(character_id) end
-
 ---@param client_name string # TODO: definition of parameter
+---@return BotList
 function EntityList:GetBotListByClientName(client_name) end
 
 ---@param acct_id number # TODO: definition of parameter
 function EntityList:GetClientByAccID(acct_id) end
 
 ---@param char_id number # TODO: definition of parameter
+---@return Client
 function EntityList:GetClientByCharID(char_id) end
 
 ---@param id number # TODO: definition of parameter
@@ -74,6 +75,7 @@ function EntityList:GetClientByName(name) end
 ---@param wid number # TODO: definition of parameter
 function EntityList:GetClientByWID(wid) end
 
+---@return ClientList
 function EntityList:GetClientList() end
 
 ---@param id number # TODO: definition of parameter
@@ -85,6 +87,7 @@ function EntityList:GetCorpseByName(name) end
 ---@param client Client # TODO: definition of parameter
 function EntityList:GetCorpseByOwner(client) end
 
+---@return CorpseList
 function EntityList:GetCorpseList() end
 
 ---@param db_id number # TODO: definition of parameter
@@ -96,6 +99,7 @@ function EntityList:GetDoorsByDoorID(door_id) end
 ---@param id number # TODO: definition of parameter
 function EntityList:GetDoorsByID(id) end
 
+---@return DoorList
 function EntityList:GetDoorsList() end
 
 ---@param client Client # TODO: definition of parameter
@@ -123,6 +127,7 @@ function EntityList:GetMobByNpcTypeID(npc_type) end
 ---@param id number # TODO: definition of parameter
 function EntityList:GetMobID(id) end
 
+---@return MobList
 function EntityList:GetMobList() end
 
 ---@param id number # TODO: definition of parameter
@@ -135,6 +140,7 @@ function EntityList:GetNPCByNPCTypeID(npc_type) end
 ---@param spawn_id number # TODO: definition of parameter
 function EntityList:GetNPCBySpawnID(spawn_id) end
 
+---@return NPCList
 function EntityList:GetNPCList() end
 
 ---@param db_id number # TODO: definition of parameter
@@ -143,6 +149,7 @@ function EntityList:GetObjectByDBID(db_id) end
 ---@param id number # TODO: definition of parameter
 function EntityList:GetObjectByID(id) end
 
+---@return ObjectList
 function EntityList:GetObjectList() end
 
 ---@param client Client # TODO: definition of parameter
@@ -151,19 +158,11 @@ function EntityList:GetRaidByClient(client) end
 ---@param id number # TODO: definition of parameter
 function EntityList:GetRaidByID(id) end
 
-function EntityList:GetRandomBot() end
-
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param distance number # TODO: definition of parameter
-function EntityList:GetRandomBot(x, y, z, distance) end
-
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param distance number # TODO: definition of parameter
----@param exclude_bot number # TODO: definition of parameter (and type this)
+---@param x? number # TODO: definition of parameter
+---@param y? number # TODO: definition of parameter
+---@param z? number # TODO: definition of parameter
+---@param distance? number # TODO: definition of parameter
+---@param exclude_bot? number # TODO: definition of parameter (and type this)
 function EntityList:GetRandomBot(x, y, z, distance, exclude_bot) end
 
 function EntityList:GetRandomClient() end
@@ -211,11 +210,13 @@ function EntityList:GetRandomNPC(x, y, z, distance) end
 ---@param exclude_npc number # TODO: definition of parameter (and type this)
 function EntityList:GetRandomNPC(x, y, z, distance, exclude_npc) end
 
+---@return ClientList
 function EntityList:GetShuffledClientList() end
 
 ---@param id number # TODO: definition of parameter
 function EntityList:GetSpawnByID(id) end
 
+---@return SpawnList
 function EntityList:GetSpawnList() end
 
 ---@param who Mob # TODO: definition of parameter

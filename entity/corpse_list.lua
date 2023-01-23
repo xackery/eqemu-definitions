@@ -1,5 +1,5 @@
 ---@meta
 
 ---@class CorpseList
----@field Entries number
+---@field entries Corpse[]
 CorpseList = {}

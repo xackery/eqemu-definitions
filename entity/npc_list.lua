@@ -1,5 +1,5 @@
 ---@meta
 
 ---@class NPCList
----@field Entries number
+---@field entries NPC[]
 NPCList = {}

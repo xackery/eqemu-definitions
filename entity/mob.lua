@@ -767,6 +767,7 @@ function Mob:GetSTA() end
 
 function Mob:GetSTR() end
 
+---@return HateList
 function Mob:GetShuffledHateList() end
 
 function Mob:GetSize() end

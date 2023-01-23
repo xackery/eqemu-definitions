@@ -110,7 +110,8 @@ function NPC:GetHealScale() end
 ---@param loot_slot number # TODO: definition of parameter
 function NPC:GetItemIDBySlot(loot_slot) end
 
-function NPC:GetLootList() end
+---@return NPCLootList
+function NPC:GetLootList() return {} end
 
 function NPC:GetLoottableID() end
 
