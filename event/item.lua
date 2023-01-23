@@ -1,7 +1,8 @@
 ---@meta
 
 ---@class ItemEventAugmentInsert
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 ---@field item string # TODO: definition of field (and proper typing)
 ---@field slot_id number # TODO: definition of field (and proper typing)
 
@@ -10,7 +11,8 @@
 function event_augment_insert(e) end
 
 ---@class ItemEventAugmentItem
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 ---@field aug string # TODO: definition of field (and proper typing)
 ---@field slot_id number # TODO: definition of field (and proper typing)
 
@@ -19,7 +21,8 @@ function event_augment_insert(e) end
 function event_augment_item(e) end
 
 ---@class ItemEventAugmentRemove
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 ---@field item string # TODO: definition of field (and proper typing)
 ---@field slot_id number # TODO: definition of field (and proper typing)
 ---@field destroyed string # TODO: definition of field (and proper typing)
@@ -29,21 +32,24 @@ function event_augment_item(e) end
 function event_augment_remove(e) end
 
 ---@class ItemEventDestroyItem
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 
 --- event_destroy_item is a Item event when destroyitem occurs.
 ---@param e ItemEventDestroyItem
 function event_destroy_item(e) end
 
 ---@class ItemEventDropItem
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 
 --- event_drop_item is a Item event when dropitem occurs.
 ---@param e ItemEventDropItem
 function event_drop_item(e) end
 
 ---@class ItemEventEquipItem
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 ---@field slot_id number # TODO: definition of field (and proper typing)
 
 --- event_equip_item is a Item event when equipitem occurs.
@@ -51,7 +57,8 @@ function event_drop_item(e) end
 function event_equip_item(e) end
 
 ---@class ItemEventItemClick
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 ---@field slot_id number # TODO: definition of field (and proper typing)
 
 --- event_item_click is a Item event when itemclick occurs.
@@ -59,7 +66,8 @@ function event_equip_item(e) end
 function event_item_click(e) end
 
 ---@class ItemEventItemClickCast
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 ---@field slot_id number # TODO: definition of field (and proper typing)
 
 --- event_item_click_cast is a Item event when itemclickcast occurs.
@@ -67,21 +75,24 @@ function event_item_click(e) end
 function event_item_click_cast(e) end
 
 ---@class ItemEventItemEnterZone
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 
 --- event_item_enter_zone is a Item event when itementerzone occurs.
 ---@param e ItemEventItemEnterZone
 function event_item_enter_zone(e) end
 
 ---@class ItemEventItemTick
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 
 --- event_item_tick is a Item event when itemtick occurs.
 ---@param e ItemEventItemTick
 function event_item_tick(e) end
 
 ---@class ItemEventLoot
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 ---@field corpse Corpse|nil # Corpse of dying NPC
 
 --- event_loot is a Item event when loot occurs.
@@ -89,14 +100,16 @@ function event_item_tick(e) end
 function event_loot(e) end
 
 ---@class ItemEventScaleCalc
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 
 --- event_scale_calc is a Item event when scalecalc occurs.
 ---@param e ItemEventScaleCalc
 function event_scale_calc(e) end
 
 ---@class ItemEventTimer
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 ---@field timer string # TODO: definition of field (and proper typing)
 
 --- event_timer is a Item event when timer occurs.
@@ -104,7 +117,8 @@ function event_scale_calc(e) end
 function event_timer(e) end
 
 ---@class ItemEventUnaugmentItem
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 ---@field aug string # TODO: definition of field (and proper typing)
 ---@field slot_id number # TODO: definition of field (and proper typing)
 
@@ -113,7 +127,8 @@ function event_timer(e) end
 function event_unaugment_item(e) end
 
 ---@class ItemEventUnequipItem
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 ---@field slot_id number # TODO: definition of field (and proper typing)
 
 --- event_unequip_item is a Item event when unequipitem occurs.
@@ -121,7 +136,8 @@ function event_unaugment_item(e) end
 function event_unequip_item(e) end
 
 ---@class ItemEventWeaponProc
----@field self Item # item that triggered the event
+---@field self ItemInst # item that triggered the event
+---@field owner Client # client related to the item event
 ---@field target string # TODO: definition of field (and proper typing)
 ---@field spell Spell|nil # Spell instance that was used
 
