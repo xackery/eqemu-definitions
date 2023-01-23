@@ -654,62 +654,81 @@ function Mob:GetHateTop() end
 ---@return number
 function Mob:GetHeading() end
 
+---@return number
 function Mob:GetHelmTexture() end
 
 ---@param material_slot number # TODO: definition of parameter
 function Mob:GetHerosForgeModel(material_slot) end
 
+---@return number
 function Mob:GetINT() end
 
 function Mob:GetInvisibleLevel() end
 
 function Mob:GetInvisibleUndeadLevel() end
 
+---@return boolean
 function Mob:GetInvul() end
 
+---@return number
 function Mob:GetItemBonuses() end
 
+---@return number
 function Mob:GetItemHPBonuses() end
 
 ---@param itemid number # TODO: definition of parameter
 ---@param identifier string # TODO: definition of parameter
+---@return number
 function Mob:GetItemStat(itemid, identifier) end
 
+---@return string
 function Mob:GetLastName() end
 
+---@return number
 function Mob:GetLevel() end
 
----@param other number # TODO: definition of parameter
-function Mob:GetLevelCon(other) end
-
 ---@param my number # TODO: definition of parameter
----@param other number # TODO: definition of parameter
+---@param other? number # TODO: definition of parameter
+---@return number
 function Mob:GetLevelCon(my, other) end
 
+---@return number
 function Mob:GetLuclinFace() end
 
+---@return number
 function Mob:GetMR() end
 
+---@return number
 function Mob:GetMana() end
 
+---@return number
 function Mob:GetManaRatio() end
 
+---@return number
 function Mob:GetMaxAGI() end
 
+---@return number
 function Mob:GetMaxCHA() end
 
+---@return number
 function Mob:GetMaxDEX() end
 
+---@return number
 function Mob:GetMaxHP() end
 
+---@return number
 function Mob:GetMaxINT() end
 
+---@return number
 function Mob:GetMaxMana() end
 
+---@return number
 function Mob:GetMaxSTA() end
 
+---@return number
 function Mob:GetMaxSTR() end
 
+---@return number
 function Mob:GetMaxWIS() end
 
 ---@param uskill number # TODO: definition of parameter (and type this)
@@ -726,6 +745,7 @@ function Mob:GetModSkillDmgTaken(skill) end
 ---@param resist number # TODO: definition of parameter (and type this)
 function Mob:GetModVulnerability(resist) end
 
+---@return number
 function Mob:GetNPCTypeID() end
 
 ---@return string
