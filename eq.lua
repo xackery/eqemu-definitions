@@ -705,74 +705,41 @@ function eq.cross_zone_signal_npc_by_npctype_id(npctype_id, signal) end
 ---@param character_id number # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
 ---@param activity_id number # TODO: definition of parameter
----@param activity_count number # TODO: definition of parameter
+---@param activity_count? number # TODO: definition of parameter
 function eq.cross_zone_update_activity_by_char_id(character_id, task_id, activity_id, activity_count) end
 
----@param character_id number # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
----@param activity_id number # TODO: definition of parameter
-function eq.cross_zone_update_activity_by_char_id(character_id, task_id, activity_id) end
-
 ---@param client_name string # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
 ---@param activity_id number # TODO: definition of parameter
----@param activity_count number # TODO: definition of parameter
+---@param activity_count? number # TODO: definition of parameter
 function eq.cross_zone_update_activity_by_client_name(client_name, task_id, activity_id, activity_count) end
 
----@param client_name string # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
----@param activity_id number # TODO: definition of parameter
-function eq.cross_zone_update_activity_by_client_name(client_name, task_id, activity_id) end
-
 ---@param expedition_id number # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
 ---@param activity_id number # TODO: definition of parameter
----@param activity_count number # TODO: definition of parameter
+---@param activity_count? number # TODO: definition of parameter
 function eq.cross_zone_update_activity_by_expedition_id(expedition_id, task_id, activity_id, activity_count) end
 
----@param expedition_id number # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
----@param activity_id number # TODO: definition of parameter
-function eq.cross_zone_update_activity_by_expedition_id(expedition_id, task_id, activity_id) end
-
 ---@param group_id number # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
 ---@param activity_id number # TODO: definition of parameter
----@param activity_count number # TODO: definition of parameter
+---@param activity_count? number # TODO: definition of parameter
 function eq.cross_zone_update_activity_by_group_id(group_id, task_id, activity_id, activity_count) end
 
----@param group_id number # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
----@param activity_id number # TODO: definition of parameter
-function eq.cross_zone_update_activity_by_group_id(group_id, task_id, activity_id) end
-
 ---@param guild_id number # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
 ---@param activity_id number # TODO: definition of parameter
-function eq.cross_zone_update_activity_by_guild_id(guild_id, task_id, activity_id) end
-
----@param guild_id number # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
----@param activity_id number # TODO: definition of parameter
----@param activity_count number # TODO: definition of parameter
+---@param activity_count? number # TODO: definition of parameter
 function eq.cross_zone_update_activity_by_guild_id(guild_id, task_id, activity_id, activity_count) end
 
 ---@param raid_id number # TODO: definition of parameter
 ---@param task_id number # TODO: definition of parameter
 ---@param activity_id number # TODO: definition of parameter
-function eq.cross_zone_update_activity_by_raid_id(raid_id, task_id, activity_id) end
-
----@param raid_id number # TODO: definition of parameter
----@param task_id number # TODO: definition of parameter
----@param activity_id number # TODO: definition of parameter
----@param activity_count number # TODO: definition of parameter
+---@param activity_count? number # TODO: definition of parameter
 function eq.cross_zone_update_activity_by_raid_id(raid_id, task_id, activity_id, activity_count) end
 
 ---@param message string # TODO: definition of parameter
-function eq.debug(message) end
-
----@param message string # TODO: definition of parameter
----@param level number # TODO: definition of parameter
+---@param level? number # TODO: definition of parameter
 function eq.debug(message, level) end
 
 ---@param bucket_key string # TODO: definition of parameter
@@ -781,19 +748,13 @@ function eq.delete_data(bucket_key) end
 ---@param name string # TODO: definition of parameter
 function eq.delete_global(name) end
 
----@param npc_type number # TODO: definition of parameter
+---@param npc_type? number # TODO: definition of parameter
 function eq.depop(npc_type) end
 
-function eq.depop() end
-
----@param npc_type number # TODO: definition of parameter
+---@param npc_type? number # TODO: definition of parameter
 function eq.depop_all(npc_type) end
 
-function eq.depop_all() end
-
-function eq.depop_with_timer() end
-
----@param npc_type number # TODO: definition of parameter
+---@param npc_type? number # TODO: definition of parameter
 function eq.depop_with_timer(npc_type) end
 
 ---@param start_spawn_status boolean # TODO: definition of parameter
@@ -834,10 +795,8 @@ function eq.enable_title(title_set) end
 ---@param task_set number # TODO: definition of parameter (and type this)
 function eq.enabled_task_count(task_set) end
 
----@param send_fail boolean # TODO: definition of parameter
+---@param send_fail? boolean # TODO: definition of parameter
 function eq.end_dz_task(send_fail) end
-
-function eq.end_dz_task() end
 
 function eq.faction_value() end
 
@@ -858,20 +817,13 @@ function eq.flag_instance_by_raid_leader(zone, version) end
 ---@param flymode number # TODO: definition of parameter
 function eq.fly_mode(flymode) end
 
----@param entity_id number # TODO: definition of parameter
-function eq.follow(entity_id) end
-
----@param entity_id number # TODO: definition of parameter
----@param distance number # TODO: definition of parameter
+---@param entity_id? number # TODO: definition of parameter
+---@param distance? number # TODO: definition of parameter
 function eq.follow(entity_id, distance) end
 
 ---@param character_id number # TODO: definition of parameter
 ---@param zone_id number # TODO: definition of parameter
-function eq.get_aa_exp_modifier_by_char_id(character_id, zone_id) end
-
----@param character_id number # TODO: definition of parameter
----@param zone_id number # TODO: definition of parameter
----@param instance_version number # TODO: definition of parameter
+---@param instance_version? number # TODO: definition of parameter
 function eq.get_aa_exp_modifier_by_char_id(character_id, zone_id, instance_version) end
 
 ---@param aa_id number # TODO: definition of parameter

@@ -1,11 +1,11 @@
 ---@meta
 
 
----@class BotEventaggrosay
----@field self Bot # TODO: definition of field (and proper typing)
+---@class BotEventAggroSay
+---@field self Bot # Bot triggering the event
 
 --- event_aggro_say is a Bot event when aggrosay occurs.
----@param e BotEventaggrosay
+---@param e BotEventAggroSay
 function event_aggro_say(e) end
 
 ---@class BotEventcast

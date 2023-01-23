@@ -115,10 +115,9 @@ function EntityList:GetGroupByLeaderName(name) end
 function EntityList:GetGroupByMob(mob) end
 
 ---@param name string # TODO: definition of parameter
+---@return Mob
+---@overload fun(id:number):Mob
 function EntityList:GetMob(name) end
-
----@param id number # TODO: definition of parameter
-function EntityList:GetMob(id) end
 
 ---@param npc_type number # TODO: definition of parameter
 ---@return Mob
@@ -165,49 +164,25 @@ function EntityList:GetRaidByID(id) end
 ---@param exclude_bot? number # TODO: definition of parameter (and type this)
 function EntityList:GetRandomBot(x, y, z, distance, exclude_bot) end
 
-function EntityList:GetRandomClient() end
-
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param distance number # TODO: definition of parameter
-function EntityList:GetRandomClient(x, y, z, distance) end
-
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param distance number # TODO: definition of parameter
----@param exclude_client number # TODO: definition of parameter (and type this)
+---@param x? number # TODO: definition of parameter
+---@param y? number # TODO: definition of parameter
+---@param z? number # TODO: definition of parameter
+---@param distance? number # TODO: definition of parameter
+---@param exclude_client? number # TODO: definition of parameter (and type this)
 function EntityList:GetRandomClient(x, y, z, distance, exclude_client) end
 
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param distance number # TODO: definition of parameter
----@param exclude_mob number # TODO: definition of parameter (and type this)
+---@param x? number # TODO: definition of parameter
+---@param y? number # TODO: definition of parameter
+---@param z? number # TODO: definition of parameter
+---@param distance? number # TODO: definition of parameter
+---@param exclude_mob? number # TODO: definition of parameter (and type this)
 function EntityList:GetRandomMob(x, y, z, distance, exclude_mob) end
 
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param distance number # TODO: definition of parameter
-function EntityList:GetRandomMob(x, y, z, distance) end
-
-function EntityList:GetRandomMob() end
-
-function EntityList:GetRandomNPC() end
-
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param distance number # TODO: definition of parameter
-function EntityList:GetRandomNPC(x, y, z, distance) end
-
----@param x number # TODO: definition of parameter
----@param y number # TODO: definition of parameter
----@param z number # TODO: definition of parameter
----@param distance number # TODO: definition of parameter
----@param exclude_npc number # TODO: definition of parameter (and type this)
+---@param x? number # TODO: definition of parameter
+---@param y? number # TODO: definition of parameter
+---@param z? number # TODO: definition of parameter
+---@param distance? number # TODO: definition of parameter
+---@param exclude_npc? number # TODO: definition of parameter (and type this)
 function EntityList:GetRandomNPC(x, y, z, distance, exclude_npc) end
 
 ---@return ClientList
@@ -229,21 +204,13 @@ function EntityList:IsMobSpawnedByNpcTypeID(npc_type) end
 function EntityList:MakeNameUnique(name) end
 
 ---@param type number # TODO: definition of parameter
----@param message string # TODO: definition of parameter
-function EntityList:Marquee(type, message) end
-
----@param type number # TODO: definition of parameter
 ---@param priority number # TODO: definition of parameter
 ---@param fade_in number # TODO: definition of parameter
 ---@param fade_out number # TODO: definition of parameter
 ---@param duration number # TODO: definition of parameter
 ---@param message string # TODO: definition of parameter
+---@overload fun(type:number, message:string, duration?:number)
 function EntityList:Marquee(type, priority, fade_in, fade_out, duration, message) end
-
----@param type number # TODO: definition of parameter
----@param message string # TODO: definition of parameter
----@param duration number # TODO: definition of parameter
-function EntityList:Marquee(type, message, duration) end
 
 ---@param guild_dbid number # TODO: definition of parameter
 ---@param type number # TODO: definition of parameter
