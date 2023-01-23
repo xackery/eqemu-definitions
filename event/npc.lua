@@ -36,38 +36,38 @@ function event_waypoint_arrive(e) end
 function event_waypoint_depart(e) end
 
 
----@class NPCEventaggrosay
+---@class NPCEventAggroSay
 ---@field self NPC # NPC who is handling the event
 ---@field other Client # Client that triggered the event
 ---@field message string # Message client said to npc
 ---@field language Languages # Language client said message in
 
 --- event_aggro_say is a NPC event when aggrosay occurs.
----@param e NPCEventaggrosay
+---@param e NPCEventAggroSay
 function event_aggro_say(e) end
 
----@class NPCEventcast
+---@class NPCEventCast
 ---@field self NPC # NPC who is handling the event
 ---@field spell Spell|nil # Spell instance that was used
 
 --- event_cast is a NPC event when cast occurs.
----@param e NPCEventcast
+---@param e NPCEventCast
 function event_cast(e) end
 
----@class NPCEventcastbegin
+---@class NPCEventCastBegin
 ---@field self NPC # NPC who is handling the event
 ---@field spell Spell|nil # Spell instance that was used
 
 --- event_cast_begin is a NPC event when castbegin occurs.
----@param e NPCEventcastbegin
+---@param e NPCEventCastBegin
 function event_cast_begin(e) end
 
----@class NPCEventcaston
+---@class NPCEventCastOn
 ---@field self NPC # NPC who is handling the event
 ---@field spell Spell|nil # Spell instance that was used
 
 --- event_cast_on is a NPC event when caston occurs.
----@param e NPCEventcaston
+---@param e NPCEventCastOn
 function event_cast_on(e) end
 
 --- event_combat triggers when a mob enters or leaves combat [docs](https://docs.eqemu.io/quest-api/events/#event_combat)
@@ -95,7 +95,7 @@ function event_combat(e) end
 ---@param e NPCEventDeath
 function event_death(e) end
 
----@class NPCEventdeathcomplete
+---@class NPCEventDeathComplete
 ---@field self NPC # NPC who is handling the event
 ---@field other Client # Client that triggered the event
 ---@field killer_id number # Entity ID of mob that killed NPC
@@ -106,10 +106,10 @@ function event_death(e) end
 ---@field killed Mob|nil # Killer mob, if any
 
 --- event_death_complete is a NPC event when deathcomplete occurs.
----@param e NPCEventdeathcomplete
+---@param e NPCEventDeathComplete
 function event_death_complete(e) end
 
----@class NPCEventdeathzone
+---@class NPCEventDeathZone
 ---@field self NPC # NPC who is handling the event
 ---@field other Client # Client that triggered the event
 ---@field killer_id number # Entity ID of mob that killed NPC
@@ -120,7 +120,7 @@ function event_death_complete(e) end
 ---@field killed Mob|nil # Killer mob, if any
 
 --- event_death_zone is a NPC event when deathzone occurs.
----@param e NPCEventdeathzone
+---@param e NPCEventDeathZone
 function event_death_zone(e) end
 
 --- event_enter triggers when a client enters an NPC proximity based on eq.set_proximity() [docs](https://docs.eqemu.io/quest-api/events/#event_enter)
@@ -132,13 +132,13 @@ function event_death_zone(e) end
 ---@param e NPCEventEnter
 function event_enter(e) end
 
----@class NPCEvententerarea
+---@class NPCEventEnterArea
 ---@field self NPC # NPC who is handling the event
 ---@field area_id number # TODO: definition of field (and proper typing)
 ---@field area_type string # TODO: definition of field (and proper typing)
 
 --- event_enter_area is a NPC event when enterarea occurs.
----@param e NPCEvententerarea
+---@param e NPCEventEnterArea
 function event_enter_area(e) end
 
 --- event_exit triggers when a client exit an NPC proximity based on eq.set_proximity() [docs](https://docs.eqemu.io/quest-api/events/#event_exit)
@@ -151,12 +151,12 @@ function event_enter_area(e) end
 function event_exit(e) end
 
 --- event_feign_death triggers when a client feign deaths while aggro'd to an NPC [docs](https://docs.eqemu.io/quest-api/events/#event_feign_death)
----@class NPCEventfeigndeath
+---@class NPCEventFeignDeath
 ---@field self NPC # NPC who is handling the event
 ---@field other Client # Client that triggered the event
 
 --- event_feign_death triggers when a client feign deaths while aggro'd to an NPC [docs](https://docs.eqemu.io/quest-api/events/#event_feign_death)
----@param e NPCEventfeigndeath
+---@param e NPCEventFeignDeath
 function event_feign_death(e) end
 
 --- event_hate_list triggers when a mob's hate list has changed [docs](https://docs.eqemu.io/quest-api/events/#event_hate_list)
@@ -186,23 +186,23 @@ function event_hp(e) end
 ---@param e NPCEventKilledMerit
 function event_killed_merit(e) end
 
----@class NPCEventleavearea
+---@class NPCEventLeaveArea
 ---@field self NPC # NPC who is handling the event
 ---@field area_id number # TODO: definition of field (and proper typing)
 ---@field area_type string # TODO: definition of field (and proper typing)
 
 --- event_leave_area is a NPC event when leavearea occurs.
----@param e NPCEventleavearea
+---@param e NPCEventLeaveArea
 function event_leave_area(e) end
 
----@class NPCEventlootzone
+---@class NPCEventLootZone
 ---@field self NPC # NPC who is handling the event
 ---@field other Client # Client that triggered the event
 ---@field item string # TODO: definition of field (and proper typing)
 ---@field corpse Corpse|nil # Corpse of dying NPC
 
 --- event_loot_zone is a NPC event when lootzone occurs.
----@param e NPCEventlootzone
+---@param e NPCEventLootZone
 function event_loot_zone(e) end
 
 --- event_popup_response triggers when a Mob responds to an NPC Popup [docs](https://docs.eqemu.io/quest-api/events/#event_popupresponse)
@@ -215,14 +215,14 @@ function event_loot_zone(e) end
 ---@param e NPCEventPopupResponse
 function event_popup_response(e) end
 
----@class NPCEventproximitysay
+---@class NPCEventProximitySay
 ---@field self NPC # NPC who is handling the event
 ---@field other Client # Client that triggered the event
 ---@field message string # Message client said to npc
 ---@field language Languages # Language client said message in
 
 --- event_proximity_say is a NPC event when proximitysay occurs.
----@param e NPCEventproximitysay
+---@param e NPCEventProximitySay
 function event_proximity_say(e) end
 
 --- event_say arguments when a player says something to an NPC [docs](https://docs.eqemu.io/quest-api/events/#event_say)
@@ -257,19 +257,19 @@ function event_signal(e) end
 ---@param e NPCEventSlay
 function event_slay(e) end
 
----@class NPCEventspawn
+---@class NPCEventSpawn
 ---@field self NPC # NPC who is handling the event
 
 --- event_spawn is a NPC event when spawn occurs.
----@param e NPCEventspawn
+---@param e NPCEventSpawn
 function event_spawn(e) end
 
----@class NPCEventspawnzone
+---@class NPCEventSpawnZone
 ---@field self NPC # NPC who is handling the event
 ---@field other Client # Client that triggered the event
 
 --- event_spawn_zone is a NPC event when spawnzone occurs.
----@param e NPCEventspawnzone
+---@param e NPCEventSpawnZone
 function event_spawn_zone(e) end
 
 --- event_target_change triggers when a NPC changes their target [docs](https://docs.eqemu.io/quest-api/events/#event_target_change)
@@ -291,11 +291,11 @@ function event_target_change(e) end
 ---@param e NPCEventTaskAccepted
 function event_task_accepted(e) end
 
----@class NPCEventtick
+---@class NPCEventTick
 ---@field self NPC # NPC who is handling the event
 
 --- event_tick is a NPC event when tick occurs.
----@param e NPCEventtick
+---@param e NPCEventTick
 function event_tick(e) end
 
 --- event_timer triggers when a timer is set via eq.set_timer(). Using eq.stop_timer(name) or eq.stop_all_timers() should be called to stop a timer [docs](https://docs.eqemu.io/quest-api/events/#event_timer)
@@ -306,7 +306,6 @@ function event_tick(e) end
 --- event_timer triggers when a timer is set via eq.set_timer(). Using eq.stop_timer(name) or eq.stop_all_timers() should be called to stop a timer [docs](https://docs.eqemu.io/quest-api/events/#event_timer)
 ---@param e NPCEventTimer
 function event_timer(e) end
-
 
 ---@class NpcEventPayload
 ---@field self NPC # NPC who is handling the event
