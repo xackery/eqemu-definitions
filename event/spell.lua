@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class SpellEventSpellBuffTic
----@field self Spell # Spell that triggered the effect
+---@field self Spell|nil # Spell that triggered the effect
 ---@field target string # Target name that the spell triggered on
 ---@field spell_id number # spell id that triggered
 ---@field caster_id number # caster entity id of who casted the spell
@@ -15,7 +15,7 @@
 function event_spell_buff_tic(e) end
 
 ---@class SpellEventSpellEffect
----@field self Spell # Spell that triggered the effect
+---@field self Spell|nil # Spell that triggered the effect
 ---@field target string # Target name that the spell triggered on
 ---@field spell_id number # spell id that triggered
 ---@field caster_id number # caster entity id of who casted the spell
@@ -29,7 +29,7 @@ function event_spell_buff_tic(e) end
 function event_spell_effect(e) end
 
 ---@class SpellEventSpellEffectTranslocateComplete
----@field self Spell # Spell that triggered the effect
+---@field self Spell|nil # Spell that triggered the effect
 ---@field target string # Target name that the spell triggered on
 
 --- event_spell_effect_translocate_complete is a Spell event when spelleffecttranslocatecomplete occurs.
@@ -37,7 +37,7 @@ function event_spell_effect(e) end
 function event_spell_effect_translocate_complete(e) end
 
 ---@class SpellEventSpellFade
----@field self Spell # Spell that triggered the effect
+---@field self Spell|nil # Spell that triggered the effect
 ---@field target string # Target name that the spell triggered on
 ---@field spell_id number # spell id that triggered
 ---@field caster_id number # caster entity id of who casted the spell

@@ -1218,10 +1218,7 @@ function Mob:SetInvisible(state) end
 function Mob:SetInvul(value) end
 
 ---@param level number # TODO: definition of parameter
-function Mob:SetLevel(level) end
-
----@param level number # TODO: definition of parameter
----@param command boolean # TODO: definition of parameter
+---@param command? boolean # TODO: definition of parameter
 function Mob:SetLevel(level, command) end
 
 ---@param mana number # TODO: definition of parameter (and type this)
