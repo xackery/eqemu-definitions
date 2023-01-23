@@ -76,7 +76,7 @@ function EntityList:GetClientByName(name) end
 function EntityList:GetClientByWID(wid) end
 
 ---@return ClientList
-function EntityList:GetClientList() end
+function EntityList:GetClientList() return {} end
 
 ---@param id number # TODO: definition of parameter
 function EntityList:GetCorpseByID(id) end
@@ -88,7 +88,7 @@ function EntityList:GetCorpseByName(name) end
 function EntityList:GetCorpseByOwner(client) end
 
 ---@return CorpseList
-function EntityList:GetCorpseList() end
+function EntityList:GetCorpseList() return {} end
 
 ---@param db_id number # TODO: definition of parameter
 function EntityList:GetDoorsByDBID(db_id) end
@@ -100,7 +100,7 @@ function EntityList:GetDoorsByDoorID(door_id) end
 function EntityList:GetDoorsByID(id) end
 
 ---@return DoorList
-function EntityList:GetDoorsList() end
+function EntityList:GetDoorsList() return {} end
 
 ---@param client Client # TODO: definition of parameter
 function EntityList:GetGroupByClient(client) end
@@ -141,7 +141,7 @@ function EntityList:GetNPCByNPCTypeID(npc_type) end
 function EntityList:GetNPCBySpawnID(spawn_id) end
 
 ---@return NPCList
-function EntityList:GetNPCList() end
+function EntityList:GetNPCList() return {} end
 
 ---@param db_id number # TODO: definition of parameter
 function EntityList:GetObjectByDBID(db_id) end
@@ -150,7 +150,7 @@ function EntityList:GetObjectByDBID(db_id) end
 function EntityList:GetObjectByID(id) end
 
 ---@return ObjectList
-function EntityList:GetObjectList() end
+function EntityList:GetObjectList() return {} end
 
 ---@param client Client # TODO: definition of parameter
 function EntityList:GetRaidByClient(client) end
