@@ -1,51 +1,51 @@
 ---@meta
 
----@class SpellEventspellbufftic
----@field self Spell # TODO: definition of field (and proper typing)
----@field target string # TODO: definition of field (and proper typing)
----@field spell_id number # TODO: definition of field (and proper typing)
----@field caster_id number # TODO: definition of field (and proper typing)
+---@class SpellEventSpellBuffTic
+---@field self Spell # Spell that triggered the effect
+---@field target string # Target name that the spell triggered on
+---@field spell_id number # spell id that triggered
+---@field caster_id number # caster entity id of who casted the spell
 ---@field tics_remaining string # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 ---@field buff_slot string # TODO: definition of field (and proper typing)
 ---@field spell Spell|nil # Spell instance that was used
 
 --- event_spell_buff_tic is a Spell event when spellbufftic occurs.
----@param e SpellEventspellbufftic
+---@param e SpellEventSpellBuffTic
 function event_spell_buff_tic(e) end
 
----@class SpellEventspelleffect
----@field self Spell # TODO: definition of field (and proper typing)
----@field target string # TODO: definition of field (and proper typing)
----@field spell_id number # TODO: definition of field (and proper typing)
----@field caster_id number # TODO: definition of field (and proper typing)
+---@class SpellEventSpellEffect
+---@field self Spell # Spell that triggered the effect
+---@field target string # Target name that the spell triggered on
+---@field spell_id number # spell id that triggered
+---@field caster_id number # caster entity id of who casted the spell
 ---@field tics_remaining string # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 ---@field buff_slot string # TODO: definition of field (and proper typing)
 ---@field spell Spell|nil # Spell instance that was used
 
 --- event_spell_effect is a Spell event when spelleffect occurs.
----@param e SpellEventspelleffect
+---@param e SpellEventSpellEffect
 function event_spell_effect(e) end
 
----@class SpellEventspelleffecttranslocatecomplete
----@field self Spell # TODO: definition of field (and proper typing)
----@field target string # TODO: definition of field (and proper typing)
+---@class SpellEventSpellEffectTranslocateComplete
+---@field self Spell # Spell that triggered the effect
+---@field target string # Target name that the spell triggered on
 
 --- event_spell_effect_translocate_complete is a Spell event when spelleffecttranslocatecomplete occurs.
----@param e SpellEventspelleffecttranslocatecomplete
+---@param e SpellEventSpellEffectTranslocateComplete
 function event_spell_effect_translocate_complete(e) end
 
----@class SpellEventspellfade
----@field self Spell # TODO: definition of field (and proper typing)
----@field target string # TODO: definition of field (and proper typing)
----@field spell_id number # TODO: definition of field (and proper typing)
----@field caster_id number # TODO: definition of field (and proper typing)
+---@class SpellEventSpellFade
+---@field self Spell # Spell that triggered the effect
+---@field target string # Target name that the spell triggered on
+---@field spell_id number # spell id that triggered
+---@field caster_id number # caster entity id of who casted the spell
 ---@field tics_remaining string # TODO: definition of field (and proper typing)
 ---@field caster_level number # TODO: definition of field (and proper typing)
 ---@field buff_slot string # TODO: definition of field (and proper typing)
 ---@field spell Spell|nil # Spell instance that was used
 
 --- event_spell_fade is a Spell event when spellfade occurs.
----@param e SpellEventspellfade
+---@param e SpellEventSpellFade
 function event_spell_fade(e) end

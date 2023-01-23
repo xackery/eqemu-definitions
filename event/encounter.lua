@@ -1,27 +1,27 @@
 ---@meta
 
 
----@class EncounterEventencounterload
+---@class EncounterEventEncounterLoad
 ---@field self Encounter # TODO: definition of field (and proper typing)
 ---@field encounter string # TODO: definition of field (and proper typing)
 ---@field data string # TODO: definition of field (and proper typing)
 
 --- event_encounter_load is a Encounter event when encounterload occurs.
----@param e EncounterEventencounterload
+---@param e EncounterEventEncounterLoad
 function event_encounter_load(e) end
 
----@class EncounterEventencounterunload
+---@class EncounterEventEncounterUnload
 ---@field self Encounter # TODO: definition of field (and proper typing)
 ---@field data string # TODO: definition of field (and proper typing)
 
 --- event_encounter_unload is a Encounter event when encounterunload occurs.
----@param e EncounterEventencounterunload
+---@param e EncounterEventEncounterUnload
 function event_encounter_unload(e) end
 
----@class EncounterEventtimer
+---@class EncounterEventTimer
 ---@field self Encounter # TODO: definition of field (and proper typing)
 ---@field timer string # TODO: definition of field (and proper typing)
 
 --- event_timer is a Encounter event when timer occurs.
----@param e EncounterEventtimer
+---@param e EncounterEventTimer
 function event_timer(e) end
