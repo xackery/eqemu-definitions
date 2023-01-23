@@ -79,7 +79,7 @@ function event_cast_begin(e) end
 ---@field caster_level number # TODO: definition of field (and proper typing)
 
 --- event_cast_on is a Player event when caston occurs.
----@param e ---@class PlayerEventCastOn
+---@param e PlayerEventCastOn
 function event_cast_on(e) end
 
 ---@class PlayerEventClickDoor
@@ -127,7 +127,7 @@ function event_consider(e) end
 ---@field corpse_entity_id number # TODO: definition of field (and proper typing)
 
 --- event_consider_corpse is a Player event when considercorpse occurs.
----@param e ---@class PlayerEventConsiderCorpse
+---@param e PlayerEventConsiderCorpse
 function event_consider_corpse(e) end
 
 ---@class PlayerEventDeath
