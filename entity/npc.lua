@@ -172,7 +172,8 @@ function NPC:GetSpellFocusHeal() end
 
 function NPC:GetSpellScale() end
 
-function NPC:GetSwarmOwner() end
+---@return number
+function NPC:GetSwarmOwner() return 0 end
 
 function NPC:GetSwarmTarget() end
 
