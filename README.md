@@ -10,6 +10,8 @@ git clone this repo under this generic path, so it ends up like: c:\lua-definiti
 
 Under extensions, [find the sumneko 'lua' extension](https://marketplace.visualstudio.com/items?itemName=sumneko.lua)
 
+**NOTE**: Be sure to disable the spire extension, it will clash with this extension
+
 Open your quests folder as a workspace by dragging the quests folder into your vscode window.
 
 Create a .gitignore if one doesn't already exist, and add .vscode/ if it doesn't already have it
