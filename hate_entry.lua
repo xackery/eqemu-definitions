@@ -1,3 +1,4 @@
+---@meta
 
 ---Hate Entry represents a hate list's entry, tracking a mob's hate
 ---@class HateEntry

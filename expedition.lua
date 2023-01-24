@@ -1,3 +1,4 @@
+---@meta
 
 ---TODO: definition for Expedition
 ---@class Expedition

@@ -1,3 +1,5 @@
+---@meta
+
 ---Contains randomized number generators
 ---@class Random
 Random = {}

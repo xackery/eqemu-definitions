@@ -1,3 +1,4 @@
+---@meta
 
 ---@alias LoreGroup 
 ---| -1 # example: Worthless Coin

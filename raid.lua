@@ -1,3 +1,4 @@
+---@meta
 
 ---TODO: definition for Raid
 ---@class Raid

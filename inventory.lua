@@ -1,3 +1,4 @@
+---@meta
 
 ---TODO: definition for Inventory
 ---@class Inventory
