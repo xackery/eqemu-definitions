@@ -22,6 +22,7 @@ function Door:ForceOpen(sender, alt_mode) end
 ---@param sender Mob # TODO: definition of parameter
 function Door:ForceOpen(sender) end
 
+---@return boolean
 function Door:GetDisableTimer() end
 
 ---@return number
@@ -39,12 +40,16 @@ function Door:GetHeading() end
 ---@return number
 function Door:GetIncline() end
 
+---@return number
 function Door:GetKeyItem() end
 
+---@return number
 function Door:GetLockPick() end
 
+---@return number
 function Door:GetNoKeyring() end
 
+---@return number
 function Door:GetOpenType() end
 
 ---@return number

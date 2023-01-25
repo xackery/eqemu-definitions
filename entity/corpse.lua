@@ -60,6 +60,7 @@ function Corpse:GetFirstSlotByItemID(item_id) end
 function Corpse:GetGold() end
 
 ---@param loot_slot number # TODO: definition of parameter
+---@return number
 function Corpse:GetItemIDBySlot(loot_slot) end
 
 ---@return CorpseLootList
