@@ -4,58 +4,82 @@
 ---@class StatBonuses
 StatBonuses = {}
 
+---@return number
 function StatBonuses:AC() end
 
+---@return number
 function StatBonuses:AGI() end
 
+---@return number
 function StatBonuses:AGICapMod() end
 
 ---@param idx number # TODO: definition of parameter
+---@return number
 function StatBonuses:AStacker(idx) end
 
+---@return number
 function StatBonuses:ATK() end
 
 ---@param idx number # TODO: definition of parameter
+---@return number
 function StatBonuses:AbsorbMagicAtt(idx) end
 
 ---@param idx number # TODO: definition of parameter
+---@return number
 function StatBonuses:Accuracy(idx) end
 
+---@return number
 function StatBonuses:AggroRange() end
 
+---@return number
 function StatBonuses:AlterNPCLevel() end
 
+---@return number
 function StatBonuses:Ambidexterity() end
 
+---@return number
 function StatBonuses:Amplification() end
 
+---@return boolean
 function StatBonuses:AntiGate() end
 
+---@return number
 function StatBonuses:ArcheryDamageModifier() end
 
 ---@param idx number # TODO: definition of parameter
+---@return number
 function StatBonuses:Assassinate(idx) end
 
 ---@param idx number # TODO: definition of parameter
+---@return number
 function StatBonuses:AssassinateLevel(idx) end
 
+---@return number
 function StatBonuses:AssistRange() end
 
+---@return number
 function StatBonuses:AvoidMeleeChance() end
 
+---@return number
 function StatBonuses:AvoidMeleeChanceEffect() end
 
 ---@param idx number # TODO: definition of parameter
+---@return number
 function StatBonuses:BStacker(idx) end
 
+---@return number
 function StatBonuses:BaseMovementSpeed() end
 
+---@return number
 function StatBonuses:BerserkSPA() end
 
+---@return number
 function StatBonuses:BindWound() end
 
+---@return number
 function StatBonuses:BlockBehind() end
 
+---@return boolean
 function StatBonuses:BlockNextSpell() end
 
 function StatBonuses:BuffSlotIncrease() end
@@ -280,6 +304,7 @@ function StatBonuses:INTCapMod() end
 
 function StatBonuses:IllusionPersistence() end
 
+---@return boolean
 function StatBonuses:ImmuneToFlee() end
 
 function StatBonuses:ImprovedReclaimEnergy() end
