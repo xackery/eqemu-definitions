@@ -213,6 +213,7 @@ function Item:HeroicStr() end
 
 function Item:HeroicWis() end
 
+---@return number
 function Item:ID() end
 
 function Item:IDFile() end

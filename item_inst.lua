@@ -44,8 +44,10 @@ function ItemInst:GetExp() end
 function ItemInst:GetID() end
 
 ---@param slot number # TODO: definition of parameter
+---@return Item
 function ItemInst:GetItem(slot) end
 
+---@return Item
 function ItemInst:GetItem() end
 
 ---@param slot number # TODO: definition of parameter
