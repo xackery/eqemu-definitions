@@ -1,6 +1,6 @@
 ---@meta
 
----@class SpellEventSpellBuffTic
+---@class SpellEvent
 ---@field self Spell|nil # Spell that triggered the effect
 ---@field target string # Target name that the spell triggered on
 ---@field spell_id number # spell id that triggered
@@ -9,20 +9,14 @@
 ---@field caster_level number # TODO: definition of field (and proper typing)
 ---@field buff_slot string # TODO: definition of field (and proper typing)
 ---@field spell Spell|nil # Spell instance that was used
+
+---@alias SpellEventSpellBuffTic SpellEvent
 
 --- event_spell_buff_tic is a Spell event when spellbufftic occurs.
 ---@param e SpellEventSpellBuffTic
 function event_spell_buff_tic(e) end
 
----@class SpellEventSpellEffect
----@field self Spell|nil # Spell that triggered the effect
----@field target string # Target name that the spell triggered on
----@field spell_id number # spell id that triggered
----@field caster_id number # caster entity id of who casted the spell
----@field tics_remaining string # TODO: definition of field (and proper typing)
----@field caster_level number # TODO: definition of field (and proper typing)
----@field buff_slot string # TODO: definition of field (and proper typing)
----@field spell Spell|nil # Spell instance that was used
+---@class SpellEventSpellEffect SpellEvent
 
 --- event_spell_effect is a Spell event when spelleffect occurs.
 ---@param e SpellEventSpellEffect
@@ -36,15 +30,7 @@ function event_spell_effect(e) end
 ---@param e SpellEventSpellEffectTranslocateComplete
 function event_spell_effect_translocate_complete(e) end
 
----@class SpellEventSpellFade
----@field self Spell|nil # Spell that triggered the effect
----@field target string # Target name that the spell triggered on
----@field spell_id number # spell id that triggered
----@field caster_id number # caster entity id of who casted the spell
----@field tics_remaining string # TODO: definition of field (and proper typing)
----@field caster_level number # TODO: definition of field (and proper typing)
----@field buff_slot string # TODO: definition of field (and proper typing)
----@field spell Spell|nil # Spell instance that was used
+---@alias SpellEventSpellFade SpellEvent
 
 --- event_spell_fade is a Spell event when spellfade occurs.
 ---@param e SpellEventSpellFade
