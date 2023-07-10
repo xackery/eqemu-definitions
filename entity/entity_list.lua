@@ -152,45 +152,56 @@ function EntityList:GetMob(name) end
 ---@return Mob
 function EntityList:GetMobByNpcTypeID(npc_type) end
 
----@param id number # TODO: definition of parameter
+--- Returns the mob that matches entity id provided.
+---@param id number # TODO: entity id of a mob
 ---@return Mob
 function EntityList:GetMobID(id) end
 
 ---@return MobList
 function EntityList:GetMobList() end
 
+--- Returns the NPC that matches entity id provided.
 ---@param id number # TODO: definition of parameter
 ---@return NPC
 function EntityList:GetNPCByID(id) end
 
+--- Returns the NPC that matches npc_type id provided.
 ---@param npc_type number # TODO: definition of parameter
 ---@return NPC
 function EntityList:GetNPCByNPCTypeID(npc_type) end
 
+--- Returns the NPC that matches spawn_id provided.
 ---@param spawn_id number # TODO: definition of parameter
 ---@return NPC
 function EntityList:GetNPCBySpawnID(spawn_id) end
 
+--- Returns a list of all NPCs in the current zone
 ---@return NPCList
 function EntityList:GetNPCList() return {} end
 
+--- Returns the object that matches db id provided.
 ---@param db_id number # TODO: definition of parameter
 function EntityList:GetObjectByDBID(db_id) end
 
+--- Returns the object that matches entity id provided.
 ---@param id number # TODO: definition of parameter
 function EntityList:GetObjectByID(id) end
 
+--- Returns a list of all objects in the current zone
 ---@return ObjectList
 function EntityList:GetObjectList() return {} end
 
+--- Returns a raid instance based on the client provided.
 ---@param client Client # TODO: definition of parameter
 ---@return Raid
 function EntityList:GetRaidByClient(client) end
 
+--- Returns a raid instance based on the raid id provided.
 ---@param id number # TODO: definition of parameter
 ---@return Raid
 function EntityList:GetRaidByID(id) end
 
+--- Returns a random bot that matches the location requirements
 ---@param x? number # TODO: definition of parameter
 ---@param y? number # TODO: definition of parameter
 ---@param z? number # TODO: definition of parameter
@@ -199,6 +210,7 @@ function EntityList:GetRaidByID(id) end
 ---@return Bot
 function EntityList:GetRandomBot(x, y, z, distance, exclude_bot) end
 
+--- Returns a random client that matches the location requirements
 ---@param x? number # TODO: definition of parameter
 ---@param y? number # TODO: definition of parameter
 ---@param z? number # TODO: definition of parameter
@@ -207,6 +219,7 @@ function EntityList:GetRandomBot(x, y, z, distance, exclude_bot) end
 ---@return Client
 function EntityList:GetRandomClient(x, y, z, distance, exclude_client) end
 
+--- Returns a random mob that matches the location requirements
 ---@param x? number # TODO: definition of parameter
 ---@param y? number # TODO: definition of parameter
 ---@param z? number # TODO: definition of parameter
@@ -215,6 +228,7 @@ function EntityList:GetRandomClient(x, y, z, distance, exclude_client) end
 ---@return Mob
 function EntityList:GetRandomMob(x, y, z, distance, exclude_mob) end
 
+--- Returns a random NPC that matches the location requirements
 ---@param x? number # TODO: definition of parameter
 ---@param y? number # TODO: definition of parameter
 ---@param z? number # TODO: definition of parameter
@@ -223,23 +237,29 @@ function EntityList:GetRandomMob(x, y, z, distance, exclude_mob) end
 ---@return NPC
 function EntityList:GetRandomNPC(x, y, z, distance, exclude_npc) end
 
+--- Returns a client list of every client in the zone, shuffled randomly
 ---@return ClientList
 function EntityList:GetShuffledClientList() end
 
+--- Returns a spawn based on the provided entity id
 ---@param id number # TODO: definition of parameter
 ---@return Spawn
 function EntityList:GetSpawnByID(id) end
 
+--- Returns a list of all spawns in the current zone
 ---@return SpawnList
 function EntityList:GetSpawnList() end
 
+--- Reduces the aggro of the mob provided by half
 ---@param who Mob # TODO: definition of parameter
 function EntityList:HalveAggro(who) end
 
+--- Returns true if the npc_type_id provided is spawned in the zone
 ---@param npc_type number # TODO: definition of parameter
 ---@return boolean
 function EntityList:IsMobSpawnedByNpcTypeID(npc_type) end
 
+--- Returns a unique form of a name
 ---@param name string # TODO: definition of parameter
 ---@return string
 function EntityList:MakeNameUnique(name) end
