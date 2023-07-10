@@ -947,6 +947,7 @@ function eq.get_instance_timer_by_id(instance_id) end
 function eq.get_inventory_slot_name(slot_id) end
 
 ---@param item_id number # TODO: definition of parameter
+---@return string
 function eq.get_item_name(item_id) end
 
 ---@param item_id number # TODO: definition of parameter
