@@ -12,49 +12,49 @@ PacketType = {}
 ---@return PacketType
 function Packet(opcode, size, raw) end
 
----@returns number
+---@return number
 function PacketType:GetOpcode() end
 
----@returns number
+---@return number
 function PacketType:GetRawOpcode() end
 
----@returns number
+---@return number
 function PacketType:GetSize() end
 
----@returns number
+---@return number
 function PacketType:GetWritePosition() end
 
 ---@param offset number # TODO: definition of parameter
----@returns number
+---@return number
 function PacketType:ReadDouble(offset) end
 
 ---@param offset number # TODO: definition of parameter
 ---@param string_length number # TODO: definition of parameter
----@returns string
+---@return string
 function PacketType:ReadFixedLengthString(offset, string_length) end
 
 ---@param offset number # TODO: definition of parameter
----@returns number
+---@return number
 function PacketType:ReadFloat(offset) end
 
 ---@param offset number # TODO: definition of parameter (and type this)
----@returns number
+---@return number
 function PacketType:ReadInt16(offset) end
 
 ---@param offset number # TODO: definition of parameter (and type this)
----@returns number
+---@return number
 function PacketType:ReadInt32(offset) end
 
 ---@param offset number # TODO: definition of parameter
----@returns number
+---@return number
 function PacketType:ReadInt64(offset) end
 
 ---@param offset number # TODO: definition of parameter (and type this)
----@returns number
+---@return number
 function PacketType:ReadInt8(offset) end
 
 ---@param offset number # TODO: definition of parameter
----@returns string
+---@return string
 function PacketType:ReadString(offset) end
 
 ---@param op number # TODO: definition of parameter

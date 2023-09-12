@@ -862,15 +862,15 @@ function eq.get_currency_id(item_id) end
 function eq.get_currency_item_id(currency_id) end
 
 ---@param bucket_key string # TODO: definition of parameter (and type this)
----@returns string
+---@return string
 function eq.get_data(bucket_key) end
 
 ---@param bucket_key string # TODO: definition of parameter (and type this)
----@returns string
+---@return string
 function eq.get_data_expires(bucket_key) end
 
 ---@param bucket_key string # TODO: definition of parameter (and type this)
----@returns string
+---@return string
 function eq.get_data_remaining(bucket_key) end
 
 ---@param deity_id number # TODO: definition of parameter
@@ -979,7 +979,7 @@ function eq.get_player_corpse_count(char_id) end
 function eq.get_player_corpse_count_by_zone_id(char_id, zone_id) end
 
 ---@param npc? NPC
----@param client? Client 
+---@param client? Client
 ---@return string[]
 ---@overload fun(client: Client): string[]
 function eq.get_qglobals(npc, client) end

@@ -5,7 +5,7 @@
 Encounter = {}
 
 --- gets encounter name
----@returns string # Encounter name
+---@return string # Encounter name
 function Encounter:GetEncounterName() end
 
 --- triggers encounter process
