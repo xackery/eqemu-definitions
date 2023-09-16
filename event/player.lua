@@ -101,7 +101,7 @@ function event_click_object(e) end
 ---@class PlayerEventCommand
 ---@field self Client # Client triggering the event
 ---@field command string # TODO: definition of field (and proper typing)
----@field args string # TODO: definition of field (and proper typing)
+---@field args string[] # TODO: definition of field (and proper typing)
 
 --- event_command is a Player event when command occurs.
 ---@param e PlayerEventCommand
