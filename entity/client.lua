@@ -655,9 +655,9 @@ function GetZoneFlags() end
 
 function Client:GoFish() end
 
----@param aa_id number # TODO: definition of parameter
----@param points number # TODO: definition of parameter
----@param ignore_cost? number # TODO: definition of parameter (and type this)
+---@param aa_id number # What AA ID to give
+---@param points number # How many points to grant
+---@param ignore_cost? boolean # Ignore the cost of the AA when granting it?
 ---@return boolean
 function Client:GrantAlternateAdvancementAbility(aa_id, points, ignore_cost) end
 
