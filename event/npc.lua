@@ -179,8 +179,8 @@ function event_hate_list(e) end
 --- event_hp triggers when an NPC HP hits a threshold set via eq.set_next_hp_event() [docs](https://docs.eqemu.io/quest-api/events/#event_hp)
 ---@class NPCEventHP
 ---@field self NPC # NPC who is handling the event
----@field hp_pct number # percent of HP that event triggered on
----@field inc_hp_pct number # percent of HP the mob currently has
+---@field hp_event number # percent of HP the mob currently has
+---@field inc_hp_event number # incrase since last HP event
 
 ---@param e NPCEventHP # event_hp triggers when an NPC HP hits a threshold set via eq.set_next_hp_event() [docs](https://docs.eqemu.io/quest-api/events/#event_hp)
 function event_hp(e) end
