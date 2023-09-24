@@ -22,6 +22,12 @@ function event_spell_buff_tic(e) end
 ---@param e SpellEventSpellEffect
 function event_spell_effect(e) end
 
+---@alias SpellEventSpellFade SpellEvent
+
+--- event_spell_fade is a Spell event when spellfade occurs.
+---@param e SpellEventSpellFade
+function event_spell_fade(e) end
+
 ---@class SpellEventSpellEffectTranslocateComplete
 ---@field self Spell|nil # Spell that triggered the effect
 ---@field target string # Target name that the spell triggered on
@@ -29,9 +35,4 @@ function event_spell_effect(e) end
 --- event_spell_effect_translocate_complete is a Spell event when spelleffecttranslocatecomplete occurs.
 ---@param e SpellEventSpellEffectTranslocateComplete
 function event_spell_effect_translocate_complete(e) end
-
----@alias SpellEventSpellFade SpellEvent
-
---- event_spell_fade is a Spell event when spellfade occurs.
----@param e SpellEventSpellFade
-function event_spell_fade(e) end
+)

@@ -1,13 +1,16 @@
 ---@meta
 
+--- # Event is based on zone/event_codes.h
 ---@class Event
----@field say number
----@field trade number
----@field death number
----@field spawn number
----@field combat number
----@field slay number
----@field waypoint_arrive number
+---@field say number # 0
+---@field trade number # 1 being given an item or money
+---@field death number # 2 being killed
+---@field spawn number # 3 triggered when we first spawn
+---@field attack number # 4 being attacked (resets after an interval of not being attacked)
+---@field combat number # 5 being attacked or attacking (resets after an interval of not being attacked)
+---@field aggro number # 6 entering combat mode due to a PC attack
+---@field slay number # 7 killing a PC
+---@field waypoint_arrive number 
 ---@field waypoint_depart number
 ---@field timer number
 ---@field signal number
@@ -104,5 +107,17 @@
 ---@field bot_create number
 ---@field augment_insert_client number
 ---@field augment_remove_client number
+---@field equip_item_bot number # bot event
+---@field unequip_item_bot number
+---@field damage_given number
+---@field damage_taken number
+---@field item_click_client number
+---@field item_click_cast_client number
+---@field destroy_item_client number
+---@field drop_item_client number
+---@field memorize_spell number
+---@field unmemorize_spell number
+---@field scribe_spell number
+---@field unscribe_spell number # client event
 Event = {}
 

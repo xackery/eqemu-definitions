@@ -144,3 +144,60 @@ function event_unequip_item(e) end
 --- event_weapon_proc is a Item event when weaponproc occurs.
 ---@param e ItemEventWeaponProc
 function event_weapon_proc(e) end
+
+---@class ItemEventLoot
+---@field corpse Corpse|nil # Corpse item is on
+
+--- event_loot is a Item event when loot occurs.
+---@param e ItemEventLoot
+function event_loot(e) end
+
+---@class ItemEventEquipItem
+---@field slot_id number # Slot ID that triggered the event
+
+--- event_equip_item is a Item event when equip occurs.
+---@param e ItemEventEquipItem
+function event_equip_item(e) end
+
+---@class ItemEventUnequipItem
+---@field slot_id number # Slot ID that triggered the event
+
+--- event_unequip is a Item event when unequip occurs.
+---@param e ItemEventUnequipItem
+function event_unequip_item(e) end
+
+
+---@class ItemEventAugmentItem
+---@field aug ItemInst # Augment item
+---@field slot_id number # Slot ID that triggered the event
+
+--- event_augment_item is a Item event when an augment is placed on an item.
+---@param e ItemEventAugmentItem
+function event_augment_item(e) end
+
+---@class ItemEventUnaugmentItem
+---@field aug ItemInst # Augment item
+---@field slot_id number # Slot ID that triggered the event
+
+--- eventun_augment_item is a Item event when augment is removed.
+---@param e ItemEventUnaugmentItem
+function event_unaugment_item(e) end
+
+---@class ItemEventAugmentInsert
+---@field item ItemInst # Augment item
+---@field slot_id number # Slot ID that triggered the event
+
+--- event_augment_insert is a Item event when an augment is placed on an item.
+---@param e ItemEventAugmentInsert
+function event_augment_insert(e) end
+
+---@class ItemEventAugmentRemove
+---@field item ItemInst # Augment item
+---@field slot_id number # Slot ID that triggered the event
+---@field destroyed boolean # Augment was destroyed
+
+--- eventun_augment_item is a Item event when augment is removed.
+---@param e ItemEventAugmentRemove
+function event_augment_remove(e) end
+
+
