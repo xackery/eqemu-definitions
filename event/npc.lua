@@ -322,3 +322,35 @@ function event_timer(e) end
 --- event_payload triggers when a mob SendPayload() is called, allowing for large data payloads compared to signal [docs](https://docs.eqemu.io/quest-api/events/#event_payload)
 ---@param e NpcEventPayload
 function event_payload(e) end
+
+
+---@class NpcEventDespawnZone
+---@field self NPC # NPC who is handling the event
+---@field other Client # Client that triggered the event
+
+--- event_despawn_zone is a NPC event when despawnzone occurs.
+---@param e NpcEventDespawnZone
+function event_despawn_zone(e) end
+
+---@class NpcEventDamageGiven
+---@field self NPC # Npc that triggered the event
+---@field entity_id number # Entity ID that triggered the event
+---@field damage number # Damage amount that triggered the event
+---@field spell_id number # Spell ID that triggered the event
+---@field skill_id number # Skill ID that triggered the event
+---@field is_damage_shield boolean # Is this a damage shield?
+---@field is_avoidable boolean # Is this damage avoidable?
+---@field buff_slot number # Buff slot that triggered the event
+---@field is_buff_tic boolean # Is this a buff tic?
+---@field special_attack string # Special attack flags for event
+---@field other Mob # Mob that triggered the event
+
+--- event_damage_given is a NPC event when damage occurs.
+---@param e NpcEventDamageGiven
+function event_damage_given(e) end
+
+---@alias NpcEventDamageTaken NpcEventDamageGiven
+
+--- event_damage_taken is a NPC event when damage occurs.
+---@param e NpcEventDamageTaken
+function event_damage_taken(e) end

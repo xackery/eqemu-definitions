@@ -505,7 +505,6 @@ function event_warp(e) end
 ---@param e PlayerEventZone
 function event_zone(e) end
 
-
 ---@class PlayerEventPlayerPacket
 ---@field self Client # Client triggering the event
 ---@field isConnecting boolean # returns true if the packet is in a connecting state
