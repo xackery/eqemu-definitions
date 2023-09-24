@@ -133,3 +133,67 @@ function event_timer(e) end
 --- event_use_skill is a Bot event when useskill occurs.
 ---@param e BotEventUseSkill
 function event_use_skill(e) end
+    
+---@class BotEventPayload
+---@field self Bot # Bot that triggered the event
+---@field payload_id number # Index for a payload signal
+---@field payload_value string # Payload data
+---@param e BotEventPayload
+function event_payload(e) end
+
+---@class BotEventEquipItem
+---@field self Bot # Bot that triggered the event
+---@field item_id number # Item ID that triggered the event
+---@field item_quantity number # Item quantity that triggered the event
+---@field slot_id number # Slot ID that triggered the event
+---@field item Item # Item instance that triggered the event
+
+--- event_equip_item is a Bot event when equipitem occurs.
+---@param e BotEventEquipItem
+function event_equip_item(e) end
+
+---@class BotEventUnequipItem
+---@field self Bot # Bot that triggered the event
+---@field item_id number # Item ID that triggered the event
+---@field item_quantity number # Item quantity that triggered the event
+---@field slot_id number # Slot ID that triggered the event
+---@field item Item # Item instance that triggered the event
+
+--- event_unequip_item is a Bot event when unequipitem occurs.
+---@param e BotEventUnequipItem
+function event_equip_item(e) end
+
+
+--- BotEventDamage is when a bot deals damage
+---@class BotEventDamage
+---@field self Bot # Bot that triggered the event
+---@field entity_id number # Entity ID that triggered the event
+---@field damage number # Damage amount that triggered the event
+---@field spell_id number # Spell ID that triggered the event
+---@field skill_id number # Skill ID that triggered the event
+---@field is_damage_shield boolean # Is this a damage shield?
+---@field is_avoidable boolean # Is this damage avoidable?
+---@field buff_slot number # Buff slot that triggered the event
+---@field is_buff_tic boolean # Is this a buff tic?
+---@field special_attack string # Special attack flags for event
+
+--- event_damage is a Bot event when damage occurs.
+---@param e BotEventDamage
+function event_damage(e) end
+
+--- BotEventDamageTaken is when a bot takes damage
+---@class BotEventDamageTaken
+---@field self Bot # Bot that triggered the event
+---@field entity_id number # Entity ID that triggered the event
+---@field damage number # Damage amount that triggered the event
+---@field spell_id number # Spell ID that triggered the event
+---@field skill_id number # Skill ID that triggered the event
+---@field is_damage_shield boolean # Is this a damage shield?
+---@field is_avoidable boolean # Is this damage avoidable?
+---@field buff_slot number # Buff slot that triggered the event
+---@field is_buff_tic boolean # Is this a buff tic?
+---@field special_attack string # Special attack flags for event
+
+--- event_damage_taken is a Bot event when damagetaken occurs.
+---@param e BotEventDamageTaken
+function event_damage_taken(e) end
