@@ -2,6 +2,7 @@
 
 ---TODO: definition for Inventory
 ---@class Inventory
+---@field valid boolean # returns false when an inventory entry is invalid
 Inventory = {}
 
 ---@param slot_id number # TODO: definition of parameter (and type this)
