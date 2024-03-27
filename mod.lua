@@ -130,4 +130,36 @@ function GetExperienceForKill(e) end
 ---@param e ModCalcSpellEffectValue_formula
 function CalcSpellEffectValue_formula(e) end
 
+---Use e.IgnoreDefault to return results
+---@class ModRegisterBug
+---@field self Client
+---@field zone string
+---@field client_version_id number
+---@field client_version_name string
+---@field account_id number
+---@field character_id number
+---@field character_name string
+---@field reporter_spoof number
+---@field category_id number
+---@field category_name string
+---@field reporter_name string
+---@field ui_path string
+---@field pos_x number
+---@field pos_y number
+---@field pos_z number
+---@field heading number
+---@field time_played number
+---@field target_id number
+---@field target_name string
+---@field optional_info_mask number
+---@field _can_duplicate number
+---@field _crash_bug number
+---@field _target_info number
+---@field _character_flags number
+---@field _unknown_value number
+---@field bug_report string
+---@field system_info string
+---@field IgnoreDefault boolean
 
+---@param e ModRegisterBug
+function RegisterBug(e) end
