@@ -440,18 +440,18 @@ function Mob:GetBeardColor() end
 ---@return number
 function Mob:GetBodyType() end
 
----@param bucket_name number # TODO: definition of parameter (and type this)
+---@param bucket_name string # TODO: definition of parameter (and type this)
 ---@return string
 function Mob:GetBucket(bucket_name) end
 
----@param bucket_name number # TODO: definition of parameter (and type this)
+---@param bucket_name string # TODO: definition of parameter (and type this)
 ---@return string
 function Mob:GetBucketExpires(bucket_name) end
 
 ---@return string
 function Mob:GetBucketKey() end
 
----@param bucket_name number # TODO: definition of parameter (and type this)
+---@param bucket_name string # TODO: definition of parameter (and type this)
 ---@return string
 function Mob:GetBucketRemaining(bucket_name) end
 
