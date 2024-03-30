@@ -1315,12 +1315,12 @@ function Client:SummonItem(item_id, charges, aug1, aug2, aug3, aug4, aug5, attun
 function Client:TGB() end
 
 ---@param copper number # TODO: definition of parameter
----@param update_client? number # TODO: definition of parameter (and type this)
+---@param update_client? boolean # Update client on the event
 ---@return boolean
 function Client:TakeMoneyFromPP(copper, update_client) end
 
 ---@param platinum number # TODO: definition of parameter
----@param update_client? number # TODO: definition of parameter (and type this)
+---@param update_client? boolean # Update client on the event
 ---@return boolean
 function Client:TakePlatinum(platinum, update_client) end
 

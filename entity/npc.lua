@@ -31,10 +31,11 @@ function NPC:AddAISpell(priority, spell_id, type, mana_cost, recast_delay, resis
 ---@param max_value number # TODO: definition of parameter
 function NPC:AddAISpellEffect(spell_effect_id, base_value, limit_value, max_value) end
 
----@param copper number # TODO: definition of parameter
----@param silver number # TODO: definition of parameter
----@param gold number # TODO: definition of parameter
----@param platinum number # TODO: definition of parameter
+---AddCash is mislabeled, works more like SetCash, use GetPlatinum() etc to do true addition
+---@param copper number # amount of copper to set on NPC
+---@param silver number # amount of silver to set on NPC
+---@param gold number # amount of gold to set on NPC
+---@param platinum number # amount of platinum to set on NPC
 function NPC:AddCash(copper, silver, gold, platinum) end
 
 ---@param item_id number # TODO: definition of parameter
