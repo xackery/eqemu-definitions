@@ -154,12 +154,14 @@ function NPC:GetSilver() end
 
 function NPC:GetSlowMitigation() end
 
+---@return number
 function NPC:GetSp2() end
 
 function NPC:GetSpawnKillCount() end
 
 function NPC:GetSpawnPointH() end
 
+---@return number
 function NPC:GetSpawnPointID() end
 
 function NPC:GetSpawnPointX() end

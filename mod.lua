@@ -159,7 +159,60 @@ function CalcSpellEffectValue_formula(e) end
 ---@field _unknown_value number
 ---@field bug_report string
 ---@field system_info string
----@field IgnoreDefault boolean
+---@field ignore_default boolean
 
 ---@param e ModRegisterBug
 function RegisterBug(e) end
+
+
+--- Note that this affects the value prior to spell focus and other mods
+---@class ModGetActSpellHealing
+---@field self Mob
+---@field spell_id number
+---@field value number # original heal amount
+---@field target Mob # target of the heal
+---@field from_buff_tic boolean # is this a heal tic
+---@field return_value number # new heal amount
+---@field ignore_default boolean # set to true to ignore default behavior
+
+---@param e ModGetActSpellHealing
+function GetActSpellHealing(e) end
+
+--- Note that this affects the value prior to spell focus and other mods
+---@class ModGetActSpellDamage
+---@field self Mob
+---@field spell_id number
+---@field value number # original heal amount
+---@field target Mob # target of the heal
+---@field return_value number # new heal amount
+---@field ignore_default boolean # set to true to ignore default behavior
+
+---@param e ModGetActSpellDamage
+function GetActSpellDamage(e) end
+
+---@class ModHealDamage # ModHealDamage
+---@field self Mob # mob being healed
+---@field value number # original heal amount
+---@field caster Mob # mob casting the heal
+---@field spell_id number # spell id of the heal
+---@field return_value number # new heal amount
+---@field ignore_default boolean # set to true to ignore default behavior
+
+---@param e ModHealDamage
+function HealDamage(e) end
+
+---@class ModCommonDamage # ModCommonDamage
+---@field self Mob # mob being damaged
+---@field attacker Mob # mob dealing the damage
+---@field value number # original damage amount
+---@field spell_id number # spell id of the damage
+---@field skill_used number # skill used to deal the damage
+---@field avoidable boolean # is the damage avoidable
+---@field buff_slot number # buff slot of the damage
+---@field buff_tic boolean # is this a buff tic
+---@field special number # special damage type
+---@field return_value number # new damage amount
+---@field ignore_default boolean # set to true to ignore default behavior
+
+---@param e ModCommonDamage
+function CommonDamage(e) end
