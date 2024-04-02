@@ -1015,6 +1015,7 @@ function eq.get_skill_name(skill_id) end
 function eq.get_spawn_condition(zone, instance_id, condition_id) end
 
 ---@param spell_id number # TODO: definition of parameter
+---@return Spell
 function eq.get_spell(spell_id) end
 
 ---@param spell_id number # TODO: definition of parameter

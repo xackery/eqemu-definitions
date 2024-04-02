@@ -216,3 +216,49 @@ function HealDamage(e) end
 
 ---@param e ModCommonDamage
 function CommonDamage(e) end
+
+--- Note that return_value < resist_chance is a resist
+---@class ModResistSpellRoll # ModResistSpellRoll
+---@field self Mob # mob resisting the spell
+---@field caster Mob # mob casting the spell
+---@field roll number # initial roll before this function was called
+---@field roll_max number # max roll value
+---@field resist_chance number # chance to resist the spell
+---@field resist_type number # type of resist check
+---@field spell_id number # spell id of the spell being resisted
+---@field use_resist_override boolean # should the resist override be used
+---@field resist_override number # override value for resist chance
+---@field is_charisma_check boolean # is this a charisma check
+---@field is_charm_tick boolean # is this a charm tick
+---@field is_root boolean # is this a root spell
+---@field level_override number # override value for level
+---@field resist_modifier number # modifier for resist chance
+---@field return_value number # new roll value, 100 = resist, lower can imply partial resists for some spells
+---@field ignore_default boolean # set to true to apply return value
+
+---@param e ModResistSpellRoll
+function ResistSpellRoll(e) end
+
+---@class ModSetExp # ModSetExp
+---@field self Client # mob resisting the spell
+---@field exp_source number # type of exp gain
+---@field current_exp number # current exp value
+---@field set_exp number # new exp value being set to
+---@field is_rezz_exp boolean # is this rez exp
+---@field return_value number # new set_exp value
+---@field ignore_default boolean # set to true to apply return value
+
+---@param e ModSetExp
+function SetExp(e) end
+
+---@class ModSetAAExp # ModSetAAExp
+---@field self Client # mob resisting the spell
+---@field exp_source number # type of exp gain
+---@field current_aa_exp number # current aa exp value
+---@field set_aa_exp number # new aa exp value being set to
+---@field is_rezz_exp boolean # is this rez exp
+---@field return_value number # new set_aa_exp value
+---@field ignore_default boolean # set to true to apply return value
+
+---@param e ModSetAAExp
+function SetAAExp(e) end
