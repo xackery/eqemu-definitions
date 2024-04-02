@@ -239,7 +239,7 @@ function CommonDamage(e) end
 ---@param e ModResistSpellRoll
 function ResistSpellRoll(e) end
 
----@class ModSetExp # ModSetExp
+---@class ModSetEXP # ModSetEXP
 ---@field self Client # mob resisting the spell
 ---@field exp_source number # type of exp gain
 ---@field current_exp number # current exp value
@@ -248,10 +248,10 @@ function ResistSpellRoll(e) end
 ---@field return_value number # new set_exp value
 ---@field ignore_default boolean # set to true to apply return value
 
----@param e ModSetExp
-function SetExp(e) end
+---@param e ModSetEXP
+function SetEXP(e) end
 
----@class ModSetAAExp # ModSetAAExp
+---@class ModSetAAEXP # ModSetAAEXP
 ---@field self Client # mob resisting the spell
 ---@field exp_source number # type of exp gain
 ---@field current_aa_exp number # current aa exp value
@@ -260,5 +260,5 @@ function SetExp(e) end
 ---@field return_value number # new set_aa_exp value
 ---@field ignore_default boolean # set to true to apply return value
 
----@param e ModSetAAExp
-function SetAAExp(e) end
+---@param e ModSetAAEXP
+function SetAAEXP(e) end
