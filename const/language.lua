@@ -29,4 +29,6 @@
 ---@field Alaran number -- 25
 ---@field Hadal number -- 26
 ---@field Unknown number -- 27
+---@field MaxValue number
+---@field Unknown27 number
 Language = {}

@@ -52,5 +52,9 @@
 ---@field immune_aggro_npc number
 ---@field modify_avoid_damage number
 ---@field immune_open number
+---@field immune_aggro_bot number
+---@field immune_assassinate number
+---@field immune_damage_bot number
+---@field immune_headshot number
 SpecialAbility = {}
 

@@ -471,7 +471,7 @@
 ---@field HideCorpse number
 ---@field TargetBuffs number
 ---@field TradeBusy number
----@field GuildUpdateURLAndChannel number
+---@field GuildUpdate number
 ---@field CameraEffect number
 ---@field SpellEffect number
 ---@field DzQuit number
