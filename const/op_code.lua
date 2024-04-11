@@ -1,549 +1,549 @@
 ---@meta
 
-OpCode = {
-    ['0x0193'] = 0,
-    ['0x0347'] = 0,
-    ['ExploreUnknown'] = 0,
-    ['Heartbeat'] = 0,
-    ['ReloadUI'] = 0,
-    ['IncreaseStats'] = 0,
-    ['ApproveZone'] = 0,
-    ['Dye'] = 0,
-    ['Stamina'] = 0,
-    ['ControlBoat'] = 0,
-    ['MobUpdate'] = 0,
-    ['ClientUpdate'] = 0,
-    ['ChannelMessage'] = 0,
-    ['SimpleMessage'] = 0,
-    ['FormattedMessage'] = 0,
-    ['TGB'] = 0,
-    ['Bind_Wound'] = 0,
-    ['Charm'] = 0,
-    ['Begging'] = 0,
-    ['MoveCoin'] = 0,
-    ['SpawnDoor'] = 0,
-    ['Sneak'] = 0,
-    ['ExpUpdate'] = 0,
-    ['DumpName'] = 0,
-    ['RespondAA'] = 0,
-    ['UpdateAA'] = 0,
-    ['SendAAStats'] = 0,
-    ['SendAATable'] = 0,
-    ['AAAction'] = 0,
-    ['BoardBoat'] = 0,
-    ['LeaveBoat'] = 0,
-    ['AdventureInfoRequest'] = 0,
-    ['AdventureInfo'] = 0,
-    ['AdventureRequest'] = 0,
-    ['AdventureDetails'] = 0,
-    ['LDoNButton'] = 0,
-    ['AdventureData'] = 0,
-    ['AdventureFinish'] = 0,
-    ['LeaveAdventure'] = 0,
-    ['AdventureUpdate'] = 0,
-    ['SendExpZonein'] = 0,
-    ['RaidUpdate'] = 0,
-    ['GuildLeader'] = 0,
-    ['GuildPeace'] = 0,
-    ['GuildRemove'] = 0,
-    ['GuildMemberList'] = 0,
-    ['GuildMemberUpdate'] = 0,
-    ['GuildMemberLevelUpdate'] = 0,
-    ['GuildInvite'] = 0,
-    ['GuildMOTD'] = 0,
-    ['SetGuildMOTD'] = 0,
-    ['GuildPublicNote'] = 0,
-    ['GetGuildsList'] = 0,
-    ['GuildDemote'] = 0,
-    ['GuildInviteAccept'] = 0,
-    ['GuildWar'] = 0,
-    ['GuildDelete'] = 0,
-    ['GuildManageRemove'] = 0,
-    ['GuildManageAdd'] = 0,
-    ['GuildManageStatus'] = 0,
-    ['GuildManageBanker'] = 0,
-    ['GetGuildMOTD'] = 0,
-    ['Trader'] = 0,
-    ['Bazaar'] = 0,
-    ['BecomeTrader'] = 0,
-    ['TraderItemUpdate'] = 0,
-    ['TraderShop'] = 0,
-    ['TraderBuy'] = 0,
-    ['PetCommands'] = 0,
-    ['TradeSkillCombine'] = 0,
-    ['AugmentItem'] = 0,
-    ['ItemName'] = 0,
-    ['ShopItem'] = 0,
-    ['ShopPlayerBuy'] = 0,
-    ['ShopPlayerSell'] = 0,
-    ['ShopDelItem'] = 0,
-    ['ShopRequest'] = 0,
-    ['ShopEnd'] = 0,
-    ['LFGCommand'] = 0,
-    ['LFGAppearance'] = 0,
-    ['GroupUpdate'] = 0,
-    ['GroupInvite'] = 0,
-    ['GroupDisband'] = 0,
-    ['GroupInvite2'] = 0,
-    ['GroupFollow'] = 0,
-    ['GroupFollow2'] = 0,
-    ['GroupCancelInvite'] = 0,
-    ['CustomTitles'] = 0,
-    ['Split'] = 0,
-    ['Jump'] = 0,
-    ['ConsiderCorpse'] = 0,
-    ['SkillUpdate'] = 0,
-    ['GMEndTrainingResponse'] = 0,
-    ['GMEndTraining'] = 0,
-    ['GMTrainSkill'] = 0,
-    ['GMTraining'] = 0,
-    ['DeleteItem'] = 0,
-    ['CombatAbility'] = 0,
-    ['TrackUnknown'] = 0,
-    ['TrackTarget'] = 0,
-    ['Track'] = 0,
-    ['ItemLinkClick'] = 0,
-    ['ItemLinkResponse'] = 0,
-    ['ItemLinkText'] = 0,
-    ['RezzAnswer'] = 0,
-    ['RezzComplete'] = 0,
-    ['SendZonepoints'] = 0,
-    ['SetRunMode'] = 0,
-    ['InspectRequest'] = 0,
-    ['InspectAnswer'] = 0,
-    ['SenseTraps'] = 0,
-    ['DisarmTraps'] = 0,
-    ['Assist'] = 0,
-    ['AssistGroup'] = 0,
-    ['PickPocket'] = 0,
-    ['LootRequest'] = 0,
-    ['EndLootRequest'] = 0,
-    ['MoneyOnCorpse'] = 0,
-    ['LootComplete'] = 0,
-    ['LootItem'] = 0,
-    ['MoveItem'] = 0,
-    ['WhoAllRequest'] = 0,
-    ['WhoAllResponse'] = 0,
-    ['Consume'] = 0,
-    ['AutoAttack'] = 0,
-    ['AutoAttack2'] = 0,
-    ['TargetMouse'] = 0,
-    ['TargetCommand'] = 0,
-    ['TargetReject'] = 0,
-    ['TargetHoTT'] = 0,
-    ['Hide'] = 0,
-    ['Forage'] = 0,
-    ['Fishing'] = 0,
-    ['Bug'] = 0,
-    ['Emote'] = 0,
-    ['Consider'] = 0,
-    ['FaceChange'] = 0,
-    ['RandomReq'] = 0,
-    ['RandomReply'] = 0,
-    ['Camp'] = 0,
-    ['YellForHelp'] = 0,
-    ['SafePoint'] = 0,
-    ['Buff'] = 0,
-    ['ColoredText'] = 0,
-    ['SpecialMesg'] = 0,
-    ['Consent'] = 0,
-    ['ConsentResponse'] = 0,
-    ['Stun'] = 0,
-    ['BeginCast'] = 0,
-    ['CastSpell'] = 0,
-    ['InterruptCast'] = 0,
-    ['Death'] = 0,
-    ['FeignDeath'] = 0,
-    ['Illusion'] = 0,
-    ['LevelUpdate'] = 0,
-    ['LevelAppearance'] = 0,
-    ['MemorizeSpell'] = 0,
-    ['HPUpdate'] = 0,
-    ['Mend'] = 0,
-    ['Taunt'] = 0,
-    ['GMDelCorpse'] = 0,
-    ['GMFind'] = 0,
-    ['GMServers'] = 0,
-    ['GMGoto'] = 0,
-    ['GMSummon'] = 0,
-    ['GMKill'] = 0,
-    ['GMLastName'] = 0,
-    ['GMToggle'] = 0,
-    ['GMEmoteZone'] = 0,
-    ['GMBecomeNPC'] = 0,
-    ['GMHideMe'] = 0,
-    ['GMZoneRequest'] = 0,
-    ['GMZoneRequest2'] = 0,
-    ['Petition'] = 0,
-    ['PetitionRefresh'] = 0,
-    ['PDeletePetition'] = 0,
-    ['PetitionBug'] = 0,
-    ['PetitionUpdate'] = 0,
-    ['PetitionCheckout'] = 0,
-    ['PetitionCheckout2'] = 0,
-    ['PetitionDelete'] = 0,
-    ['PetitionResolve'] = 0,
-    ['PetitionCheckIn'] = 0,
-    ['PetitionUnCheckout'] = 0,
-    ['PetitionQue'] = 0,
-    ['SetServerFilter'] = 0,
-    ['NewSpawn'] = 0,
-    ['Animation'] = 0,
-    ['ZoneChange'] = 0,
-    ['DeleteSpawn'] = 0,
-    ['EnvDamage'] = 0,
-    ['Action'] = 0,
-    ['Damage'] = 0,
-    ['ManaChange'] = 0,
-    ['ClientError'] = 0,
-    ['Save'] = 0,
-    ['LocInfo'] = 0,
-    ['Surname'] = 0,
-    ['ClearSurname'] = 0,
-    ['SwapSpell'] = 0,
-    ['DeleteSpell'] = 0,
-    ['CloseContainer'] = 0,
-    ['ClickObjectAction'] = 0,
-    ['GroundSpawn'] = 0,
-    ['ClearObject'] = 0,
-    ['ZoneUnavail'] = 0,
-    ['ItemPacket'] = 0,
-    ['TradeRequest'] = 0,
-    ['TradeRequestAck'] = 0,
-    ['TradeAcceptClick'] = 0,
-    ['TradeMoneyUpdate'] = 0,
-    ['TradeCoins'] = 0,
-    ['CancelTrade'] = 0,
-    ['FinishTrade'] = 0,
-    ['SaveOnZoneReq'] = 0,
-    ['Logout'] = 0,
-    ['LogoutReply'] = 0,
-    ['PreLogoutReply'] = 0,
-    ['DuelAccept'] = 0,
-    ['InstillDoubt'] = 0,
-    ['SafeFallSuccess'] = 0,
-    ['DisciplineUpdate'] = 0,
-    ['SendGuildTributes'] = 0,
-    ['SendTributes'] = 0,
-    ['TributeUpdate'] = 0,
-    ['TributeItem'] = 0,
-    ['TributePointUpdate'] = 0,
-    ['TributeInfo'] = 0,
-    ['GuildTributeInfo'] = 0,
-    ['OpenGuildTributeMaster'] = 0,
-    ['OpenTributeMaster'] = 0,
-    ['TributeTimer'] = 0,
-    ['SelectTribute'] = 0,
-    ['TributeNPC'] = 0,
-    ['TributeMoney'] = 0,
-    ['TributeToggle'] = 0,
-    ['CloseTributeMaster'] = 0,
-    ['RecipesFavorite'] = 0,
-    ['RecipesSearch'] = 0,
-    ['RecipeReply'] = 0,
-    ['RecipeDetails'] = 0,
-    ['RecipeAutoCombine'] = 0,
-    ['Shielding'] = 0,
-    ['FindPersonRequest'] = 0,
-    ['FindPersonReply'] = 0,
-    ['ZoneEntry'] = 0,
-    ['PlayerProfile'] = 0,
-    ['CharInventory'] = 0,
-    ['ZoneSpawns'] = 0,
-    ['Weather'] = 0,
-    ['ReqNewZone'] = 0,
-    ['NewZone'] = 0,
-    ['ReqClientSpawn'] = 0,
-    ['SpawnAppearance'] = 0,
-    ['ClientReady'] = 0,
-    ['ZoneComplete'] = 0,
-    ['ApproveWorld'] = 0,
-    ['LogServer'] = 0,
-    ['MOTD'] = 0,
-    ['SendLoginInfo'] = 0,
-    ['DeleteCharacter'] = 0,
-    ['SendCharInfo'] = 0,
-    ['ExpansionInfo'] = 0,
-    ['CharacterCreate'] = 0,
-    ['CharacterCreateRequest'] = 0,
-    ['RandomNameGenerator'] = 0,
-    ['GuildsList'] = 0,
-    ['ApproveName'] = 0,
-    ['EnterWorld'] = 0,
-    ['PostEnterWorld'] = 0,
-    ['SendSystemStats'] = 0,
-    ['World_Client_CRC1'] = 0,
-    ['World_Client_CRC2'] = 0,
-    ['SetChatServer'] = 0,
-    ['SetChatServer2'] = 0,
-    ['ZoneServerInfo'] = 0,
-    ['WorldClientReady'] = 0,
-    ['WorldUnknown001'] = 0,
-    ['AckPacket'] = 0,
-    ['WearChange'] = 0,
-    ['CrashDump'] = 0,
-    ['LoginComplete'] = 0,
-    ['GMNameChange'] = 0,
-    ['ReadBook'] = 0,
-    ['GMKick'] = 0,
-    ['RezzRequest'] = 0,
-    ['MultiLineMsg'] = 0,
-    ['TimeOfDay'] = 0,
-    ['CompletedTasks'] = 0,
-    ['MoneyUpdate'] = 0,
-    ['ClickObject'] = 0,
-    ['MoveDoor'] = 0,
-    ['TraderDelItem'] = 0,
-    ['AdventureMerchantPurchase'] = 0,
-    ['TestBuff'] = 0,
-    ['DuelDecline'] = 0,
-    ['RequestDuel'] = 0,
-    ['BazaarInspect'] = 0,
-    ['ClickDoor'] = 0,
-    ['GroupAcknowledge'] = 0,
-    ['GroupDelete'] = 0,
-    ['AdventureMerchantResponse'] = 0,
-    ['ShopEndConfirm'] = 0,
-    ['AdventureMerchantRequest'] = 0,
-    ['Sound'] = 0,
-    ['WorldComplete'] = 0,
-    ['MobRename'] = 0,
-    ['TaskDescription'] = 0,
-    ['TaskActivity'] = 0,
-    ['SharedTaskPlayerList'] = 0,
-    ['AnnoyingZoneUnknown'] = 0,
-    ['Some3ByteHPUpdate'] = 0,
-    ['FloatListThing'] = 0,
-    ['AAExpUpdate'] = 0,
-    ['ForceFindPerson'] = 0,
-    ['PlayMP3'] = 0,
-    ['RequestClientZoneChange'] = 0,
-    ['SomeItemPacketMaybe'] = 0,
-    ['QueryResponseThing'] = 0,
-    ['Some6ByteHPUpdate'] = 0,
-    ['BankerChange'] = 0,
-    ['BecomeCorpse'] = 0,
-    ['Action2'] = 0,
-    ['BazaarSearch'] = 0,
-    ['SetTitle'] = 0,
-    ['SetTitleReply'] = 0,
-    ['ConfirmDelete'] = 0,
-    ['ConsentDeny'] = 0,
-    ['CrystalCountUpdate'] = 0,
-    ['DeletePetition'] = 0,
-    ['DenyResponse'] = 0,
-    ['Disarm'] = 0,
-    ['Feedback'] = 0,
-    ['FriendsWho'] = 0,
-    ['GMApproval'] = 0,
-    ['GMSearchCorpse'] = 0,
-    ['GuildBank'] = 0,
-    ['InitialHPUpdate'] = 0,
-    ['InitialMobHealth'] = 0,
-    ['LFGGetMatchesRequest'] = 0,
-    ['LFGGetMatchesResponse'] = 0,
-    ['LFGResponse'] = 0,
-    ['LFPCommand'] = 0,
-    ['LFPGetMatchesRequest'] = 0,
-    ['LFPGetMatchesResponse'] = 0,
-    ['LeadershipExpToggle'] = 0,
-    ['LeadershipExpUpdate'] = 0,
-    ['LoadSpellSet'] = 0,
-    ['LockoutTimerInfo'] = 0,
-    ['MendHPUpdate'] = 0,
-    ['MobHealth'] = 0,
-    ['MoveLogDisregard'] = 0,
-    ['MoveLogRequest'] = 0,
-    ['PetitionSearch'] = 0,
-    ['PetitionSearchResults'] = 0,
-    ['PetitionSearchText'] = 0,
-    ['RaidInvite'] = 0,
-    ['ReclaimCrystals'] = 0,
-    ['Report'] = 0,
-    ['SenseHeading'] = 0,
-    ['LDoNOpen'] = 0,
-    ['LDoNSenseTraps'] = 0,
-    ['LDoNPickLock'] = 0,
-    ['LDoNDisarmTraps'] = 0,
-    ['LDoNInspect'] = 0,
-    ['DynamicWall'] = 0,
-    ['RequestTitles'] = 0,
-    ['PurchaseLeadershipAA'] = 0,
-    ['UpdateLeadershipAA'] = 0,
-    ['AdventurePointsUpdate'] = 0,
-    ['ZoneInUnknown'] = 0,
-    ['ZoneServerReady'] = 0,
-    ['ZoneGuildList'] = 0,
-    ['SendTitleList'] = 0,
-    ['NewTitlesAvailable'] = 0,
-    ['Bandolier'] = 0,
-    ['OpenDiscordMerchant'] = 0,
-    ['DiscordMerchantInventory'] = 0,
-    ['GiveMoney'] = 0,
-    ['OnLevelMessage'] = 0,
-    ['RequestKnowledgeBase'] = 0,
-    ['KnowledgeBase'] = 0,
-    ['VetRewardsAvaliable'] = 0,
-    ['VetClaimRequest'] = 0,
-    ['VetClaimReply'] = 0,
-    ['WeaponEquip1'] = 0,
-    ['PlayerStateAdd'] = 0,
-    ['PlayerStateRemove'] = 0,
-    ['WorldLogout'] = 0,
-    ['SessionReady'] = 0,
-    ['Login'] = 0,
-    ['ServerListRequest'] = 0,
-    ['PlayEverquestRequest'] = 0,
-    ['ChatMessage'] = 0,
-    ['LoginAccepted'] = 0,
-    ['ServerListResponse'] = 0,
-    ['Poll'] = 0,
-    ['PlayEverquestResponse'] = 0,
-    ['EnterChat'] = 0,
-    ['PollResponse'] = 0,
-    ['Command'] = 0,
-    ['ZonePlayerToBind'] = 0,
-    ['AutoFire'] = 0,
-    ['Rewind'] = 0,
-    ['TaskSelectWindow'] = 0,
-    ['TaskActivityComplete'] = 0,
-    ['AcceptNewTask'] = 0,
-    ['CancelTask'] = 0,
-    ['TaskHistoryRequest'] = 0,
-    ['TaskHistoryReply'] = 0,
-    ['PetBuffWindow'] = 0,
-    ['RaidJoin'] = 0,
-    ['Translocate'] = 0,
-    ['Sacrifice'] = 0,
-    ['KeyRing'] = 0,
-    ['PopupResponse'] = 0,
-    ['DeleteCharge'] = 0,
-    ['PotionBelt'] = 0,
-    ['Barter'] = 0,
-    ['VoiceMacroIn'] = 0,
-    ['VoiceMacroOut'] = 0,
-    ['WorldObjectsSent'] = 0,
-    ['BlockedBuffs'] = 0,
-    ['RemoveBlockedBuffs'] = 0,
-    ['ClearBlockedBuffs'] = 0,
-    ['GroupUpdateLeaderAA'] = 0,
-    ['MarkNPC'] = 0,
-    ['ClearNPCMarks'] = 0,
-    ['DoGroupLeadershipAbility'] = 0,
-    ['DelegateAbility'] = 0,
-    ['SetGroupTarget'] = 0,
-    ['ApplyPoison'] = 0,
-    ['FinishWindow'] = 0,
-    ['FinishWindow2'] = 0,
-    ['ItemVerifyRequest'] = 0,
-    ['ItemVerifyReply'] = 0,
-    ['GMTrainSkillConfirm'] = 0,
-    ['RestState'] = 0,
-    ['AugmentInfo'] = 0,
-    ['PVPStats'] = 0,
-    ['PVPLeaderBoardRequest'] = 0,
-    ['PVPLeaderBoardReply'] = 0,
-    ['PVPLeaderBoardDetailsRequest'] = 0,
-    ['PVPLeaderBoardDetailsReply'] = 0,
-    ['DisciplineTimer'] = 0,
-    ['RespawnWindow'] = 0,
-    ['AdventureMerchantSell'] = 0,
-    ['AdventureStatsRequest'] = 0,
-    ['AdventureStatsReply'] = 0,
-    ['AdventureLeaderboardRequest'] = 0,
-    ['AdventureLeaderboardReply'] = 0,
-    ['SetStartCity'] = 0,
-    ['LoginUnknown1'] = 0,
-    ['LoginUnknown2'] = 0,
-    ['ItemViewUnknown'] = 0,
-    ['GetGuildMOTDReply'] = 0,
-    ['SetGuildRank'] = 0,
-    ['SpawnPositionUpdate'] = 0,
-    ['ManaUpdate'] = 0,
-    ['EnduranceUpdate'] = 0,
-    ['MobManaUpdate'] = 0,
-    ['MobEnduranceUpdate'] = 0,
-    ['GroupUpdateB'] = 0,
-    ['GroupDisbandYou'] = 0,
-    ['GroupDisbandOther'] = 0,
-    ['GroupLeaderChange'] = 0,
-    ['GroupLeadershipAAUpdate'] = 0,
-    ['GroupRoles'] = 0,
-    ['SendFindableNPCs'] = 0,
-    ['HideCorpse'] = 0,
-    ['TargetBuffs'] = 0,
-    ['TradeBusy'] = 0,
-    ['GuildUpdateURLAndChannel'] = 0,
-    ['CameraEffect'] = 0,
-    ['SpellEffect'] = 0,
-    ['DzQuit'] = 0,
-    ['DzListTimers'] = 0,
-    ['DzPlayerList'] = 0,
-    ['DzAddPlayer'] = 0,
-    ['DzRemovePlayer'] = 0,
-    ['DzSwapPlayer'] = 0,
-    ['DzMakeLeader'] = 0,
-    ['DzExpeditionInvite'] = 0,
-    ['DzExpeditionInviteResponse'] = 0,
-    ['DzExpeditionInfo'] = 0,
-    ['DzMemberListName'] = 0,
-    ['DzMemberListStatus'] = 0,
-    ['DzSetLeaderName'] = 0,
-    ['DzExpeditionEndsWarning'] = 0,
-    ['DzExpeditionLockoutTimers'] = 0,
-    ['DzMemberList'] = 0,
-    ['DzCompass'] = 0,
-    ['DzChooseZone'] = 0,
-    ['DzChooseZoneReply'] = 0,
-    ['BuffCreate'] = 0,
-    ['GuildStatus'] = 0,
-    ['BuffRemoveRequest'] = 0,
-    ['CorpseDrag'] = 0,
-    ['CorpseDrop'] = 0,
-    ['ChangeSize'] = 0,
-    ['GroupMakeLeader'] = 0,
-    ['RemoveAllDoors'] = 0,
-    ['RemoveNimbusEffect'] = 0,
-    ['GuildCreate'] = 0,
-    ['AltCurrency'] = 0,
-    ['FellowshipUpdate'] = 0,
-    ['AltCurrencyMerchantRequest'] = 0,
-    ['AltCurrencyMerchantReply'] = 0,
-    ['AltCurrencyPurchase'] = 0,
-    ['AltCurrencySellSelection'] = 0,
-    ['AltCurrencyReclaim'] = 0,
-    ['AltCurrencySell'] = 0,
-    ['Untargetable'] = 0,
-    ['CrystalReclaim'] = 0,
-    ['CrystalCreate'] = 0,
-    ['SendMaxCharacters'] = 0,
-    ['SendMembership'] = 0,
-    ['SendMembershipDetails'] = 0,
-    ['LFGuild'] = 0,
-    ['XTargetRequest'] = 0,
-    ['XTargetResponse'] = 0,
-    ['XTargetAutoAddHaters'] = 0,
-    ['Weblink'] = 0,
-    ['InspectMessageUpdate'] = 0,
-    ['ItemPreview'] = 0,
-    ['MercenaryDataRequest'] = 0,
-    ['MercenaryDataResponse'] = 0,
-    ['MercenaryHire'] = 0,
-    ['MercenaryUnknown1'] = 0,
-    ['MercenaryTimer'] = 0,
-    ['MercenaryAssign'] = 0,
-    ['MercenaryDataUpdate'] = 0,
-    ['MercenaryCommand'] = 0,
-    ['MercenarySuspendRequest'] = 0,
-    ['MercenarySuspendResponse'] = 0,
-    ['MercenaryUnsuspendResponse'] = 0,
-    ['MercenaryDataUpdateRequest'] = 0,
-    ['MercenaryDismiss'] = 0,
-    ['MercenaryTimerRequest'] = 0,
-    ['OpenInventory'] = 0,
-    ['OpenContainer'] = 0,
-    ['Marquee'] = 0,
-    ['ClientTimeStamp'] = 0,
-    ['GuildPromote'] = 0,
-    ['Fling'] = 0,
-}
+---@class Opcode
+---@field ExploreUnknown number
+---@field Heartbeat number
+---@field ReloadUI number
+---@field IncreaseStats number
+---@field ApproveZone number
+---@field Dye number
+---@field Stamina number
+---@field ControlBoat number
+---@field MobUpdate number
+---@field ClientUpdate number
+---@field ChannelMessage number
+---@field SimpleMessage number
+---@field FormattedMessage number
+---@field TGB number
+---@field Bind_Wound number
+---@field Charm number
+---@field Begging number
+---@field MoveCoin number
+---@field SpawnDoor number
+---@field Sneak number
+---@field ExpUpdate number
+---@field DumpName number
+---@field RespondAA number
+---@field UpdateAA number
+---@field SendAAStats number
+---@field SendAATable number
+---@field AAAction number
+---@field BoardBoat number
+---@field LeaveBoat number
+---@field AdventureInfoRequest number
+---@field AdventureInfo number
+---@field AdventureRequest number
+---@field AdventureDetails number
+---@field LDoNButton number
+---@field AdventureData number
+---@field AdventureFinish number
+---@field LeaveAdventure number
+---@field AdventureUpdate number
+---@field SendExpZonein number
+---@field RaidUpdate number
+---@field GuildLeader number
+---@field GuildPeace number
+---@field GuildRemove number
+---@field GuildMemberList number
+---@field GuildMemberUpdate number
+---@field GuildMemberLevelUpdate number
+---@field GuildInvite number
+---@field GuildMOTD number
+---@field SetGuildMOTD number
+---@field GuildPublicNote number
+---@field GetGuildsList number
+---@field GuildDemote number
+---@field GuildInviteAccept number
+---@field GuildWar number
+---@field GuildDelete number
+---@field GuildManageRemove number
+---@field GuildManageAdd number
+---@field GuildManageStatus number
+---@field GuildManageBanker number
+---@field GetGuildMOTD number
+---@field Trader number
+---@field Bazaar number
+---@field BecomeTrader number
+---@field TraderItemUpdate number
+---@field TraderShop number
+---@field TraderBuy number
+---@field PetCommands number
+---@field TradeSkillCombine number
+---@field AugmentItem number
+---@field ItemName number
+---@field ShopItem number
+---@field ShopPlayerBuy number
+---@field ShopPlayerSell number
+---@field ShopDelItem number
+---@field ShopRequest number
+---@field ShopEnd number
+---@field LFGCommand number
+---@field LFGAppearance number
+---@field GroupUpdate number
+---@field GroupInvite number
+---@field GroupDisband number
+---@field GroupInvite2 number
+---@field GroupFollow number
+---@field GroupFollow2 number
+---@field GroupCancelInvite number
+---@field CustomTitles number
+---@field Split number
+---@field Jump number
+---@field ConsiderCorpse number
+---@field SkillUpdate number
+---@field GMEndTrainingResponse number
+---@field GMEndTraining number
+---@field GMTrainSkill number
+---@field GMTraining number
+---@field DeleteItem number
+---@field CombatAbility number
+---@field TrackUnknown number
+---@field TrackTarget number
+---@field Track number
+---@field ItemLinkClick number
+---@field ItemLinkResponse number
+---@field ItemLinkText number
+---@field RezzAnswer number
+---@field RezzComplete number
+---@field SendZonepoints number
+---@field SetRunMode number
+---@field InspectRequest number
+---@field InspectAnswer number
+---@field SenseTraps number
+---@field DisarmTraps number
+---@field Assist number
+---@field AssistGroup number
+---@field PickPocket number
+---@field LootRequest number
+---@field EndLootRequest number
+---@field MoneyOnCorpse number
+---@field LootComplete number
+---@field LootItem number
+---@field MoveItem number
+---@field WhoAllRequest number
+---@field WhoAllResponse number
+---@field Consume number
+---@field AutoAttack number
+---@field AutoAttack2 number
+---@field TargetMouse number
+---@field TargetCommand number
+---@field TargetReject number
+---@field TargetHoTT number
+---@field Hide number
+---@field Forage number
+---@field Fishing number
+---@field Bug number
+---@field Emote number
+---@field Consider number
+---@field FaceChange number
+---@field RandomReq number
+---@field RandomReply number
+---@field Camp number
+---@field YellForHelp number
+---@field SafePoint number
+---@field Buff number
+---@field ColoredText number
+---@field SpecialMesg number
+---@field Consent number
+---@field ConsentResponse number
+---@field Stun number
+---@field BeginCast number
+---@field CastSpell number
+---@field InterruptCast number
+---@field Death number
+---@field FeignDeath number
+---@field Illusion number
+---@field LevelUpdate number
+---@field LevelAppearance number
+---@field MemorizeSpell number
+---@field HPUpdate number
+---@field Mend number
+---@field Taunt number
+---@field GMDelCorpse number
+---@field GMFind number
+---@field GMServers number
+---@field GMGoto number
+---@field GMSummon number
+---@field GMKill number
+---@field GMLastName number
+---@field GMToggle number
+---@field GMEmoteZone number
+---@field GMBecomeNPC number
+---@field GMHideMe number
+---@field GMZoneRequest number
+---@field GMZoneRequest2 number
+---@field Petition number
+---@field PetitionRefresh number
+---@field PDeletePetition number
+---@field PetitionBug number
+---@field PetitionUpdate number
+---@field PetitionCheckout number
+---@field PetitionCheckout2 number
+---@field PetitionDelete number
+---@field PetitionResolve number
+---@field PetitionCheckIn number
+---@field PetitionUnCheckout number
+---@field PetitionQue number
+---@field SetServerFilter number
+---@field NewSpawn number
+---@field Animation number
+---@field ZoneChange number
+---@field DeleteSpawn number
+---@field EnvDamage number
+---@field Action number
+---@field Damage number
+---@field ManaChange number
+---@field ClientError number
+---@field Save number
+---@field LocInfo number
+---@field Surname number
+---@field ClearSurname number
+---@field SwapSpell number
+---@field DeleteSpell number
+---@field CloseContainer number
+---@field ClickObjectAction number
+---@field GroundSpawn number
+---@field ClearObject number
+---@field ZoneUnavail number
+---@field ItemPacket number
+---@field TradeRequest number
+---@field TradeRequestAck number
+---@field TradeAcceptClick number
+---@field TradeMoneyUpdate number
+---@field TradeCoins number
+---@field CancelTrade number
+---@field FinishTrade number
+---@field SaveOnZoneReq number
+---@field Logout number
+---@field LogoutReply number
+---@field PreLogoutReply number
+---@field DuelAccept number
+---@field InstillDoubt number
+---@field SafeFallSuccess number
+---@field DisciplineUpdate number
+---@field SendGuildTributes number
+---@field SendTributes number
+---@field TributeUpdate number
+---@field TributeItem number
+---@field TributePointUpdate number
+---@field TributeInfo number
+---@field GuildTributeInfo number
+---@field OpenGuildTributeMaster number
+---@field OpenTributeMaster number
+---@field TributeTimer number
+---@field SelectTribute number
+---@field TributeNPC number
+---@field TributeMoney number
+---@field TributeToggle number
+---@field CloseTributeMaster number
+---@field RecipesFavorite number
+---@field RecipesSearch number
+---@field RecipeReply number
+---@field RecipeDetails number
+---@field RecipeAutoCombine number
+---@field Shielding number
+---@field FindPersonRequest number
+---@field FindPersonReply number
+---@field ZoneEntry number
+---@field PlayerProfile number
+---@field CharInventory number
+---@field ZoneSpawns number
+---@field Weather number
+---@field ReqNewZone number
+---@field NewZone number
+---@field ReqClientSpawn number
+---@field SpawnAppearance number
+---@field ClientReady number
+---@field ZoneComplete number
+---@field ApproveWorld number
+---@field LogServer number
+---@field MOTD number
+---@field SendLoginInfo number
+---@field DeleteCharacter number
+---@field SendCharInfo number
+---@field ExpansionInfo number
+---@field CharacterCreate number
+---@field CharacterCreateRequest number
+---@field RandomNameGenerator number
+---@field GuildsList number
+---@field ApproveName number
+---@field EnterWorld number
+---@field PostEnterWorld number
+---@field SendSystemStats number
+---@field World_Client_CRC1 number
+---@field World_Client_CRC2 number
+---@field SetChatServer number
+---@field SetChatServer2 number
+---@field ZoneServerInfo number
+---@field WorldClientReady number
+---@field WorldUnknown001 number
+---@field AckPacket number
+---@field WearChange number
+---@field CrashDump number
+---@field LoginComplete number
+---@field GMNameChange number
+---@field ReadBook number
+---@field GMKick number
+---@field RezzRequest number
+---@field MultiLineMsg number
+---@field TimeOfDay number
+---@field CompletedTasks number
+---@field MoneyUpdate number
+---@field ClickObject number
+---@field MoveDoor number
+---@field TraderDelItem number
+---@field AdventureMerchantPurchase number
+---@field TestBuff number
+---@field DuelDecline number
+---@field RequestDuel number
+---@field BazaarInspect number
+---@field ClickDoor number
+---@field GroupAcknowledge number
+---@field GroupDelete number
+---@field AdventureMerchantResponse number
+---@field ShopEndConfirm number
+---@field AdventureMerchantRequest number
+---@field Sound number
+---@field WorldComplete number
+---@field MobRename number
+---@field TaskDescription number
+---@field TaskActivity number
+---@field SharedTaskPlayerList number
+---@field AnnoyingZoneUnknown number
+---@field Some3ByteHPUpdate number
+---@field FloatListThing number
+---@field AAExpUpdate number
+---@field ForceFindPerson number
+---@field PlayMP3 number
+---@field RequestClientZoneChange number
+---@field SomeItemPacketMaybe number
+---@field QueryResponseThing number
+---@field Some6ByteHPUpdate number
+---@field BankerChange number
+---@field BecomeCorpse number
+---@field Action2 number
+---@field BazaarSearch number
+---@field SetTitle number
+---@field SetTitleReply number
+---@field ConfirmDelete number
+---@field ConsentDeny number
+---@field CrystalCountUpdate number
+---@field DeletePetition number
+---@field DenyResponse number
+---@field Disarm number
+---@field Feedback number
+---@field FriendsWho number
+---@field GMApproval number
+---@field GMSearchCorpse number
+---@field GuildBank number
+---@field InitialHPUpdate number
+---@field InitialMobHealth number
+---@field LFGGetMatchesRequest number
+---@field LFGGetMatchesResponse number
+---@field LFGResponse number
+---@field LFPCommand number
+---@field LFPGetMatchesRequest number
+---@field LFPGetMatchesResponse number
+---@field LeadershipExpToggle number
+---@field LeadershipExpUpdate number
+---@field LoadSpellSet number
+---@field LockoutTimerInfo number
+---@field MendHPUpdate number
+---@field MobHealth number
+---@field MoveLogDisregard number
+---@field MoveLogRequest number
+---@field PetitionSearch number
+---@field PetitionSearchResults number
+---@field PetitionSearchText number
+---@field RaidInvite number
+---@field ReclaimCrystals number
+---@field Report number
+---@field SenseHeading number
+---@field LDoNOpen number
+---@field LDoNSenseTraps number
+---@field LDoNPickLock number
+---@field LDoNDisarmTraps number
+---@field LDoNInspect number
+---@field DynamicWall number
+---@field RequestTitles number
+---@field PurchaseLeadershipAA number
+---@field UpdateLeadershipAA number
+---@field AdventurePointsUpdate number
+---@field ZoneInUnknown number
+---@field ZoneServerReady number
+---@field ZoneGuildList number
+---@field SendTitleList number
+---@field NewTitlesAvailable number
+---@field Bandolier number
+---@field OpenDiscordMerchant number
+---@field DiscordMerchantInventory number
+---@field GiveMoney number
+---@field OnLevelMessage number
+---@field RequestKnowledgeBase number
+---@field KnowledgeBase number
+---@field VetRewardsAvaliable number
+---@field VetClaimRequest number
+---@field VetClaimReply number
+---@field WeaponEquip1 number
+---@field PlayerStateAdd number
+---@field PlayerStateRemove number
+---@field WorldLogout number
+---@field SessionReady number
+---@field Login number
+---@field ServerListRequest number
+---@field PlayEverquestRequest number
+---@field ChatMessage number
+---@field LoginAccepted number
+---@field ServerListResponse number
+---@field Poll number
+---@field PlayEverquestResponse number
+---@field EnterChat number
+---@field PollResponse number
+---@field Command number
+---@field ZonePlayerToBind number
+---@field AutoFire number
+---@field Rewind number
+---@field TaskSelectWindow number
+---@field TaskActivityComplete number
+---@field AcceptNewTask number
+---@field CancelTask number
+---@field TaskHistoryRequest number
+---@field TaskHistoryReply number
+---@field PetBuffWindow number
+---@field RaidJoin number
+---@field Translocate number
+---@field Sacrifice number
+---@field KeyRing number
+---@field PopupResponse number
+---@field DeleteCharge number
+---@field PotionBelt number
+---@field Barter number
+---@field VoiceMacroIn number
+---@field VoiceMacroOut number
+---@field WorldObjectsSent number
+---@field BlockedBuffs number
+---@field RemoveBlockedBuffs number
+---@field ClearBlockedBuffs number
+---@field GroupUpdateLeaderAA number
+---@field MarkNPC number
+---@field ClearNPCMarks number
+---@field DoGroupLeadershipAbility number
+---@field DelegateAbility number
+---@field SetGroupTarget number
+---@field ApplyPoison number
+---@field FinishWindow number
+---@field FinishWindow2 number
+---@field ItemVerifyRequest number
+---@field ItemVerifyReply number
+---@field GMTrainSkillConfirm number
+---@field RestState number
+---@field AugmentInfo number
+---@field PVPStats number
+---@field PVPLeaderBoardRequest number
+---@field PVPLeaderBoardReply number
+---@field PVPLeaderBoardDetailsRequest number
+---@field PVPLeaderBoardDetailsReply number
+---@field DisciplineTimer number
+---@field RespawnWindow number
+---@field AdventureMerchantSell number
+---@field AdventureStatsRequest number
+---@field AdventureStatsReply number
+---@field AdventureLeaderboardRequest number
+---@field AdventureLeaderboardReply number
+---@field SetStartCity number
+---@field LoginUnknown1 number
+---@field LoginUnknown2 number
+---@field ItemViewUnknown number
+---@field GetGuildMOTDReply number
+---@field SetGuildRank number
+---@field SpawnPositionUpdate number
+---@field ManaUpdate number
+---@field EnduranceUpdate number
+---@field MobManaUpdate number
+---@field MobEnduranceUpdate number
+---@field GroupUpdateB number
+---@field GroupDisbandYou number
+---@field GroupDisbandOther number
+---@field GroupLeaderChange number
+---@field GroupLeadershipAAUpdate number
+---@field GroupRoles number
+---@field SendFindableNPCs number
+---@field HideCorpse number
+---@field TargetBuffs number
+---@field TradeBusy number
+---@field GuildUpdateURLAndChannel number
+---@field CameraEffect number
+---@field SpellEffect number
+---@field DzQuit number
+---@field DzListTimers number
+---@field DzPlayerList number
+---@field DzAddPlayer number
+---@field DzRemovePlayer number
+---@field DzSwapPlayer number
+---@field DzMakeLeader number
+---@field DzExpeditionInvite number
+---@field DzExpeditionInviteResponse number
+---@field DzExpeditionInfo number
+---@field DzMemberListName number
+---@field DzMemberListStatus number
+---@field DzSetLeaderName number
+---@field DzExpeditionEndsWarning number
+---@field DzExpeditionLockoutTimers number
+---@field DzMemberList number
+---@field DzCompass number
+---@field DzChooseZone number
+---@field DzChooseZoneReply number
+---@field BuffCreate number
+---@field GuildStatus number
+---@field BuffRemoveRequest number
+---@field CorpseDrag number
+---@field CorpseDrop number
+---@field ChangeSize number
+---@field GroupMakeLeader number
+---@field RemoveAllDoors number
+---@field RemoveNimbusEffect number
+---@field GuildCreate number
+---@field AltCurrency number
+---@field FellowshipUpdate number
+---@field AltCurrencyMerchantRequest number
+---@field AltCurrencyMerchantReply number
+---@field AltCurrencyPurchase number
+---@field AltCurrencySellSelection number
+---@field AltCurrencyReclaim number
+---@field AltCurrencySell number
+---@field Untargetable number
+---@field CrystalReclaim number
+---@field CrystalCreate number
+---@field SendMaxCharacters number
+---@field SendMembership number
+---@field SendMembershipDetails number
+---@field LFGuild number
+---@field XTargetRequest number
+---@field XTargetResponse number
+---@field XTargetAutoAddHaters number
+---@field Weblink number
+---@field InspectMessageUpdate number
+---@field ItemPreview number
+---@field MercenaryDataRequest number
+---@field MercenaryDataResponse number
+---@field MercenaryHire number
+---@field MercenaryUnknown1 number
+---@field MercenaryTimer number
+---@field MercenaryAssign number
+---@field MercenaryDataUpdate number
+---@field MercenaryCommand number
+---@field MercenarySuspendRequest number
+---@field MercenarySuspendResponse number
+---@field MercenaryUnsuspendResponse number
+---@field MercenaryDataUpdateRequest number
+---@field MercenaryDismiss number
+---@field MercenaryTimerRequest number
+---@field OpenInventory number
+---@field OpenContainer number
+---@field Marquee number
+---@field ClientTimeStamp number
+---@field GuildPromote number
+---@field Fling number
+Opcode = {}
+Opcode["0x0193"] = 0
+Opcode["0x0347"] = 1
