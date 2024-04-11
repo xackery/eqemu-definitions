@@ -47,6 +47,23 @@ function event_cast_on(e) end
 ---@param e BotEventCombat
 function event_combat(e) end
 
+---@class BotEventDamageGiven
+---@field self Bot # Bot that triggered the event
+---@field entity_id number # Entity ID that triggered the event
+---@field damage number # Damage amount that triggered the event
+---@field spell_id number # Spell ID that triggered the event
+---@field skill_id number # Skill ID that triggered the event
+---@field is_damage_shield boolean # Is a damage shield?
+---@field is_avoidable boolean # Is this damage avoidable?
+---@field buff_slot number # Buff slot that triggered the event
+---@field is_buff_tic boolean # Is this a buff tic?
+---@field special_attack number # Special attack flags for event
+
+--- event_damage_given is a Bot event when damagegiven occurs.
+---@param e BotEventDamageGiven
+function event_damage_given(e) end
+
+
 ---@class BotEventDeath
 ---@field self Bot # Bot that triggered the event
 ---@field other Client # Client that triggered the event
@@ -82,7 +99,7 @@ function event_popup_response(e) end
 ---@field self Bot # Bot that triggered the event
 ---@field other Client # Client that triggered the event
 ---@field message string # Message client said to npc
----@field language Languages # Language client said message in
+---@field language Language # Language client said message in
 
 --- event_say is a Bot event when say occurs.
 ---@param e BotEventSay
@@ -133,7 +150,7 @@ function event_timer(e) end
 --- event_use_skill is a Bot event when useskill occurs.
 ---@param e BotEventUseSkill
 function event_use_skill(e) end
-    
+
 ---@class BotEventPayload
 ---@field self Bot # Bot that triggered the event
 ---@field payload_id number # Index for a payload signal
