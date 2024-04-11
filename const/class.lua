@@ -46,4 +46,5 @@
 ---@field FELLOWSHIP_MASTER number
 ---@field ALT_CURRENCY_MERCHANT number
 ---@field MERCENARY_MASTER number
+---@field GUILD_BANKER number
 Class = {}
