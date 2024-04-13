@@ -1,7 +1,6 @@
 ---@meta
 
 ---@class ExpSource
----@field Unknown number # 0
 ---@field Quest number # 1
 ---@field GM number # 2
 ---@field Kill number # 3
