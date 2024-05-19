@@ -43,7 +43,7 @@ function Inventory:FindFreeSlot(for_bag, try_cursor, min_size, is_arrow) end
 
 ---@param slot_id number # TODO: definition of parameter
 ---@param bag_slot? number # TODO: definition of parameter
----@return Item Item # Item instance
+---@return ItemInst ItemInst # Item instance
 function Inventory:GetItem(slot_id, bag_slot) end
 
 ---@param inst ItemInst # TODO: definition of parameter
