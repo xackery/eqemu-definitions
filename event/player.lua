@@ -519,3 +519,36 @@ function event_zone(e) end
 --- Occurs when a player receives a packet
 ---@param e PlayerEventPlayerPacket
 function event_player_packet(e) end
+
+
+---@class PlayerEventCombine
+---@field self Client # Client triggering the event
+---@field container_slot number # Container slot triggering event
+
+--- event_combine is a Player event when combine occurs.
+---@param e PlayerEventCombine
+function event_combine(e) end
+
+
+---@class PlayerEventCombineFailure
+---@field self Client # Client triggering the event
+---@field recipe_id number # Recipe ID triggering event
+---@field recipe_name string # Recipe name triggering event
+
+
+--- event_combine_failure is a Player event when combine occurs.
+---@param e PlayerEventCombineFailure
+function event_combine_failure(e) end
+
+
+
+---@class PlayerEventCombineSuccess
+---@field self Client # Client triggering the event
+---@field recipe_id number # Recipe ID triggering event
+---@field recipe_name string # Recipe name triggering event
+
+
+--- event_combine_success is a Player event when combine occurs.
+---@param e PlayerEventCombineSuccess
+function event_combine_success(e) end
+
