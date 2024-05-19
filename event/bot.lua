@@ -204,3 +204,32 @@ function event_damage(e) end
 --- event_damage_taken is a Bot event when damagetaken occurs.
 ---@param e BotEventDamageTaken
 function event_damage_taken(e) end
+
+
+---@class BotEventEntityVariableDelete
+---@field self Bot # Bot that triggered the event
+---@field variable_name string
+---@field variable_value string # If variable_value_new is set, then this is old_value
+---@field variable_value_new string? # New value being replaced
+--- BotEventEntityVariableDelete is triggered when a bot variable is deleted
+---@param e BotEventEntityVariableDelete
+function event_entity_variable_delete(e) end
+
+---@class BotEventEntityVariableSet
+---@field self Bot # Bot that triggered the event
+---@field variable_name string
+---@field variable_value string # If variable_value_new is set, then this is old_value
+---@field variable_value_new string? # New value being replaced
+--- BotEventEntityVariableSet is triggered when a bot variable is set
+---@param e BotEventEntityVariableSet
+function event_entity_variable_set(e) end
+
+---@class BotEventEntityVariableUpdate
+---@field self Bot # Bot that triggered the event
+---@field variable_name string
+---@field variable_value string # If variable_value_new is set, then this is old_value
+---@field variable_value_new string? # New value being replaced
+--- BotEventEntityVariableUpdate is triggered when a bot variable is updated
+---@param e BotEventEntityVariableUpdate
+function event_entity_variable_update(e) end
+
