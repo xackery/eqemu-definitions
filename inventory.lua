@@ -41,8 +41,8 @@ function Inventory:DeleteItem(slot_id, quantity) end
 ---@param is_arrow? boolean # TODO: definition of parameter
 function Inventory:FindFreeSlot(for_bag, try_cursor, min_size, is_arrow) end
 
----@param slot_id number # TODO: definition of parameter
----@param bag_slot? number # TODO: definition of parameter
+---@param slot_id number # This correlates to the inventory slot location id
+---@param bag_slot? number # Index offset within the bag, starting with 0
 ---@return ItemInst ItemInst # Item instance
 function Inventory:GetItem(slot_id, bag_slot) end
 
