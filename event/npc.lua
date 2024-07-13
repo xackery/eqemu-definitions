@@ -8,7 +8,7 @@
 ---@field Item4 ItemInst
 
 ---event_trade is when a client begins a trade with an NPC [doc](https://docs.eqemu.io/quest-api/events/#event_trade)
----@class NPCEventTrade 
+---@class NPCEventTrade
 ---@field self NPC # NPC who is handling the event
 ---@field other Client # Client that triggered the event
 ---@field platinum number # Amount of platinum being traded
@@ -16,7 +16,7 @@
 ---@field silver number # Amount of silver being traded
 ---@field copper number # Amount of copper being traded
 ---@field trade TradeList
-    
+
 ---@param e NPCEventTrade # event_trade is when a client begins a trade with an NPC [doc](https://docs.eqemu.io/quest-api/events/#event_trade)
 function event_trade(e) end
 

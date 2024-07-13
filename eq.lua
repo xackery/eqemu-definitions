@@ -1040,9 +1040,11 @@ function eq.get_task_name(task_id) end
 ---@param timer string #
 function eq.get_timer_duration(timer) end
 
+---@return number
 function eq.get_zone_id() end
 
----@param zone_name string #
+---@param zone_name string # short name of zone
+---@return number
 function eq.get_zone_id_by_name(zone_name) end
 
 ---@return number
