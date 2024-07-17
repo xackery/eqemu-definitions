@@ -16,7 +16,7 @@
 ---@param e SpellEventSpellBuffTic
 function event_spell_buff_tic(e) end
 
----@class SpellEventSpellEffect SpellEvent
+---@alias SpellEventSpellEffect SpellEvent
 
 --- event_spell_effect is a Spell event when spelleffect occurs.
 ---@param e SpellEventSpellEffect
@@ -35,4 +35,3 @@ function event_spell_fade(e) end
 --- event_spell_effect_translocate_complete is a Spell event when spelleffecttranslocatecomplete occurs.
 ---@param e SpellEventSpellEffectTranslocateComplete
 function event_spell_effect_translocate_complete(e) end
-)

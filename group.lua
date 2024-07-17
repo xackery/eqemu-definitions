@@ -34,6 +34,7 @@ function Group:GetLeaderName() end
 function Group:GetLowestLevel() end
 
 ---@param member_index number # TODO: definition of parameter
+---@return Mob
 function Group:GetMember(member_index) end
 
 ---@param other Mob # TODO: definition of parameter

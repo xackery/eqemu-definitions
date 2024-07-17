@@ -88,6 +88,7 @@ function Spell:GoodEffect() end
 
 function Spell:HateAdded() end
 
+---@return number
 function Spell:ID() end
 
 function Spell:InCombat() end
