@@ -30,6 +30,7 @@ function ItemInst:GetAugmentItemID(slot) end
 
 function ItemInst:GetAugmentType() end
 
+---@return number # Number of charges on the item
 function ItemInst:GetCharges() end
 
 function ItemInst:GetColor() end
@@ -41,6 +42,7 @@ function ItemInst:GetCustomDataString() end
 
 function ItemInst:GetExp() end
 
+---@return number # ID of item
 function ItemInst:GetID() end
 
 ---@param slot number # TODO: definition of parameter

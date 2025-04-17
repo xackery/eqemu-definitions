@@ -16,6 +16,7 @@ function Inventory:CalcSlotFromMaterial(material) end
 
 ---@param slot_id number # TODO: definition of parameter (and type this)
 ---@param bag_slot? number # TODO: definition of parameter (and type this)
+---@return number # Slot ID calculated from bag
 function Inventory:CalcSlotId(slot_id, bag_slot) end
 
 ---@param item Item # TODO: definition of parameter

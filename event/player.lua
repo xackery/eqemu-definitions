@@ -115,8 +115,9 @@ function event_command(e) end
 
 ---@class PlayerEventConnect
 ---@field self Client # Client triggering the event
+---@field last_login number # Last time player logged in
 
---- event_connect is a Player event when connect occurs.
+--- event_connect triggers when a player first logs in
 ---@param e PlayerEventConnect
 function event_connect(e) end
 
