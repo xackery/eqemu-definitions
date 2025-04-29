@@ -1156,6 +1156,9 @@ function Mob:SendWearChange(material_slot) end
 ---@return boolean
 function Mob:SetAA(rank_id, new_value, charges) end
 
+--- Syncronizes AA changes, saving and resending tables. Ideal to be called after SetAA
+function Mob:SyncAA() end
+
 ---@param value boolean # TODO: definition of parameter
 function Mob:SetAllowBeneficial(value) end
 
